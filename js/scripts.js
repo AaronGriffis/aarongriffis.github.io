@@ -16,8 +16,8 @@ function loaded() {
       TweenMax.to('.terrain.layer1', 1, {top: '100%', ease: Linear.easeNone}),
       TweenMax.to('.terrain.layer2', 1, {top: '90%', ease: Linear.easeNone}),
       TweenMax.to('.terrain.layer3', 1, {top: '80%', ease: Linear.easeNone}),
-      TweenMax.to('.terrain.layer4', 1, {top: '60%', ease: Linear.easeNone}),
-      TweenMax.to('.terrain.layer5', 1, {top: '40%', ease: Linear.easeNone})
+      TweenMax.to('.terrain.layer4', 1, {top: '70%', ease: Linear.easeNone}),
+      TweenMax.to('.terrain.layer5', 1, {top: '60%', ease: Linear.easeNone})
    ]);
   
    var scene = new ScrollMagic.Scene()
@@ -79,7 +79,6 @@ function shakeTree() {
 // Activate Gallery
 $('#portfolio .grid').lightGallery({
    selector: 'a',
-   thumbnail: true,
 	share: false,
    download: false,
    counter: false,

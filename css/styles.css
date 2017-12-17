@@ -1538,12 +1538,12 @@ header #header-text #header-btn:hover #header-arrow path {
   float: left;
 }
 
-.grid-sizer a, .grid-item a {
+.grid-item a {
   display: inline-block;
   position: relative;
 }
 
-.grid-sizer img, .grid-sizer #portfolio-description, .grid-item img, .grid-item #portfolio-description {
+.grid-item img, .grid-item #portfolio-description {
   border: 0.33333rem solid #fff8e6;
   border-radius: 1rem;
   padding: 0.33333rem;
@@ -1553,30 +1553,40 @@ header #header-text #header-btn:hover #header-arrow path {
   margin-top: 2rem;
 }
 
-.grid-sizer .title-overlay, .grid-item .title-overlay {
-  background: rgba(58, 71, 31, 0.8);
+.grid-item .title-overlay {
+  background: #fff8e6;
   border-radius: 0.33333rem;
   margin: 2.66667rem 0.66667rem 0.66667rem 2.66667rem;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   position: absolute;
   top: 0;
-  bottom: 0;
+  bottom: 0.16667rem;
   left: 0;
   right: 0;
   opacity: 0;
-  transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.25s ease-in-out;
 }
 
-.grid-sizer .title-overlay h3, .grid-item .title-overlay h3 {
-  color: #fff8e6;
+.grid-item .title-overlay .title {
+  color: #3a471f;
   margin: 0;
   font-size: 2.5rem;
   text-align: center;
 }
 
-.grid-sizer .title-overlay:hover, .grid-item .title-overlay:hover {
+.grid-item .title-overlay .tags h4 {
+  color: #fff8e6;
+  background: #3a471f;
+  padding: 0.5rem;
+  border-radius: 5rem;
+  display: inline-block;
+  margin: 0.5rem 0;
+}
+
+.grid-item .title-overlay:hover {
   opacity: 1;
 }
 

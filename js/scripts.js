@@ -88,6 +88,6 @@ $('#portfolio .grid').lightGallery({
 //Masonry
 $('#portfolio .grid').masonry({
    itemSelector: '.grid-item',
-   isFitWidth: true,
+   fitWidth: true,
    columnWidth: '.grid-sizer'
  });

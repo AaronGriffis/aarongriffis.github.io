@@ -7,8 +7,7 @@ function loaded() {
    TweenMax.set('.tree path.short', {strokeDasharray: '6px', strokeDashoffset: '6px'});
 
    headerTimeline.staggerFrom('.terrain:not(#mountain)', 1, {onStart:animateTerrain, onStartParams:["{self}"]}, 0.25)
-      // .to('#mountain', 2, {attr: {viewBox:'0 0 100 50'}, ease: Power1.easeOut}, '+=0.5')
-      .from('#header-text', 1, {css: {autoAlpha:0, top:'-10vh'}, ease:Power2.easeOut}, 1.5);
+      .from('#header-text', 1, {css: {autoAlpha:0, top:'-10vh'}, ease:Power2.easeOut}, 0.5);
   
 	var controller = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "100%"}});
    var parallaxTween = new TimelineMax().add([
@@ -33,6 +32,22 @@ function loaded() {
          anim.to('#header-arrow path', 0.2, {y:1, ease:Power2.easeIn})
              .to('#header-arrow path', 1, {y:0, ease:Elastic.easeOut});
       });
+   
+   // Activate Gallery
+   $('#portfolio .grid').lightGallery({
+      selector: 'a',
+      share: false,
+      download: false,
+      counter: false,
+      showThumbByDefault: false
+   });
+
+   //Masonry
+   $('#portfolio .grid').masonry({
+      itemSelector: '.grid-item',
+      fitWidth: true,
+      columnWidth: '.grid-sizer'
+   });
 }
 
 function animateTerrain(terrain) {
@@ -75,19 +90,3 @@ function shakeTree() {
      .add(TweenMax.staggerTo(leftBranches, 2, {rotation: 0, ease: Elastic.easeOut}, 0.03), .1)
      .add(TweenMax.staggerTo(rightBranches, 2, {rotation: 0, ease: Elastic.easeOut}, 0.03), .1);
 }
-
-// Activate Gallery
-$('#portfolio .grid').lightGallery({
-   selector: 'a',
-	share: false,
-   download: false,
-   counter: false,
-   showThumbByDefault: false
-});
-
-//Masonry
-$('#portfolio .grid').masonry({
-   itemSelector: '.grid-item',
-   fitWidth: true,
-   columnWidth: '.grid-sizer'
- });

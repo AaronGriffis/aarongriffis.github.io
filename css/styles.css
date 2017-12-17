@@ -1162,9 +1162,9 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   max-height: 80vh;
   width: auto !important;
   height: auto !important;
-  border: 0.33333rem solid #fff8e6;
-  border-radius: 1rem;
-  padding: 0.33333rem;
+  border: 0.16667rem solid #fff8e6;
+  border-radius: 0.5rem;
+  padding: 0.16667rem;
 }
 
 .lg-outer.lg-show-after-load .lg-item .lg-object, .lg-outer.lg-show-after-load .lg-item .lg-video-play {
@@ -1518,7 +1518,7 @@ header #header-text #header-btn:hover #header-arrow path {
 
 #portfolio {
   background: #3a471f;
-  max-width: 80rem;
+  max-width: 40rem;
   margin: 10vh auto;
 }
 
@@ -1533,8 +1533,8 @@ header #header-text #header-btn:hover #header-arrow path {
 }
 
 .grid-sizer, .grid-item {
-  width: 20rem;
-  height: 20rem;
+  width: 10rem;
+  height: 10rem;
   float: left;
 }
 
@@ -1544,19 +1544,19 @@ header #header-text #header-btn:hover #header-arrow path {
 }
 
 .grid-item img, .grid-item #portfolio-description {
-  border: 0.33333rem solid #fff8e6;
-  border-radius: 1rem;
-  padding: 0.33333rem;
-  width: 16rem;
-  height: 16rem;
-  margin-left: 2rem;
-  margin-top: 2rem;
+  border: 0.16667rem solid #fff8e6;
+  border-radius: 0.5rem;
+  padding: 0.16667rem;
+  width: 8rem;
+  height: 8rem;
+  margin-left: 1rem;
+  margin-top: 1rem;
 }
 
 .grid-item .title-overlay {
   background: #fff8e6;
-  border-radius: 0.33333rem;
-  margin: 2.66667rem 0.66667rem 0.66667rem 2.66667rem;
+  border-radius: 0.16667rem;
+  margin: 1.33333rem 0.33333rem 0.33333rem 1.33333rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1573,17 +1573,22 @@ header #header-text #header-btn:hover #header-arrow path {
 .grid-item .title-overlay .title {
   color: #3a471f;
   margin: 0;
-  font-size: 2.5rem;
+  font-size: 1.25rem;
   text-align: center;
+}
+
+.grid-item .title-overlay .tags {
+  text-align: center;
+  margin: 0.125rem 0.25rem;
 }
 
 .grid-item .title-overlay .tags h4 {
   color: #fff8e6;
   background: #3a471f;
-  padding: 0.5rem;
+  padding: 0.25rem 0.625rem;
   border-radius: 5rem;
   display: inline-block;
-  margin: 0.5rem 0;
+  margin: 0.125rem 0;
 }
 
 .grid-item .title-overlay:hover {
@@ -1591,19 +1596,19 @@ header #header-text #header-btn:hover #header-arrow path {
 }
 
 .grid-item--width2 {
-  width: 40rem;
+  width: 20rem;
 }
 
 .grid-item--width2 img, .grid-item--width2 #portfolio-description {
-  width: 36rem;
+  width: 18rem;
 }
 
 .grid-item--height2 {
-  height: 40rem;
+  height: 20rem;
 }
 
 .grid-item--height2 img, .grid-item--height2 #portfolio-description {
-  height: 36rem;
+  height: 18rem;
 }
 
 #portfolio-description section {
@@ -1611,8 +1616,57 @@ header #header-text #header-btn:hover #header-arrow path {
   color: #3a471f;
   height: 100%;
   width: 100%;
-  border-radius: 0.33333rem;
+  border-radius: 0.16667rem;
   padding: calc(1rem / 3) 1rem;
+}
+
+@media (min-width: 768px) {
+  #portfolio {
+    max-width: 80rem;
+  }
+  .grid-sizer, .grid-item {
+    width: 20rem;
+    height: 20rem;
+  }
+  .grid-item img, .grid-item #portfolio-description {
+    border: 0.33333rem solid #fff8e6;
+    border-radius: 1rem;
+    padding: 0.33333rem;
+    width: 16rem;
+    height: 16rem;
+    margin-left: 2rem;
+    margin-top: 2rem;
+  }
+  .grid-item .title-overlay {
+    border-radius: 0.33333rem;
+    margin: 2.66667rem 0.66667rem 0.66667rem 2.66667rem;
+    bottom: 0.16667rem;
+  }
+  .grid-item .title-overlay .title {
+    font-size: 2.5rem;
+  }
+  .grid-item .title-overlay .tags {
+    margin: 0.25rem 0.5rem;
+  }
+  .grid-item .title-overlay .tags h4 {
+    padding: 0.5rem 1.25rem;
+    margin: 0.25rem 0;
+  }
+  .grid-item--width2 {
+    width: 40rem;
+  }
+  .grid-item--width2 img, .grid-item--width2 #portfolio-description {
+    width: 36rem;
+  }
+  .grid-item--height2 {
+    height: 40rem;
+  }
+  .grid-item--height2 img, .grid-item--height2 #portfolio-description {
+    height: 36rem;
+  }
+  #portfolio-description section {
+    border-radius: 0.33333rem;
+  }
 }
 
 * {

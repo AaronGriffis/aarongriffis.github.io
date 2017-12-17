@@ -46,7 +46,7 @@
       justify-content: center;
       position: absolute;
       top: 0;
-      bottom: ($gutter / 12);
+      bottom: ($gutter / 6);
       left: 0;
       right: 0;
       opacity: 0;
@@ -59,13 +59,18 @@
          text-align: center;
       }
 
-      .tags h4 {
-         color: $bg;
-         background: $fg;
-         padding: 0.5rem;
-         border-radius: 5rem;
-         display: inline-block;
-         margin: 0.5rem 0;
+      .tags {
+         text-align: center;
+         margin: ($titleFontSize / 10) ($titleFontSize / 5);
+
+         h4 {
+            color: $bg;
+            background: $fg;
+            padding: ($titleFontSize / 5) ($titleFontSize / 2);
+            border-radius: 5rem;
+            display: inline-block;
+            margin: ($titleFontSize / 10) 0;
+         }
       }
    }
 
@@ -99,6 +104,69 @@
    padding: calc(1rem / 3) 1rem;
 }
 
-@media (min-width: 375px) {
+
+@media (min-width: 768px) {
+   $gutter: 2rem;
+   $masonrySize: 20rem;
+   $titleFontSize: 2.5rem;
+
+   #portfolio {
+      max-width: $masonrySize * $maxColumns;
+   }
+
+   .grid-sizer, .grid-item {
+      width: $masonrySize;
+      height: $masonrySize;
+   }
+
+   .grid-item {
+      img, #portfolio-description {
+         border: ($gutter / 6) solid $bg;
+         border-radius: ($gutter / 2);
+         padding: ($gutter / 6);
+         width: $masonrySize - ($gutter * 2);
+         height: $masonrySize - ($gutter * 2);
+         margin-left: $gutter;
+         margin-top: $gutter;
+      }
+      
+      .title-overlay {
+         border-radius: ($gutter / 6);
+         margin: ($gutter * (4/3)) ($gutter / 3) ($gutter / 3) ($gutter * (4/3));
+         bottom: ($gutter / 12);
    
+         .title {
+            font-size: $titleFontSize;
+         }
+   
+         .tags {
+            margin: ($titleFontSize / 10) ($titleFontSize / 5);
+   
+            h4 {
+               padding: ($titleFontSize / 5) ($titleFontSize / 2);
+               margin: ($titleFontSize / 10) 0;
+            }
+         }
+      }
+   }
+   
+   .grid-item--width2{
+      width: ($masonrySize * 2);
+   
+      img, #portfolio-description {
+         width: ($masonrySize * 2) - ($gutter * 2);
+      }
+   }
+   
+   .grid-item--height2 {
+      height: ($masonrySize * 2);
+   
+      img, #portfolio-description {
+         height: ($masonrySize * 2) - ($gutter * 2);
+      }
+   }
+   
+   #portfolio-description section {
+      border-radius: ($gutter / 6);
+   }
 }

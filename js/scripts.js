@@ -11,11 +11,11 @@ function loaded() {
   
 	var controller = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "100%"}});
    var parallaxTween = new TimelineMax().add([
-      TweenMax.to('.terrain.layer1', 1, {bottom: '-100%', ease: Linear.easeNone}),
+      TweenMax.to('.terrain.layer1', 1, {bottom: '-110%', ease: Linear.easeNone}),
       TweenMax.to('.terrain.layer2', 1, {bottom: '-90%', ease: Linear.easeNone}),
-      TweenMax.to('.terrain.layer3', 1, {bottom: '-80%', ease: Linear.easeNone}),
-      TweenMax.to('.terrain.layer4', 1, {bottom: '-70%', ease: Linear.easeNone}),
-      TweenMax.to('.terrain.layer5', 1, {bottom: '-60%', ease: Linear.easeNone})
+      TweenMax.to('.terrain.layer3', 1, {bottom: '-70%', ease: Linear.easeNone}),
+      TweenMax.to('.terrain.layer4', 1, {bottom: '-50%', ease: Linear.easeNone}),
+      TweenMax.to('.terrain.layer5', 1, {bottom: '-30%', ease: Linear.easeNone})
    ]);
   
    var scene = new ScrollMagic.Scene()

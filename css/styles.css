@@ -1327,7 +1327,7 @@ header #header-text {
   pointer-events: none;
 }
 
-header #header-text h1, header #header-text h3 {
+header #header-text h1, header #header-text h2 {
   pointer-events: all;
 }
 
@@ -1335,7 +1335,7 @@ header #header-text h1 {
   margin-bottom: 0;
 }
 
-header #header-text h3 {
+header #header-text h2 {
   margin-top: 0;
 }
 
@@ -1618,6 +1618,10 @@ header #header-text #header-btn:hover #header-arrow path {
   width: 100%;
   border-radius: 0.16667rem;
   padding: calc(1rem / 3) 1rem;
+}
+
+#portfolio-description section p {
+  font-family: "Montserrat", sans-serif;
 }
 
 @media (min-width: 768px) {

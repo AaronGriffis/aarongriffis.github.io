@@ -4,6 +4,7 @@
 @import "lightgallery";
 @import "header";
 @import "portfolio";
+@import "footer";
 
 * {
    box-sizing: border-box;
@@ -13,4 +14,5 @@ body {
    background: $fg;
    margin: 0;
    font-family: $headingFont;
+   line-height: 1.25;
 }

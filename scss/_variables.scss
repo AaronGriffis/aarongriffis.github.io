@@ -11,7 +11,14 @@ $layers: 6;
 $treeCount: 20;
 
 //Masonry
-$gutter: 1rem;
 $masonrySize: 10rem;
+$gutter: 0.5rem;
 $maxColumns: 4;
+$border: 0.125rem;
 $titleFontSize: 1.25rem;
+$aboutFontSize: 1.25rem;
+
+//Footer
+$usernameFontSize: 1rem;
+$usernameLinkSize: 1.66rem;
+$usernameTransition: 0.5s;

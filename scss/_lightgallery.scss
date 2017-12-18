@@ -876,9 +876,9 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   max-height: 80vh;
   width: auto !important;
   height: auto !important;
-  border: ($gutter / 6) solid $bg;
-  border-radius: ($gutter / 2);
-  padding: ($gutter / 6);
+  border: $border solid $bg;
+  border-radius: $border * 3;
+  padding: $border;
 }
 .lg-outer.lg-show-after-load .lg-item .lg-object, .lg-outer.lg-show-after-load .lg-item .lg-video-play {
   opacity: 0;

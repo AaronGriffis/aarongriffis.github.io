@@ -1,0 +1,71 @@
+footer {
+   color: #fff8e7;
+   margin: 3rem auto;
+   font-size: $usernameFontSize;
+}
+
+#username-links, #username {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+}
+
+#username-links>a {
+   color: #fff8e7;
+   font-size: $usernameLinkSize;
+   line-height: $usernameLinkSize * 2;
+   text-align: center;
+   width: $usernameLinkSize * 2;
+   transition: font-size $usernameTransition;
+}
+
+#username-links>a:hover {
+   font-size: $usernameLinkSize * 7/4;
+}
+
+#username {
+   align-items: baseline;
+   transition: margin-left $usernameTransition;
+}
+
+#username-before, #username-after {
+   color: transparent;
+   transition: color $usernameTransition;
+   flex: 1;
+}
+
+#username-before {
+   text-align: right;
+}
+
+#username>span:not(#username-before):not(#username-after), #username-small {
+   font-size: $usernameFontSize + 1rem;
+   font-weight: bold;
+}
+
+#username-small {
+   color: #fff8e7;
+   display: none;
+   text-align: center;
+}
+
+#username-space {
+   font-size: 0;
+   width: $usernameFontSize/2;
+   transition: width $usernameTransition $usernameTransition/2;
+}
+
+#username-space.no-width {
+   width: 0;
+}
+
+@media (max-width: 767px) {
+   #username {
+      display: none;
+   }
+
+   #username-small {
+      display: block;
+   }
+}

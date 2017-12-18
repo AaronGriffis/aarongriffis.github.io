@@ -47,6 +47,12 @@ function loaded() {
       fitWidth: true,
       columnWidth: '.grid-sizer'
    });
+
+   //Footer
+   $('#link-github').hover(function() {onFooterHover(5, "github.com/");}, offFooterHover);
+   $('#link-codepen').hover(function() {onFooterHover(5, "codepen.io/");}, offFooterHover);
+   $('#link-linkedin').hover(function() {onFooterHover(8, "linkedin.com/in/");}, offFooterHover);
+   $('#link-email').hover(function() {onFooterHover(0, "me@", ".com");}, offFooterHover);
 }
 
 function animateTerrain(terrain) {
@@ -88,4 +94,23 @@ function shakeTree() {
      .add(TweenMax.staggerTo(rightBranches, .1, {rotation: 5, ease: Power1.easeOut}, 0.03), 0)
      .add(TweenMax.staggerTo(leftBranches, 2, {rotation: 0, ease: Elastic.easeOut}, 0.03), .1)
      .add(TweenMax.staggerTo(rightBranches, 2, {rotation: 0, ease: Elastic.easeOut}, 0.03), .1);
+}
+
+function onFooterHover(marginLeft, before, after) {
+  $('#username').css("margin-left", marginLeft + "rem");
+  $('#username-before').text(before).css("color", "inherit");
+  $('#username-space').addClass("no-width");
+  if (after !== undefined) {
+    $('#username-after').text(after).css("color", "inherit");
+  }
+  else {
+    $('#username-after').css("color", "transparent");
+  }
+}
+
+function offFooterHover() {
+  $('#username').css("margin-left","0px");
+  $('#username-before').css("color", "transparent");
+  $('#username-after').css("color", "transparent");
+  $('#username-space').removeClass("no-width");
 }

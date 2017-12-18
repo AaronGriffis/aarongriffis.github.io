@@ -27,7 +27,7 @@ header {
       width: 100%;
       text-align: center;
       color: $fg;
-      padding: 0 2rem;
+      padding: 0 1.5rem;
       visibility: hidden;
       pointer-events: none;
 
@@ -73,7 +73,7 @@ header {
          stroke-width: 0.5px;
          float: right;
          height: 3rem;
-         padding: 0.2rem;
+         padding: 0.25rem;
 
          circle {
             fill: $bg;
@@ -95,7 +95,7 @@ header {
    }
 }
 
-@media (min-width: 375px) and (min-height: 375px) {
+@media (min-width: 376px) and (min-height: 376px) {
    header #header-text, header #header-text #header-btn {
       font-size: 3vmin;
    }

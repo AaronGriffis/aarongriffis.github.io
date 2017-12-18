@@ -40,6 +40,7 @@
       background: $bg;
       border-radius: $border;
       margin: ($gutter + ($border * 2)) ($border * 2) ($border * 2) ($gutter + ($border * 2));
+      padding: ($titleFontSize / 5);
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -61,7 +62,7 @@
 
       .tags {
          text-align: center;
-         margin: ($titleFontSize / 10) ($titleFontSize / 5);
+         margin: ($titleFontSize / 10) 0;
 
          h4 {
             color: $bg;
@@ -101,17 +102,17 @@
    height: 100%;
    width: 100%;
    border-radius: $border;
-   padding: $aboutFontSize * 0.8;
+   padding: $titleFontSize * 0.8;
 
    h1{
-      font-size: $aboutFontSize * 1.2;
+      font-size: $titleFontSize * 1.2;
       margin: 0;
    }
 
    p {
       font-family: $pFont;
-      font-size: $aboutFontSize;
-      margin: ($aboutFontSize * 0.8) 0;
+      font-size: $titleFontSize;
+      margin: ($titleFontSize * 0.8) 0;
    }
 }
 
@@ -119,9 +120,8 @@
 @media (min-width: 768px) {
    $gutter: $gutter * 2;
    $border: $border * 2;
-   $masonrySize: $masonrySize * 2;
-   $titleFontSize: $titleFontSize * 2;
-   $aboutFontSize: $aboutFontSize * 1.6;
+   $masonrySize: $masonrySize * 1.5;
+   $titleFontSize: $titleFontSize * 1.6;
 
    #portfolio {
       max-width: $masonrySize * $maxColumns;
@@ -146,6 +146,7 @@
       .title-overlay {
          border-radius: $border;
          margin: ($gutter + ($border * 2)) ($border * 2) ($border * 2) ($gutter + ($border * 2));
+         padding: ($titleFontSize / 5);
          bottom: $border;
    
          .title {
@@ -153,7 +154,7 @@
          }
    
          .tags {
-            margin: ($titleFontSize / 10) ($titleFontSize / 5);
+            margin: ($titleFontSize / 10) 0;
    
             h4 {
                padding: ($titleFontSize / 5) ($titleFontSize / 2);
@@ -181,15 +182,15 @@
    
    #portfolio-description section {
       border-radius: $border;
-      padding: $aboutFontSize * 1.5;
+      padding: $titleFontSize * 1.5;
 
       h1{
-         font-size: $aboutFontSize * 1.5;
+         font-size: $titleFontSize * 1.5;
       }
    
       p {
-         font-size: $aboutFontSize;
-         margin: $aboutFontSize 0;
+         font-size: $titleFontSize * 0.75;
+         margin: $titleFontSize 0;
       }
    }
 

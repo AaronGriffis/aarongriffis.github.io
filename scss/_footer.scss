@@ -17,7 +17,7 @@ footer {
    line-height: $usernameLinkSize * 2;
    text-align: center;
    width: $usernameLinkSize * 2;
-   transition: font-size $usernameTransition;
+   transition: font-size ($usernameTransition / 2);
 }
 
 #username-links>a:hover {

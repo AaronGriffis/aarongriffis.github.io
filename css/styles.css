@@ -1593,7 +1593,7 @@ header #header-text #header-btn:hover #header-arrow path {
 }
 
 .grid-item .title-overlay:hover {
-  opacity: 1;
+  opacity: 1 !important;
 }
 
 .grid-item--width2 {

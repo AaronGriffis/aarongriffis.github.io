@@ -2,20 +2,28 @@ $(document).ready(loaded);
 
 function loaded() {
    var headerTimeline = new TimelineMax();
-  
+   var overlayTimeline = new TimelineMax({repeat:-1, delay:10});
+
    TweenMax.set('.tree path:not(.trunk,.short)', {strokeDasharray: '12px', strokeDashoffset: '12px'});
    TweenMax.set('.tree path.short', {strokeDasharray: '6px', strokeDashoffset: '6px'});
 
    headerTimeline.staggerFrom('.terrain:not(#mountain)', 1, {onStart:animateTerrain, onStartParams:["{self}"]}, 0.25)
       .from('#header-text', 1, {css: {autoAlpha:0, top:'-10vh'}, ease:Power2.easeOut}, 0.5);
-  
+
+   var overlayTransition = 0.35,
+       overlayPause = 6;
+   $('.title-overlay').each(function(index, element) {
+      overlayTimeline.to(element, overlayTransition, {opacity:1, ease:Linear.easeNone})
+         .to(element, overlayTransition, {opacity:0, ease:Linear.easeNone}, "+=" + (overlayTransition + overlayPause));
+   });
+
 	var controller = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "100%"}});
    var parallaxTween = new TimelineMax().add([
-      TweenMax.to('.terrain.layer1', 1, {bottom: '-110%', ease: Linear.easeNone}),
-      TweenMax.to('.terrain.layer2', 1, {bottom: '-90%', ease: Linear.easeNone}),
-      TweenMax.to('.terrain.layer3', 1, {bottom: '-70%', ease: Linear.easeNone}),
-      TweenMax.to('.terrain.layer4', 1, {bottom: '-50%', ease: Linear.easeNone}),
-      TweenMax.to('.terrain.layer5', 1, {bottom: '-30%', ease: Linear.easeNone})
+      TweenMax.to('.terrain.layer1', 1, {bottom: '-110%', ease:Linear.easeNone}),
+      TweenMax.to('.terrain.layer2', 1, {bottom: '-90%', ease:Linear.easeNone}),
+      TweenMax.to('.terrain.layer3', 1, {bottom: '-70%', ease:Linear.easeNone}),
+      TweenMax.to('.terrain.layer4', 1, {bottom: '-50%', ease:Linear.easeNone}),
+      TweenMax.to('.terrain.layer5', 1, {bottom: '-30%', ease:Linear.easeNone})
    ]);
   
    var scene = new ScrollMagic.Scene()

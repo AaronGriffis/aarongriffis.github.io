@@ -1,17 +1,17 @@
 $(document).ready(loaded);
 
 function loaded() {
-   var headerTimeline = new TimelineMax();
+   var introTimeline = new TimelineMax();
    var overlayTimeline = new TimelineMax({repeat:-1, delay:10});
 
-   TweenMax.set('.tree path:not(.trunk,.short)', {strokeDasharray: '12px', strokeDashoffset: '12px'});
-   TweenMax.set('.tree path.short', {strokeDasharray: '6px', strokeDashoffset: '6px'});
+   TweenMax.set('.tree:not(#logo svg) path:not(.trunk,.short)', {strokeDasharray: '12px', strokeDashoffset: '12px'});
+   TweenMax.set('.tree:not(#logo svg) path.short', {strokeDasharray: '6px', strokeDashoffset: '6px'});
 
-   headerTimeline.staggerFrom('.terrain:not(#mountain)', 1, {onStart:animateTerrain, onStartParams:["{self}"]}, 0.25)
-      .from('#header-text', 1, {css: {autoAlpha:0, top:'-10vh'}, ease:Power2.easeOut}, 0.5);
+   introTimeline.staggerFrom('.terrain:not(#mountain)', 1, {onStart:animateTerrain, onStartParams:["{self}"]}, 0.25)
+      .from('#intro-text', 1, {css: {autoAlpha:0, top:'-10vh'}, ease:Power2.easeOut}, 0.5);
 
    var overlayTransition = 0.35,
-       overlayPause = 6;
+       overlayPause = 4;
    $('.title-overlay').each(function(index, element) {
       overlayTimeline.to(element, overlayTransition, {opacity:1, ease:Linear.easeNone})
          .to(element, overlayTransition, {opacity:0, ease:Linear.easeNone}, "+=" + (overlayTransition + overlayPause));
@@ -32,13 +32,24 @@ function loaded() {
   
    $('.tree .trunk').click(shakeTree).hover(shakeTree);
 
-   $('#header-btn')
-      .click(function() {TweenMax.to(window, 2.5, {scrollTo:"#portfolio", ease:Power2.easeInOut}, '+=2');} )
+   //scrollTo
+   var scrollSpeed = 2;
+
+   $('#intro-btn')
+      .click(function() {
+         TweenMax.to(window, scrollSpeed, {scrollTo:{y:"#portfolio", offsetY:(32 + $('body>header').height())}, ease:Power2.easeInOut});
+      })
       .mouseenter(function() {
          var anim = new TimelineLite();
-         anim.to('#header-arrow path', 0.2, {y:1, ease:Power2.easeIn})
-             .to('#header-arrow path', 1, {y:0, ease:Elastic.easeOut});
+         anim.to('#intro-arrow path', 0.2, {y:1, ease:Power2.easeIn})
+             .to('#intro-arrow path', 1, {y:0, ease:Elastic.easeOut});
       });
+
+   $('body>header>nav a').click(function() {
+      var pos = $($(this).attr('href')).offset().top;
+      TweenMax.to(window, scrollSpeed, {scrollTo:{y:pos, offsetY:(32 + $('body>header').height())}, ease:Power2.easeInOut});
+      return false;
+   });
    
    // Activate Gallery
    $('#portfolio .grid').lightGallery({

@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat|Quicksand');
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Comfortaa');
 @import "variables";
 @import "normalize";
 @import "lightgallery";
 @import "header";
+@import "intro";
 @import "portfolio";
 @import "footer";
 
@@ -12,7 +13,131 @@
 
 body {
    background: $fg;
+   color: $bg;
    margin: 0;
    font-family: $headingFont;
    line-height: 1.25;
+
+   &>section {
+      max-width: $masonrySize * $maxColumns;
+      margin: 0 auto;
+
+      &>h1 {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         text-align: center;
+         font-size: 1.5rem;
+         margin: 2rem 0;
+      }
+   }
+}
+
+body>section>h1:before, body>section>h1:after {
+   content: "";
+   background: $bg;
+   border-radius: 0.5rem;
+   flex-grow: 1;
+   height: $border;
+   margin: 0 1rem;
+   min-width: 3rem;
+}
+
+@media (min-width: 376px) {
+   body>section>h1 {
+      font-size: 5vmin;
+   }
+}
+
+@media (min-width: 768px) {
+   $gutter: $gutter * 2;
+   $border: $border * 2;
+   $masonrySize: $masonrySize * 1.5;
+   $titleFontSize: $titleFontSize * 1.6;
+
+   body {
+      &>header {
+         border-bottom: $border solid $bg;
+
+         ul>li>a {
+            font-size: $titleFontSize;
+         }
+         
+         #logo {
+            border: $border solid $bg;
+            padding: $border;
+         }
+      }
+
+      &>section {
+         max-width: $masonrySize * $maxColumns;
+         
+         &>h1 {
+            font-size: 2.5rem;
+         }
+
+         &>h1:before, &>h1:after {
+            height: $border;
+         }
+      }
+   }
+
+   .grid-sizer, .grid-item {
+      width: $masonrySize;
+      height: $masonrySize;
+   }
+
+   .grid-item {
+      img {
+         border: $border solid $bg;
+         border-radius: $border * 3;
+         padding: $border;
+         width: $masonrySize - ($gutter * 2);
+         height: $masonrySize - ($gutter * 2);
+         margin-left: $gutter;
+         margin-top: $gutter;
+      }
+      
+      .title-overlay {
+         border-radius: $border;
+         margin: ($gutter + ($border * 2)) ($border * 2) ($border * 2) ($gutter + ($border * 2));
+         padding: ($titleFontSize / 5);
+         bottom: $border;
+   
+         .title {
+            font-size: $titleFontSize;
+         }
+   
+         .tags {
+            margin: ($titleFontSize / 10) 0;
+   
+            h4 {
+               padding: ($titleFontSize / 5) ($titleFontSize / 2);
+               margin: ($titleFontSize / 10) 0;
+            }
+         }
+      }
+   }
+   
+   .grid-item--width2{
+      width: ($masonrySize * 2);
+   
+      img {
+         width: ($masonrySize * 2) - ($gutter * 2);
+      }
+   }
+   
+   .grid-item--height2 {
+      height: ($masonrySize * 2);
+   
+      img {
+         height: ($masonrySize * 2) - ($gutter * 2);
+      }
+   }
+
+   .lg-outer .lg-image {
+      border: $border solid $bg;
+      border-radius: $border * 3;
+      padding: $border;
+   }
 }

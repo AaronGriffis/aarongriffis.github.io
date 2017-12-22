@@ -28,9 +28,40 @@
    <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body class="home">
-
+<body>
    <header>
+      <nav>
+         <ul>
+            <li><a href="#intro">Home</a></li>
+            <li><a href="#portfolio">Work</a></li>
+            <li>
+               <div id="logo">
+                  <svg class="tree" viewBox="15 15 20 25">
+                     <g>
+                        <path class="trunk" d="m25,22 l-0.5,15 a1,1 0 0,0 1,0 l-0.5,-15"/>
+                        <path d="m25,18 a10,10 0 0 1 -2,6" class="left"/>
+                        <path d="m25,21 a5,5 0 0 1 -2,3" class="left short"/>
+                        <path d="m25,18 a15,15 0 0 0 3,9" class="right"/>
+                        <path d="m25,23 a6,6 0 0 0 2,3.5" class="right short"/>
+                        <path d="m25,21 a8,8 0 0 1 -4,8" class="left"/>
+                        <path d="m25,23 a6,6 0 0 1 -3,6" class="left"/>
+                        <path d="m25,24 a9,9 0 0 0 6,8" class="right"/>
+                        <path d="m25,26 a8,8 0 0 0 5,6.5" class="right"/>
+                        <path d="m25,29 a8,8 0 0 0 3,3.5" class="right short"/>
+                        <path d="m25,25 a9,9 0 0 1 -6,9" class="left"/>
+                        <path d="m25,27 a8,8 0 0 1 -5,7.5" class="left"/>
+                        <path d="m25,28 a7,7 0 0 1 -3,6.5" class="left"/>
+                     </g>
+                  </svg>
+               </div>
+            </li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+         </ul>
+      </nav>
+   </header>
+
+   <div id="intro">
       <svg xmlns="http://www.w3.org/2000/svg" class="terrain right layer1" viewbox="-50 0 50 50" preserveAspectRatio="xMinYMax">
          <path d="M50 0 l-35 50 h35z"/>
       </svg>
@@ -270,14 +301,14 @@
             </g>
          </svg>
       </svg>
-      <div id="header-text">
+      <div id="intro-text">
          <h1>Hi, I'm Aaron Griffis</h1>
          <h2>and I enjoy making things</h2>
 
-         <button id="header-btn">
+         <button id="intro-btn">
             <span>
                <p>Take a look at some of<br/>the things I've made</p>
-               <svg xmlns="http://www.w3.org/2000/svg" id="header-arrow" viewbox="0 0 8 8">
+               <svg xmlns="http://www.w3.org/2000/svg" id="intro-arrow" viewbox="0 0 8 8">
                   <circle cx="4" cy="4" r="4"/>
                   <path d="m4 2.5 v3 m-1 -1 l1 1 l 1 -1"/>
                </svg>
@@ -285,21 +316,13 @@
          </button>
          
       </div>
-   </header>
+   </div>
           
-   <div id="portfolio">
+   <section id="portfolio">
+      <h1>Some of the Things I've Made</h1>
       <div class="grid" data-masonry='{ "itemSelector": ".grid-item", "isFitWidth": true, "columnWidth": 320 }'>
          <div class="grid-sizer"></div>
          <div class="grid-item grid-item--height2 grid-item--width2">
-            <div id="portfolio-description">
-               <section>
-                  <h1>About me</h1>
-                  <p>I'm a programmer and designer born and raised in the PNW.</p>
-                  <p>I view the web as an interactive, digital canvas just waiting to be painted with artwork and information.</p>
-               </section>
-            </div>
-         </div>
-         <div class="grid-item grid-item--width2">
             <a href="img/portfolio/fullsize/movies.png" data-sub-html="<h3>Movie Collection Web App</h3><h4>A web app for browsing and managing my movie collection. Built with jQuery and Bootstrap. <a href='http://movies.aarongriffis.com'>Check it out!</a></h4>">
                <img src="img/portfolio/thumbs/movies-thumb.png">
                <div class="title-overlay">
@@ -310,6 +333,19 @@
                      <h4>Bootstrap</h4>
                      <h4>SQL</h4>
                      <h4>API</h4>
+                  </div>
+               </div>
+            </a>
+         </div>
+         <div class="grid-item grid-item--width2">
+            <a href="img/portfolio/fullsize/movies.png" data-sub-html="<h3>Movie Trailer Website</h3><h4>A responsive website advertising The Grand Budapest Hotel. <a href='http://www.aarongriffis.com/p1-movie-trailer/'>Check it out!</a></h4>">
+               <img src="img/portfolio/thumbs/movies-thumb.png">
+               <div class="title-overlay">
+                  <h1 class="title">Movie Trailer Website</h1>
+                  <div class="tags">
+                     <h4>Website</h4>
+                     <h4>jQuery</h4>
+                     <h4>Sass</h4>
                   </div>
                </div>
             </a>
@@ -379,7 +415,16 @@
             </a>
          </div>
       </div>
-   </div>
+   </section>
+
+   <section id="about">
+      <h1>A Bit About Me</h1>
+      <p>I'm an aspiring web developer with a degree in computer science and a minor in design.</p>
+   </section>
+
+   <section id="contact">
+      <h1>Say Hi</h1>
+   </section>
 
    <footer>
       <div id="username" class="hidden-xs">

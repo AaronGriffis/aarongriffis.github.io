@@ -1,11 +1,11 @@
 #portfolio {
    background: $fg;
    max-width: $masonrySize * $maxColumns;
-   margin: 10vh auto 0;
+   margin-top: 10vh;
 }
 
 .grid {
-   margin: 0 auto;
+   margin: -1rem auto;
 }
 
 .grid:after {
@@ -26,7 +26,7 @@
       position: relative;
    }
 
-   img, #portfolio-description {
+   img {
       border: $border solid $bg;
       border-radius: $border * 3;
       padding: $border;
@@ -83,7 +83,7 @@
 .grid-item--width2{
    width: ($masonrySize * 2);
 
-   img, #portfolio-description {
+   img {
       width: ($masonrySize * 2) - ($gutter * 2);
    }
 }
@@ -91,112 +91,7 @@
 .grid-item--height2 {
    height: ($masonrySize * 2);
 
-   img, #portfolio-description {
+   img {
       height: ($masonrySize * 2) - ($gutter * 2);
-   }
-}
-
-#portfolio-description section {
-   background: $bg;
-   color: $fg;
-   height: 100%;
-   width: 100%;
-   border-radius: $border;
-   padding: $titleFontSize * 0.8;
-
-   h1{
-      font-size: $titleFontSize * 1.2;
-      margin: 0;
-   }
-
-   p {
-      font-family: $pFont;
-      font-size: $titleFontSize;
-      margin: ($titleFontSize * 0.8) 0;
-   }
-}
-
-
-@media (min-width: 768px) {
-   $gutter: $gutter * 2;
-   $border: $border * 2;
-   $masonrySize: $masonrySize * 1.5;
-   $titleFontSize: $titleFontSize * 1.6;
-
-   #portfolio {
-      max-width: $masonrySize * $maxColumns;
-   }
-
-   .grid-sizer, .grid-item {
-      width: $masonrySize;
-      height: $masonrySize;
-   }
-
-   .grid-item {
-      img, #portfolio-description {
-         border: $border solid $bg;
-         border-radius: $border * 3;
-         padding: $border;
-         width: $masonrySize - ($gutter * 2);
-         height: $masonrySize - ($gutter * 2);
-         margin-left: $gutter;
-         margin-top: $gutter;
-      }
-      
-      .title-overlay {
-         border-radius: $border;
-         margin: ($gutter + ($border * 2)) ($border * 2) ($border * 2) ($gutter + ($border * 2));
-         padding: ($titleFontSize / 5);
-         bottom: $border;
-   
-         .title {
-            font-size: $titleFontSize;
-         }
-   
-         .tags {
-            margin: ($titleFontSize / 10) 0;
-   
-            h4 {
-               padding: ($titleFontSize / 5) ($titleFontSize / 2);
-               margin: ($titleFontSize / 10) 0;
-            }
-         }
-      }
-   }
-   
-   .grid-item--width2{
-      width: ($masonrySize * 2);
-   
-      img, #portfolio-description {
-         width: ($masonrySize * 2) - ($gutter * 2);
-      }
-   }
-   
-   .grid-item--height2 {
-      height: ($masonrySize * 2);
-   
-      img, #portfolio-description {
-         height: ($masonrySize * 2) - ($gutter * 2);
-      }
-   }
-   
-   #portfolio-description section {
-      border-radius: $border;
-      padding: $titleFontSize * 1.5;
-
-      h1{
-         font-size: $titleFontSize * 1.5;
-      }
-   
-      p {
-         font-size: $titleFontSize * 0.75;
-         margin: $titleFontSize 0;
-      }
-   }
-
-   .lg-outer .lg-image {
-      border: $border solid $bg;
-      border-radius: $border * 3;
-      padding: $border;
    }
 }

@@ -1,0 +1,47 @@
+#contact {
+   form {
+      width: 75%;
+      margin: 0 auto;
+      
+      input, textarea {
+         display: block;
+         width: 100%;
+         background: $bg;
+         color: $fg;
+         border: none;
+         border-radius: $border * 3;
+         font: bold 1rem $headingFont;
+         margin: $gutter 0;
+         padding: 1rem;
+         outline: none;
+      }
+
+      textarea {
+         height: 8rem;
+         resize: vertical;
+      }
+
+      input[type="submit"] {
+         @include double-border();
+      }
+
+      ::placeholder {
+         color: transparentize($fg, 0.5);
+      }
+   }
+}
+
+@mixin contact--md($border) {
+   #contact form {
+      width: 50%;
+
+      input, textarea {
+         border-radius: $border * 3;
+      }
+
+      input[type="submit"] {
+         font-size: 1.5rem;
+         @include double-border($border: $border);
+      }
+   }
+}

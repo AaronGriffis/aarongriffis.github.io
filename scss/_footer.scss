@@ -1,6 +1,6 @@
 footer {
    color: #fff8e7;
-   margin: 3rem auto;
+   margin: 6rem auto 2rem;
    font-size: $usernameFontSize;
 }
 
@@ -11,20 +11,22 @@ footer {
    align-items: center;
 }
 
-#username-links>a {
+#username-links > a {
    color: #fff8e7;
    font-size: $usernameLinkSize;
    line-height: $usernameLinkSize * 2;
+   outline: none;
    text-align: center;
    width: $usernameLinkSize * 2;
    transition: font-size ($usernameTransition / 2);
-}
 
-#username-links>a:hover {
-   font-size: $usernameLinkSize * 7/4;
+   &:hover, &:focus {
+      font-size: $usernameLinkSize * 7/4;
+   }
 }
 
 #username {
+   display: none;
    align-items: baseline;
    transition: margin-left $usernameTransition;
 }
@@ -39,14 +41,14 @@ footer {
    text-align: right;
 }
 
-#username>span:not(#username-before):not(#username-after), #username-small {
+#username > span:not(#username-before):not(#username-after), #username-small {
    font-size: $usernameFontSize + 1rem;
    font-weight: bold;
 }
 
 #username-small {
    color: #fff8e7;
-   display: none;
+   display: block;
    text-align: center;
 }
 
@@ -60,12 +62,16 @@ footer {
    width: 0;
 }
 
-@media (max-width: 767px) {
-   #username {
-      display: none;
-   }
+@mixin footer--md() {
+   footer {
+      margin: 8rem auto 2rem;
+   
+      #username {
+         display: flex;
+      }
 
-   #username-small {
-      display: block;
+      #username-small {
+         display: none;
+      }
    }
 }

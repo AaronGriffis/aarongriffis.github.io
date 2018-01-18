@@ -1,0 +1,21 @@
+@mixin double-border($bdr-rds: ($border * 3), $border: $border, $inv:false) {
+   background: if($inv, $bg, $fg);
+   color: if($inv, $fg, $bg);
+   border: solid $border if($inv, $fg, $bg);
+   border-radius: $bdr-rds;
+   box-shadow: inset 0 0 0 $border if($inv, $bg, $fg);
+   outline: none;
+   transition: background $btn-transition, 
+               color $btn-transition,
+               box-shadow 0.1s,
+               opacity $btn-transition;
+
+   &:hover, &:focus {
+      background: if($inv, $fg, $bg);
+      color: if($inv, $bg, $fg);
+   }
+
+   &:active {
+      box-shadow: inset 0 0 0 ($border * 1.5) if($inv, $bg, $fg);
+   }
+}

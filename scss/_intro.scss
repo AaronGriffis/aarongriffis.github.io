@@ -25,7 +25,6 @@
    #intro-text {
       top: 15vmin;
       width: 100%;
-      text-align: center;
       color: $fg;
       padding: 0 1.5rem;
       visibility: hidden;
@@ -44,24 +43,21 @@
       }
 
       #intro-btn {
-         background: $fg;
-         color: $bg;
-         border: none;
-         border-radius: 50rem;
          height: 3rem;
          padding: 0;
          cursor: pointer;
          font: bold 1rem $headingFont;
          outline: none;
          pointer-events: all;
-         transition: background 0.2s ease-in-out;
+
+         @include double-border(50rem, $inv: true);
 
          p {
             display: inline-block;
             white-space: nowrap;
-            margin: 0.25rem;
+            margin: $border;
             margin-left: 1rem;
-            line-height: 1.25rem;
+            line-height: (3rem / 2) - ($border * 2);
          }
       }
 
@@ -72,68 +68,15 @@
          stroke-linejoin: round;
          stroke-width: 0.5px;
          float: right;
-         height: 3rem;
-         padding: 0.25rem;
+         height: 3rem - ($border * 2);
+         width: 3rem - ($border * 2);
+         padding: calc(#{$border} - 1px);
 
          circle {
             fill: $bg;
             stroke: none;
          }
-
-         path {
-            transition: stroke 0.2s ease-in-out;
-         }
       }
-      
-      #intro-btn:hover {
-         background: lighten($fg, 10%);
-      }
-      
-      #intro-btn:hover #intro-arrow path {
-         stroke: lighten($fg, 10%);
-      }
-   }
-}
-
-@media (min-width: 376px) and (min-height: 376px) {
-   #intro #intro-text, #intro #intro-text #intro-btn {
-      font-size: 3vmin;
-   }
-
-   #intro #intro-text #intro-btn {
-      height: 10vmin;
-   }
-
-   #intro #intro-text #intro-btn p {
-      line-height: 4vmin;
-      margin: 1vmin;
-      margin-left: 4vmin;
-   }
-
-   #intro #intro-text #intro-arrow {
-      height: 10vmin;
-      padding: 1vmin;
-   }
-}
-
-@media (min-width: 768px) and (min-height: 768px) {
-   #intro #intro-text, #intro #intro-text #intro-btn {
-      font-size: 1.5rem;
-   }
-   
-   #intro #intro-text #intro-btn {
-      height: 5rem;
-   }
-
-   #intro #intro-text #intro-btn p {
-      line-height: 2rem;
-      margin: 0.5rem;
-      margin-left: 2rem;
-   }
-
-   #intro #intro-text #intro-arrow {
-      height: 5rem;
-      padding: 0.5rem;
    }
 }
 
@@ -160,7 +103,7 @@
    $g: green($bg) + (((green($fg) - green($bg)) / $layers) * ($scale + 1));
    $b: blue($bg) + (((blue($fg) - blue($bg)) / $layers) * ($scale + 1));
       
-   .layer#{$i}>path {
+   .layer#{$i} > path {
       fill: rgb($r, $g, $b);
    }
 
@@ -169,6 +112,54 @@
       
       .trunk {
       fill: rgb($r, $g, $b);
+      }
+   }
+}
+
+@mixin intro--sm() {
+   #intro #intro-text, #intro #intro-text #intro-btn {
+      font-size: 3vmin;
+   }
+
+   #intro #intro-text #intro-btn {
+      height: 10vmin;
+
+      p {
+         line-height: calc((10vmin / 2) - (#{$border} * 2));
+         margin-left: 4vmin;
+      }
+
+      #intro-arrow {
+         height: calc(10vmin - (#{$border} * 2));
+         width: calc(10vmin - (#{$border} * 2));
+      }
+   }
+}
+
+@mixin intro--md($border) {
+   #intro #intro-text, #intro #intro-text #intro-btn {
+      font-size: 1.5rem;
+   }
+
+   #intro #intro-text {
+      #intro-btn {
+         border: solid $border $fg;
+         box-shadow: inset 0 0 0 $border $bg;
+         height: 5rem;
+
+         @include double-border(50rem, $border, $inv: true);
+
+         p {
+            line-height: (5rem / 2) - ($border * 2);
+            margin: $border;
+            margin-left: 2rem;
+         }
+
+         #intro-arrow {
+            height: 5rem - ($border * 2);
+            width: 5rem - ($border * 2);
+            padding: calc(#{$border} - 1px);
+         }
       }
    }
 }

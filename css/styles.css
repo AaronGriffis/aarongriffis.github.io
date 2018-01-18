@@ -224,7 +224,7 @@ body > header {
   box-shadow: inset 0 -0.125rem #fff8e6;
   position: fixed;
   top: 0;
-  height: 10vh;
+  height: 12vh;
   width: 100%;
   z-index: 100;
 }
@@ -280,8 +280,9 @@ body > header nav ul li a:active {
   border-radius: 50%;
   box-shadow: inset 0 0 0 0.125rem #3a471f;
   flex-shrink: 0;
-  height: calc(10vh - (0.125rem * 2));
-  width: calc(10vh - (0.125rem * 2));
+  height: calc(12vh - (0.125rem * 2));
+  width: calc(12vh - (0.125rem * 2));
+  pointer-events: unset;
 }
 
 #logo path {
@@ -292,11 +293,21 @@ body > header nav ul li a:active {
   fill: #3a471f;
 }
 
-#intro {
+#loading-mask, #intro {
   background: #fff8e6;
-  height: 80vh;
-  margin: 10vh 0 0;
+  height: 76vh;
+}
+
+#loading-mask {
+  display: none;
+  position: absolute;
+  width: 100%;
+  z-index: 99;
+}
+
+#intro {
   position: relative;
+  margin: 12vh 0 0;
   overflow: hidden;
   text-align: center;
 }
@@ -322,7 +333,6 @@ body > header nav ul li a:active {
   width: 100%;
   color: #3a471f;
   padding: 0 1.5rem;
-  visibility: hidden;
   pointer-events: none;
 }
 
@@ -478,7 +488,7 @@ body > header nav ul li a:active {
 }
 
 #portfolio {
-  margin-top: 10vh;
+  margin-top: 12vh;
 }
 
 .grid {
@@ -496,6 +506,10 @@ body > header nav ul li a:active {
   height: 10rem;
 }
 
+.grid-sizer {
+  position: absolute;
+}
+
 .gutter-sizer {
   width: 1rem;
 }
@@ -504,6 +518,7 @@ body > header nav ul li a:active {
   float: left;
   margin-bottom: 1rem;
   outline: none;
+  position: relative;
 }
 
 .grid-item:hover .title-overlay, .grid-item:focus .title-overlay {
@@ -557,7 +572,7 @@ body > header nav ul li a:active {
   margin: 0.125rem 0;
 }
 
-.grid-item .title-overlay .tags h4 {
+.grid-item .title-overlay .tags p {
   color: #fff8e6;
   background: #3a471f;
   padding: 0.25rem 0.625rem;
@@ -693,7 +708,7 @@ footer {
     font-size: 5vmin;
   }
   body > header nav ul li a {
-    font: bold 1.25rem "Comfortaa", sans-serif;
+    font: bold 1rem "Comfortaa", sans-serif;
   }
   #intro #intro-text, #intro #intro-text #intro-btn {
     font-size: 3vmin;
@@ -725,6 +740,7 @@ footer {
   body > header {
     border-bottom: 0.25rem solid #3a471f;
     box-shadow: inset 0 -0.25rem #fff8e6;
+    height: 8vh;
   }
   body > header nav {
     max-width: 70rem;
@@ -732,6 +748,8 @@ footer {
   body > header nav ul li a {
     border: solid 0.25rem transparent;
     font: bold 1.5rem "Comfortaa", sans-serif;
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
   }
   body > header nav ul li a:hover, body > header nav ul li a:focus {
     border: solid 0.25rem #fff8e6;
@@ -742,11 +760,17 @@ footer {
   body > header #logo {
     border: 0.25rem solid #fff8e6;
     box-shadow: inset 0 0 0 0.25rem #3a471f;
-    height: calc(10vh - (0.25rem * 2));
-    width: calc(10vh - (0.25rem * 2));
+    height: calc(8vh - (0.25rem * 2));
+    width: calc(8vh - (0.25rem * 2));
+  }
+  #loading-mask, #intro {
+    height: 84vh;
   }
   #intro #intro-text, #intro #intro-text #intro-btn {
     font-size: 1.5rem;
+  }
+  #intro {
+    margin: 8vh 0 0;
   }
   #intro #intro-text #intro-btn {
     border: solid 0.25rem #3a471f;
@@ -777,6 +801,9 @@ footer {
     width: 4.5rem;
     padding: calc(0.25rem - 1px);
   }
+  #portfolio {
+    margin-top: 8vh;
+  }
   .grid-sizer, .grid-item {
     width: 15rem;
     height: 15rem;
@@ -804,7 +831,7 @@ footer {
   .grid-item .title-overlay .tags {
     margin: 0.2rem 0;
   }
-  .grid-item .title-overlay .tags h4 {
+  .grid-item .title-overlay .tags p {
     padding: 0.4rem 1rem;
     margin: 0.2rem 0;
   }

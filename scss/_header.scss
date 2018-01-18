@@ -4,7 +4,7 @@ body > header {
    box-shadow: inset 0 (-$border) $bg;
    position: fixed;
    top: 0;
-   height: 10vh;
+   height: $headerHeight;
    width: 100%;
    z-index: 100;
 
@@ -61,8 +61,9 @@ body > header {
    border-radius: 50%;
    box-shadow: inset 0 0 0 $border $fg;
    flex-shrink: 0;
-   height: calc(10vh - (#{$border} * 2));
-   width: calc(10vh - (#{$border} * 2));
+   height: calc(#{$headerHeight} - (#{$border} * 2));
+   width: calc(#{$headerHeight} - (#{$border} * 2));
+   pointer-events: unset;
 
    path {
       stroke: $fg;
@@ -75,23 +76,24 @@ body > header {
 
 @mixin header--sm() {
    body > header nav ul li a {
-      // margin: ($border * 2);
-      // padding: 0.25rem 0.75rem;
-      font: bold $titleFontSize $headingFont;
+      font: bold 1rem $headingFont;
    }
 }
 
-@mixin header--md($gutter, $border, $masonrySize, $titleFontSize) {
+@mixin header--md($headerHeight, $gutter, $border, $masonrySize, $titleFontSize) {
    body > header {
       border-bottom: $border solid $fg;
       box-shadow: inset 0 (-$border) $bg;
+      height: $headerHeight;
 
       nav {
          max-width: ($masonrySize * $maxColumns) + ($gutter * ($maxColumns + 1));
 
          ul li a {
             border: solid $border transparent;
-            font: bold ($titleFontSize * 0.75) $headingFont;
+            font: bold 1.5rem $headingFont;
+            margin: ($border * 2);
+            padding: 0.5rem 1rem;
 
             &:hover, &:focus {
                border: solid $border hsl(43, 100%, 95%);
@@ -106,8 +108,8 @@ body > header {
       #logo {
          border: $border solid $bg;
          box-shadow: inset 0 0 0 $border $fg;
-         height: calc(10vh - (#{$border} * 2));
-         width: calc(10vh - (#{$border} * 2));
+         height: calc(#{$headerHeight} - (#{$border} * 2));
+         width: calc(#{$headerHeight} - (#{$border} * 2));
       }
    }
 }

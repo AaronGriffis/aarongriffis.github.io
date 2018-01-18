@@ -4,12 +4,20 @@ function loaded() {
    var introTimeline = new TimelineMax();
    var overlayTimeline = new TimelineMax({repeat:-1, delay:10});
 
+   $('#loading-mask').show();
+
+   TweenMax.set('.terrain.left', {attr: {viewBox:'50 0 50 50'}});
+   TweenMax.set('.terrain.right', {attr: {viewBox:'-50 0 50 50'}});
    TweenMax.set('.tree:not(#logo) path:not(.trunk,.short)', {strokeDasharray: '12px', strokeDashoffset: '12px'});
    TweenMax.set('.tree:not(#logo) path.short', {strokeDasharray: '6px', strokeDashoffset: '6px'});
 
-   introTimeline.staggerFrom('.terrain:not(#mountain)', 1, {onStart:animateTerrain, onStartParams:["{self}"]}, 0.25)
-      .from('#intro-text', 1, {css: {autoAlpha:0, top:'-10vh'}, ease:Power2.easeOut}, 0.5);
+   $('#loading-mask').hide();
 
+   //intro slide in animations
+   introTimeline.staggerFrom('.terrain', 1, {onStart:animateTerrain, onStartParams:["{self}"]}, 0.25)
+      .from('#intro-text', 1, {css: {autoAlpha:0, top:'-12vh'}, ease:Power2.easeOut}, 0.5);
+
+   //portfolio overlay rotation
    var overlayTransition = 0.3,
        overlayPause = 4;
    $('.title-overlay').each(function(index, element) {
@@ -17,6 +25,7 @@ function loaded() {
          .to(element, overlayTransition, {opacity:0, ease:Linear.easeNone}, "+=" + (overlayTransition + overlayPause));
    });
 
+   //intro parallax
 	var controller = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "100%"}});
    var parallaxTween = new TimelineMax().add([
       TweenMax.to('.terrain.layer1', 1, {bottom: '-110%', ease:Linear.easeNone}),
@@ -25,27 +34,10 @@ function loaded() {
       TweenMax.to('.terrain.layer4', 1, {bottom: '-50%', ease:Linear.easeNone}),
       TweenMax.to('.terrain.layer5', 1, {bottom: '-30%', ease:Linear.easeNone})
    ]);
-  
    var scene = new ScrollMagic.Scene()
       .setTween(parallaxTween)
       .addTo(controller);
   
-   $('.tree .trunk').click(shakeTree).hover(shakeTree);
-
-   //scrollTo
-   var scrollSpeed = 2;
-
-   $('#intro-btn')
-      .click(function() {
-         TweenMax.to(window, scrollSpeed, {scrollTo:{y:"#portfolio", offsetY:(32 + $('body > header').height())}, ease:Power2.easeInOut});
-      });
-
-   $('body > header > nav a').click(function() {
-      var pos = $($(this).attr('href')).offset().top;
-      TweenMax.to(window, scrollSpeed, {scrollTo:{y:pos, offsetY:(32 + $('body > header').height())}, ease:Power2.easeInOut});
-      return false;
-   });
-
    //Masonry
    $('#portfolio .grid').masonry({
       itemSelector: '.grid-item',
@@ -54,12 +46,34 @@ function loaded() {
       gutter: '.gutter-sizer'
    });
 
+   //event handlers
+
+   //shake trees
+   $('.tree:not(#logo) .trunk').click(shakeTree).hover(shakeTree);
+   $('#logo').click(function(e) {shakeTree(e, $('#logo .trunk'));});
+
+   //scrollTo
+   var scrollSpeed = 2;
+
+   $('#intro-btn')
+      .click(function() {
+         TweenMax.to(window, scrollSpeed, {scrollTo:{y:"#portfolio", offsetY:(32 + $('body > header').height())}, ease:Power2.easeInOut});
+         return false;
+      });
+
+   $('body > header > nav a').click(function() {
+      var pos = $($(this).attr('href')).offset().top;
+      TweenMax.to(window, scrollSpeed, {scrollTo:{y:pos, offsetY:(32 + $('body > header').height())}, ease:Power2.easeInOut});
+      return false;
+   });
+
    //Footer
    $('#link-github').hover(function() {onFooterHover(5, "github.com/");}, offFooterHover);
    $('#link-codepen').hover(function() {onFooterHover(5, "codepen.io/");}, offFooterHover);
    $('#link-linkedin').hover(function() {onFooterHover(8, "linkedin.com/in/");}, offFooterHover);
    $('#link-email').hover(function() {onFooterHover(0, "me@", ".com");}, offFooterHover);
 }
+
 
 function animateTerrain(terrain) {
    var $this = terrain.target,
@@ -81,9 +95,9 @@ function animateTree(tree) {
    TweenMax.set(leftBranches, {rotation: -20, transformOrigin: 'top right'});
    TweenMax.set(rightBranches, {rotation: 20});
   
-   tl.to($($this), 0.75, {
+   tl.from($($this), 0.75, {
       attr: {
-         viewBox:'15 0 20 40'
+         viewBox:'15 -40 20 40'
       },
       ease: Back.easeOut
       }, 0.8)
@@ -91,10 +105,20 @@ function animateTree(tree) {
       .add(TweenMax.staggerTo(branches, 2, {rotation: 0, ease: Elastic.easeOut}, 0.03), '-=1.25');
 }
 
-function shakeTree() {
-   var leftBranches = $('~path.left', this),
-       rightBranches = $('~path.right', this),
+function shakeTree(e, trunk) {
+   var leftBranches,
+       rightBranches,
        tl = new TimelineMax();
+
+   if (trunk !== undefined) {
+      leftBranches = $('~path.left', trunk);
+      rightBranches = $('~path.right', trunk);
+   }
+   else {
+      leftBranches = $('~path.left', this);
+      rightBranches = $('~path.right', this);
+   }
+   
 
    tl.add(TweenMax.staggerTo(leftBranches, .1, {rotation: -5, ease: Power1.easeOut}, 0.03), 0)
      .add(TweenMax.staggerTo(rightBranches, .1, {rotation: 5, ease: Power1.easeOut}, 0.03), 0)

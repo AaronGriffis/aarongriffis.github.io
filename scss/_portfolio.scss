@@ -1,5 +1,5 @@
 #portfolio {
-   margin-top: 10vh;
+   margin-top: $headerHeight;
 }
 
 .grid {
@@ -17,6 +17,10 @@
    height: $masonrySize;
 }
 
+.grid-sizer {
+   position: absolute;
+}
+
 .gutter-sizer {
    width: $gutter;
 }
@@ -25,6 +29,7 @@
    float: left;
    margin-bottom: $gutter;
    outline: none;
+   position: relative;
 
    &:hover .title-overlay, &:focus .title-overlay {
       opacity: 1 !important;
@@ -76,7 +81,7 @@
          text-align: center;
          margin: ($titleFontSize / 10) 0;
 
-         h4 {
+         p {
             color: $bg;
             background: $fg;
             padding: ($titleFontSize / 5) ($titleFontSize / 2);
@@ -96,7 +101,11 @@
    height: ($masonrySize * 2) + $gutter;
 }
 
-@mixin portfolio--md($gutter, $border, $masonrySize, $titleFontSize) {
+@mixin portfolio--md($headerHeight, $gutter, $border, $masonrySize, $titleFontSize) {
+   #portfolio {
+      margin-top: $headerHeight;
+   }
+
    .grid-sizer, .grid-item {
       width: $masonrySize;
       height: $masonrySize;
@@ -129,7 +138,7 @@
          .tags {
             margin: ($titleFontSize / 10) 0;
    
-            h4 {
+            p {
                padding: ($titleFontSize / 5) ($titleFontSize / 2);
                margin: ($titleFontSize / 10) 0;
             }

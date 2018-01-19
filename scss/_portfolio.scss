@@ -47,6 +47,10 @@
       height: $masonrySize;
    }
 
+   .thumb-md {
+      display: none;
+   }
+
    .title-overlay {
       background: $bg;
       border: $border solid $bg;
@@ -123,6 +127,14 @@
          padding: $border;
          width: $masonrySize;
          height: $masonrySize;
+      }
+
+      .thumb-sm {
+         display: none;
+      }
+
+      .thumb-md {
+         display: unset;
       }
       
       .title-overlay {

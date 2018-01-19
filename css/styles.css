@@ -537,6 +537,10 @@ body > header nav ul li a:active {
   height: 10rem;
 }
 
+.grid-item .thumb-md {
+  display: none;
+}
+
 .grid-item .title-overlay {
   background: #fff8e6;
   border: 0.125rem solid #fff8e6;
@@ -818,6 +822,12 @@ footer {
     padding: 0.25rem;
     width: 15rem;
     height: 15rem;
+  }
+  .grid-item .thumb-sm {
+    display: none;
+  }
+  .grid-item .thumb-md {
+    display: unset;
   }
   .grid-item .title-overlay {
     border: 0.25rem solid #fff8e6;

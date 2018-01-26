@@ -29,6 +29,21 @@
 </head>
 
 <body>
+   <svg id="vignette" viewbox="0 0 2 2" preserveAspectRatio="none">
+      <defs>
+         <filter id="vig-blur">
+            <feGaussianBlur stdDeviation="0.2" />
+         </filter>
+
+         <mask id="vig-mask">
+            <rect fill="#fff" width="100%" height="100%" />
+            <path fill="#000" d="M0 1 Q0 0 1 0 T2 1 T1 2 T0 1" filter="url(#vig-blur)" />
+         </mask>
+      </defs>
+      
+      <path d="M-1 -1 H4 V4 H-4 Z" mask="url(#vig-mask)" />
+   </svg>
+
    <header>
       <nav>
          <ul>
@@ -61,7 +76,6 @@
 
    <div id="loading-mask"></div>
    <div id="intro">
-
       <svg xmlns="http://www.w3.org/2000/svg" class="terrain right layer1" viewbox="0 0 50 50" preserveAspectRatio="xMinYMax">
          <path d="M50 0 l-35 50 h35z"/>
       </svg>
@@ -301,10 +315,10 @@
             </g>
          </svg>
       </svg>
+
       <div id="intro-text">
          <h1>Hi, I'm Aaron Griffis</h1>
          <h2>and I enjoy making things</h2>
-
          <button id="intro-btn">
             <span>
                <p>Take a look at some of<br/>the things I've made</p>
@@ -314,7 +328,6 @@
                </svg>
             </span>
          </button>
-         
       </div>
    </div>
           
@@ -419,6 +432,7 @@
    <section id="contact">
       <h1>Get In Touch</h1>
       <form action="https://formspree.io/me@aarongriffis.com" method="POST">
+         <input type="hidden" name="_next" value="//site.io/thanks.html">
          <input type="text" name="name" placeholder="Your Name">
          <input type="text" name="email" placeholder="Your Email">
          <textarea name="message" placeholder="Your Message"></textarea>

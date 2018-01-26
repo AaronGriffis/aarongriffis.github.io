@@ -218,13 +218,26 @@ body > section > h1:after {
   margin-left: 0.5rem;
 }
 
+#vignette {
+  fill: rgba(0, 0, 0, 0.33);
+  position: fixed;
+  width: 100vw;
+  height: 90vh;
+  top: 10vh;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+  z-index: 1000;
+}
+
 body > header {
   background: #3a471f;
   border-bottom: 0.125rem solid #3a471f;
   box-shadow: inset 0 -0.125rem #fff8e6;
   position: fixed;
   top: 0;
-  height: 12vh;
+  height: 10vh;
   width: 100%;
   z-index: 100;
 }
@@ -280,8 +293,8 @@ body > header nav ul li a:active {
   border-radius: 50%;
   box-shadow: inset 0 0 0 0.125rem #3a471f;
   flex-shrink: 0;
-  height: calc(12vh - (0.125rem * 2));
-  width: calc(12vh - (0.125rem * 2));
+  height: calc(10vh - (0.125rem * 2));
+  width: calc(10vh - (0.125rem * 2));
   pointer-events: unset;
 }
 
@@ -295,7 +308,7 @@ body > header nav ul li a:active {
 
 #loading-mask, #intro {
   background: #fff8e6;
-  height: 76vh;
+  height: 80vh;
 }
 
 #loading-mask {
@@ -307,7 +320,7 @@ body > header nav ul li a:active {
 
 #intro {
   position: relative;
-  margin: 12vh 0 0;
+  margin: 10vh 0 0;
   overflow: hidden;
   text-align: center;
 }
@@ -488,7 +501,7 @@ body > header nav ul li a:active {
 }
 
 #portfolio {
-  margin-top: 12vh;
+  margin-top: 10vh;
 }
 
 .grid {
@@ -740,6 +753,10 @@ footer {
   }
   body > section > h1:before, body > section > h1:after {
     height: 0.25rem;
+  }
+  #vignette {
+    height: 92vh;
+    top: 8vh;
   }
   body > header {
     border-bottom: 0.25rem solid #3a471f;

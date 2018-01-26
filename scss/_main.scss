@@ -46,13 +46,26 @@ body {
    }
 }
 
+#vignette {
+   fill: rgba(0, 0, 0, 0.33);
+   position: fixed;
+   width: 100vw;
+   height: 100vh - $headerHeight;
+   top: $headerHeight;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   pointer-events: none;
+   z-index: 1000;
+ }
+
 @mixin main--sm() {
    body > section > h1 {
       font-size: 5vmin;
    }
 }
 
-@mixin main--md($gutter, $border, $masonrySize) {
+@mixin main--md($headerHeight, $gutter, $border, $masonrySize) {
    body > section {
       max-width: ($masonrySize * $maxColumns) + ($gutter * ($maxColumns + 1));
       padding: 0 $gutter;
@@ -64,5 +77,10 @@ body {
       & > h1:before, & > h1:after {
          height: $border;
       }
+   }
+
+   #vignette {
+      height: 100vh - $headerHeight;
+      top: $headerHeight;
    }
 }

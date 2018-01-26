@@ -11,7 +11,7 @@
    $masonrySize: $masonrySize * 1.5;
    $titleFontSize: $titleFontSize * 1.6;
 
-   @include main--md($gutter, $border, $masonrySize);
+   @include main--md($headerHeight, $gutter, $border, $masonrySize);
    @include header--md($headerHeight, $gutter, $border, $masonrySize, $titleFontSize);
    @include intro--md($headerHeight, $border);
    @include portfolio--md($headerHeight, $gutter, $border, $masonrySize, $titleFontSize);

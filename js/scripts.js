@@ -21,8 +21,8 @@ function loaded() {
    var overlayTransition = 0.3,
        overlayPause = 4;
    $('.title-overlay').each(function(index, element) {
-      overlayTimeline.to(element, overlayTransition, {opacity:1, ease:Linear.easeNone})
-         .to(element, overlayTransition, {opacity:0, ease:Linear.easeNone}, "+=" + (overlayTransition + overlayPause));
+      overlayTimeline.to(element, overlayTransition, {opacity:0, ease:Linear.easeNone})
+         .to(element, overlayTransition, {opacity:1, ease:Linear.easeNone}, "+=" + (overlayTransition + overlayPause));
    });
 
    //intro parallax

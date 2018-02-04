@@ -32,7 +32,7 @@
    position: relative;
 
    &:hover .title-overlay, &:focus .title-overlay {
-      opacity: 1 !important;
+      opacity: 0 !important;
    }
 
    &:active .title-overlay {
@@ -63,7 +63,7 @@
       bottom: 0;
       left: 0;
       right: 0;
-      opacity: 0;
+      opacity: 1;
       transition: opacity $btn-transition,
                   box-shadow 0.1s;
 
@@ -81,12 +81,13 @@
          margin: ($titleFontSize / 10) 0;
 
          p {
-            color: $bg;
             background: $fg;
-            padding: ($titleFontSize / 5) ($titleFontSize / 2);
             border-radius: 5rem;
+            color: $bg;
             display: inline-block;
+            font: bold 1rem $pFont;
             margin: ($titleFontSize / 10) 0;
+            padding: ($titleFontSize / 5) ($titleFontSize / 2);
          }
       }
    }
@@ -143,7 +144,6 @@
             margin: ($titleFontSize / 10) 0;
    
             p {
-               font-family: $pFont;
                padding: ($titleFontSize / 5) ($titleFontSize / 2);
                margin: ($titleFontSize / 10) 0;
             }

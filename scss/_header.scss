@@ -28,26 +28,13 @@ body > header {
             list-style: none;
 
             a {
-               border: solid $border transparent;
-               border-radius: 50rem;
-               box-shadow: inset 0 0 $bg;
-               color: $bg;
                display: block;
                margin: $border;
                padding: 0.25rem 0.5rem;
                text-decoration: none;
                font: bold 0.75rem $headingFont;
-               outline: none;
-               transition: border $btn-transition,
-                           box-shadow 0.1s;
 
-               &:hover, &:focus {
-                  border: solid $border $bg;
-               }
-
-               &:active {
-                  box-shadow: inset 0 0 0 ($border / 2) $bg;
-               }
+               @include single-border();
             }
          }
       }
@@ -56,14 +43,12 @@ body > header {
 
 #logo {
    align-self: flex-end;
-   background: $bg;
-   border: $border solid $bg;
-   border-radius: 50%;
-   box-shadow: inset 0 0 0 $border $fg;
    flex-shrink: 0;
    height: calc(#{$headerHeight} - (#{$border} * 2));
    width: calc(#{$headerHeight} - (#{$border} * 2));
    pointer-events: unset;
+   
+   @include double-border(50rem, $filled:true, $padding: 0);
 
    path {
       stroke: $fg;
@@ -90,26 +75,19 @@ body > header {
          max-width: ($masonrySize * $maxColumns) + ($gutter * ($maxColumns + 1));
 
          ul li a {
-            border: solid $border transparent;
             font: bold 1.5rem $headingFont;
             margin: ($border * 2);
             padding: 0.5rem 1rem;
 
-            &:hover, &:focus {
-               border: solid $border $bg;
-            }
-
-            &:active {
-               box-shadow: inset 0 0 0 ($border / 2) $bg;
-            }
+            @include single-border($border: $border);
          }
       }
       
       #logo {
-         border: $border solid $bg;
-         box-shadow: inset 0 0 0 $border $fg;
          height: calc(#{$headerHeight} - (#{$border} * 2));
          width: calc(#{$headerHeight} - (#{$border} * 2));
+
+         @include double-border(50rem, $border: $border, $filled:true, $padding: 0);
       }
    }
 }

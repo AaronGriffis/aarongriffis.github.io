@@ -1,9 +1,22 @@
-@mixin double-border($bdr-rds: ($border * 3), $border: $border, $inv:false) {
-   background: if($inv, $bg, $fg);
-   color: if($inv, $fg, $bg);
+@mixin double-border($bdr-rds: ($border * 3), $border: $border, $filled:false, $inv:false, $padding: $gutter) {
+   @if $filled {
+      background: if($inv, $fg, $bg);
+      color: if($inv, $bg, $fg);
+   }
+   @else {
+      background: if($inv, $bg, $fg);
+      color: if($inv, $fg, $bg);
+   }
    border: solid $border if($inv, $fg, $bg);
    border-radius: $bdr-rds;
    box-shadow: inset 0 0 0 $border if($inv, $bg, $fg);
+   padding: $padding;
+}
+
+@mixin double-border-btn($bdr-rds: ($border * 3), $border: $border, $font-size: 1rem, $filled: false, $inv:false, $padding: $gutter) {
+   @include double-border($bdr-rds, $border, $filled, $inv, $padding);
+
+   font: bold $font-size $headingFont;
    outline: none;
    transition: background $btn-transition, 
                color $btn-transition,
@@ -17,5 +30,37 @@
 
    &:active {
       box-shadow: inset 0 0 0 ($border * 1.5) if($inv, $bg, $fg);
+   }
+}
+
+@mixin single-border($border: $border, $inv:false) {
+   border: solid $border transparent;
+   border-radius: 50rem;
+   box-shadow: inset 0 0 if($inv, $fg, $bg);
+   color: if($inv, $fg, $bg);
+   outline: none;
+   transition: border $btn-transition,
+               box-shadow 0.1s;
+
+   &:hover, &:focus {
+      border: solid $border if($inv, $fg, $bg);
+   }
+
+   &:active {
+      box-shadow: inset 0 0 0 ($border / 2) if($inv, $fg, $bg);
+   }
+}
+
+@mixin single-border-icon($border: $border, $inv:false) {
+   margin: 0.25rem;
+   padding: 1rem;
+
+   @include single-border($border, $inv);
+
+   & > svg {
+      fill: if($inv, $fg, $bg);
+      display: block;
+      height: 2.5rem;
+      width: 2.5rem;
    }
 }

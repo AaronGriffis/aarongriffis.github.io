@@ -28,11 +28,11 @@ function loaded() {
    //intro parallax
 	var controller = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "100%"}});
    var parallaxTween = new TimelineMax().add([
-      TweenMax.to('.terrain.layer1', 1, {bottom: '-110%', ease:Linear.easeNone}),
-      TweenMax.to('.terrain.layer2', 1, {bottom: '-90%', ease:Linear.easeNone}),
-      TweenMax.to('.terrain.layer3', 1, {bottom: '-70%', ease:Linear.easeNone}),
-      TweenMax.to('.terrain.layer4', 1, {bottom: '-50%', ease:Linear.easeNone}),
-      TweenMax.to('.terrain.layer5', 1, {bottom: '-30%', ease:Linear.easeNone})
+      TweenMax.to('.terrain.layer1', 1, {y: '110%', ease:Linear.easeNone}),
+      TweenMax.to('.terrain.layer2', 1, {y: '90%', ease:Linear.easeNone}),
+      TweenMax.to('.terrain.layer3', 1, {y: '70%', ease:Linear.easeNone}),
+      TweenMax.to('.terrain.layer4', 1, {y: '50%', ease:Linear.easeNone}),
+      TweenMax.to('.terrain.layer5', 1, {y: '30%', ease:Linear.easeNone})
    ]);
    var scene = new ScrollMagic.Scene()
       .setTween(parallaxTween)
@@ -52,18 +52,21 @@ function loaded() {
    $('.tree:not(#logo) .trunk').click(shakeTree).hover(shakeTree);
    $('#logo').click(function(e) {shakeTree(e, $('#logo .trunk'));});
 
-   //scrollTo
-   var scrollSpeed = 2;
-
-   $('#intro-btn')
-      .click(function() {
-         TweenMax.to(window, scrollSpeed, {scrollTo:{y:"#portfolio", offsetY:(32 + $('body > header').height())}, ease:Power2.easeInOut});
-         return false;
-      });
+   //scrollTop
+   $('#intro-btn').click(function() {
+      $('html, body').scrollTop($('#portfolio').offset().top);
+      return false;
+   });
 
    $('body > header > nav a').click(function() {
-      var pos = $($(this).attr('href')).offset().top;
-      TweenMax.to(window, scrollSpeed, {scrollTo:{y:pos, offsetY:(32 + $('body > header').height())}, ease:Power2.easeInOut});
+      var href = $(this).attr('href'),
+          offset = 0;
+
+      if (href !== "#top") {
+         offset = $(href).offset().top;
+      }
+
+      $('html, body').scrollTop(offset);
       return false;
    });
 

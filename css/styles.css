@@ -181,9 +181,10 @@ html {
 body {
   background: #3a471f;
   color: #fff8e6;
-  margin: 0;
+  margin: 10vh 0 0;
   font-family: "Comfortaa", sans-serif;
-  line-height: 1.25;
+  line-height: 1.5;
+  text-align: center;
 }
 
 body > section {
@@ -192,11 +193,17 @@ body > section {
   padding: 0 1rem;
 }
 
+body > section:before {
+  content: "";
+  display: block;
+  height: 10vh;
+  margin-top: -10vh;
+}
+
 body > section > h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
   font-size: 1.5rem;
   margin: 2rem 0;
 }
@@ -218,6 +225,10 @@ body > section > h1:after {
   margin-left: 0.5rem;
 }
 
+body > section h2 {
+  font-size: 1.25rem;
+}
+
 #vignette {
   fill: rgba(0, 0, 0, 0.33);
   position: fixed;
@@ -229,6 +240,10 @@ body > section > h1:after {
   right: 0;
   pointer-events: none;
   z-index: 1000;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  will-change: transform;
 }
 
 body > header {
@@ -265,15 +280,15 @@ body > header nav ul li {
 }
 
 body > header nav ul li a {
-  border: solid 0.125rem transparent;
-  border-radius: 50rem;
-  box-shadow: inset 0 0 #fff8e6;
-  color: #fff8e6;
   display: block;
   margin: 0.125rem;
   padding: 0.25rem 0.5rem;
   text-decoration: none;
   font: bold 0.75rem "Comfortaa", sans-serif;
+  border: solid 0.125rem transparent;
+  border-radius: 50rem;
+  box-shadow: inset 0 0 #fff8e6;
+  color: #fff8e6;
   outline: none;
   transition: border 0.3s ease-in-out, box-shadow 0.1s;
 }
@@ -288,14 +303,16 @@ body > header nav ul li a:active {
 
 #logo {
   align-self: flex-end;
-  background: #fff8e6;
-  border: 0.125rem solid #fff8e6;
-  border-radius: 50%;
-  box-shadow: inset 0 0 0 0.125rem #3a471f;
   flex-shrink: 0;
   height: calc(10vh - (0.125rem * 2));
   width: calc(10vh - (0.125rem * 2));
   pointer-events: unset;
+  background: #fff8e6;
+  color: #3a471f;
+  border: solid 0.125rem #fff8e6;
+  border-radius: 50rem;
+  box-shadow: inset 0 0 0 0.125rem #3a471f;
+  padding: 0;
 }
 
 #logo path {
@@ -320,9 +337,14 @@ body > header nav ul li a:active {
 
 #intro {
   position: relative;
-  margin: 10vh 0 0;
   overflow: hidden;
-  text-align: center;
+}
+
+#intro:before {
+  content: "";
+  display: block;
+  height: 10vh;
+  margin-top: -10vh;
 }
 
 #intro .terrain, #intro #intro-text {
@@ -363,16 +385,15 @@ body > header nav ul li a:active {
 
 #intro #intro-text #intro-btn {
   height: 3rem;
-  padding: 0;
   cursor: pointer;
-  font: bold 1rem "Comfortaa", sans-serif;
-  outline: none;
   pointer-events: all;
   background: #fff8e6;
   color: #3a471f;
   border: solid 0.125rem #3a471f;
   border-radius: 50rem;
   box-shadow: inset 0 0 0 0.125rem #fff8e6;
+  padding: 0;
+  font: bold 1rem "Comfortaa", sans-serif;
   outline: none;
   transition: background 0.3s ease-in-out, color 0.3s ease-in-out, box-shadow 0.1s, opacity 0.3s ease-in-out;
 }
@@ -556,7 +577,8 @@ body > header nav ul li a:active {
 
 .grid-item .title-overlay {
   background: #fff8e6;
-  border: 0.125rem solid #fff8e6;
+  color: #3a471f;
+  border: solid 0.125rem #fff8e6;
   border-radius: 0.375rem;
   box-shadow: inset 0 0 0 0.125rem #3a471f;
   padding: 0.25rem;
@@ -581,11 +603,9 @@ body > header nav ul li a:active {
   color: #3a471f;
   margin: 0;
   font-size: 1.25rem;
-  text-align: center;
 }
 
 .grid-item .title-overlay .tags {
-  text-align: center;
   margin: 0.125rem 0;
 }
 
@@ -606,13 +626,123 @@ body > header nav ul li a:active {
   height: 21rem;
 }
 
-#about p {
-  font-family: "Montserrat", sans-serif;
+#about .flex-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#about > .flex-wrapper #blurb {
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+}
+
+#about > .flex-wrapper #blurb > div {
+  margin: auto 0;
+}
+
+#about > .flex-wrapper > .flex-wrapper {
+  flex: 1;
+}
+
+#about .card {
+  margin: 0.5rem;
+  max-width: 40rem;
+  min-width: 50vw;
+  flex: 1;
+  background: #fff8e6;
+  color: #3a471f;
+  border: solid 0.125rem #fff8e6;
+  border-radius: 0.375rem;
+  box-shadow: inset 0 0 0 0.125rem #3a471f;
+  padding: 1rem;
+}
+
+#about .card h2 {
+  margin-top: 0;
+}
+
+#about #toolbox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#about #toolbox .icon-link {
+  margin: 0.25rem;
+  padding: 1rem;
+  border: solid 0.125rem transparent;
+  border-radius: 50rem;
+  box-shadow: inset 0 0 #3a471f;
+  color: #3a471f;
+  outline: none;
+  transition: border 0.3s ease-in-out, box-shadow 0.1s;
+}
+
+#about #toolbox .icon-link:hover, #about #toolbox .icon-link:focus {
+  border: solid 0.125rem #3a471f;
+}
+
+#about #toolbox .icon-link:active {
+  box-shadow: inset 0 0 0 0.0625rem #3a471f;
+}
+
+#about #toolbox .icon-link > svg {
+  fill: #3a471f;
+  display: block;
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+#about p, #about li {
+  font: bold 1rem "Montserrat", sans-serif;
+  line-height: 1.75rem;
+  text-align: left;
+}
+
+#about li {
+  margin: 1rem 0;
+  line-height: 1.5rem;
+}
+
+#about a:not(.icon-link) {
+  background: #fff8e6;
+  border-radius: 0.375rem;
+  -webkit-box-decoration-break: clone;
+  color: #3a471f;
+  padding: 0.25rem 0.125rem;
+  outline: none;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out, padding 0.1s;
+}
+
+#about a:not(.icon-link):active {
+  padding: 0.125rem;
+}
+
+#about a:not(.icon-link):visited {
+  color: #6b7350;
+}
+
+#about a:not(.icon-link):hover, #about a:not(.icon-link):focus {
+  background: #3a471f;
+  color: #fff8e6;
 }
 
 #contact form {
-  width: 75%;
   margin: 0 auto;
+  width: 75%;
+  text-align: left;
+}
+
+#contact form p {
+  background: #fff8e6;
+  color: #3a471f;
+  border: solid 0.125rem #fff8e6;
+  border-radius: 0.375rem;
+  box-shadow: inset 0 0 0 0.125rem #3a471f;
+  padding: 1rem;
 }
 
 #contact form input, #contact form textarea {
@@ -622,7 +752,7 @@ body > header nav ul li a:active {
   color: #3a471f;
   border: none;
   border-radius: 0.375rem;
-  font: bold 1rem "Comfortaa", sans-serif;
+  font: bold 1rem "Montserrat", sans-serif;
   margin: 1rem 0;
   padding: 1rem;
   outline: none;
@@ -634,11 +764,14 @@ body > header nav ul li a:active {
 }
 
 #contact form input[type="submit"] {
+  cursor: pointer;
   background: #3a471f;
   color: #fff8e6;
   border: solid 0.125rem #fff8e6;
   border-radius: 0.375rem;
   box-shadow: inset 0 0 0 0.125rem #3a471f;
+  padding: 1rem;
+  font: bold 1rem "Comfortaa", sans-serif;
   outline: none;
   transition: background 0.3s ease-in-out, color 0.3s ease-in-out, box-shadow 0.1s, opacity 0.3s ease-in-out;
 }
@@ -653,7 +786,7 @@ body > header nav ul li a:active {
 }
 
 #contact form ::placeholder {
-  color: rgba(58, 71, 31, 0.5);
+  color: #9ca082;
 }
 
 footer {
@@ -670,17 +803,29 @@ footer {
 }
 
 #username-links > a {
-  color: #fff8e7;
-  font-size: 1.75rem;
-  line-height: 3.5rem;
+  margin: 0.25rem;
+  padding: 1rem;
+  border: solid 0.125rem transparent;
+  border-radius: 50rem;
+  box-shadow: inset 0 0 #fff8e6;
+  color: #fff8e6;
   outline: none;
-  text-align: center;
-  width: 3.5rem;
-  transition: font-size 0.25s;
+  transition: border 0.3s ease-in-out, box-shadow 0.1s;
 }
 
 #username-links > a:hover, #username-links > a:focus {
-  font-size: 3.0625rem;
+  border: solid 0.125rem #fff8e6;
+}
+
+#username-links > a:active {
+  box-shadow: inset 0 0 0 0.0625rem #fff8e6;
+}
+
+#username-links > a > svg {
+  fill: #fff8e6;
+  display: block;
+  height: 2.5rem;
+  width: 2.5rem;
 }
 
 #username {
@@ -699,6 +844,10 @@ footer {
   text-align: right;
 }
 
+#username-after {
+  text-align: left;
+}
+
 #username > span:not(#username-before):not(#username-after), #username-small {
   font-size: 2rem;
   font-weight: bold;
@@ -707,7 +856,6 @@ footer {
 #username-small {
   color: #fff8e7;
   display: block;
-  text-align: center;
 }
 
 #username-space {
@@ -720,9 +868,46 @@ footer {
   width: 0;
 }
 
+#thanks {
+  display: inline-block;
+  margin: 10vh 4rem 0;
+  background: #fff8e6;
+  color: #3a471f;
+  border: solid 0.125rem #fff8e6;
+  border-radius: 0.375rem;
+  box-shadow: inset 0 0 0 0.125rem #3a471f;
+  padding: 1rem;
+}
+
+#thanks a {
+  display: inline-block;
+  text-decoration: none;
+  background: #fff8e6;
+  color: #3a471f;
+  border: solid 0.125rem #3a471f;
+  border-radius: 50rem;
+  box-shadow: inset 0 0 0 0.125rem #fff8e6;
+  padding: 1rem;
+  font: bold 1rem "Comfortaa", sans-serif;
+  outline: none;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out, box-shadow 0.1s, opacity 0.3s ease-in-out;
+}
+
+#thanks a:hover, #thanks a:focus {
+  background: #3a471f;
+  color: #fff8e6;
+}
+
+#thanks a:active {
+  box-shadow: inset 0 0 0 0.1875rem #fff8e6;
+}
+
 @media (min-width: 376px) and (min-height: 376px) {
   body > section > h1 {
-    font-size: 5vmin;
+    font-size: calc(4vmin + 0.5rem);
+  }
+  body > section h2 {
+    font-size: calc(1vmin + 1rem);
   }
   body > header nav ul li a {
     font: bold 1rem "Comfortaa", sans-serif;
@@ -741,18 +926,33 @@ footer {
     height: calc(10vmin - (0.125rem * 2));
     width: calc(10vmin - (0.125rem * 2));
   }
+  #about .card {
+    min-width: 376px;
+  }
 }
 
 @media (min-width: 768px) and (min-height: 768px) {
+  body {
+    margin: 8vh 0 0;
+  }
   body > section {
     max-width: 70rem;
     padding: 0 2rem;
+  }
+  body > section:before {
+    content: "";
+    display: block;
+    height: 8vh;
+    margin-top: -8vh;
   }
   body > section > h1 {
     font-size: 2.5rem;
   }
   body > section > h1:before, body > section > h1:after {
     height: 0.25rem;
+  }
+  body > section h2 {
+    font-size: 1.5rem;
   }
   #vignette {
     height: 92vh;
@@ -767,10 +967,15 @@ footer {
     max-width: 70rem;
   }
   body > header nav ul li a {
-    border: solid 0.25rem transparent;
     font: bold 1.5rem "Comfortaa", sans-serif;
     margin: 0.5rem;
     padding: 0.5rem 1rem;
+    border: solid 0.25rem transparent;
+    border-radius: 50rem;
+    box-shadow: inset 0 0 #fff8e6;
+    color: #fff8e6;
+    outline: none;
+    transition: border 0.3s ease-in-out, box-shadow 0.1s;
   }
   body > header nav ul li a:hover, body > header nav ul li a:focus {
     border: solid 0.25rem #fff8e6;
@@ -779,29 +984,36 @@ footer {
     box-shadow: inset 0 0 0 0.125rem #fff8e6;
   }
   body > header #logo {
-    border: 0.25rem solid #fff8e6;
-    box-shadow: inset 0 0 0 0.25rem #3a471f;
     height: calc(8vh - (0.25rem * 2));
     width: calc(8vh - (0.25rem * 2));
+    background: #fff8e6;
+    color: #3a471f;
+    border: solid 0.25rem #fff8e6;
+    border-radius: 50rem;
+    box-shadow: inset 0 0 0 0.25rem #3a471f;
+    padding: 0;
   }
   #loading-mask, #intro {
     height: 84vh;
   }
-  #intro #intro-text, #intro #intro-text #intro-btn {
+  #intro:before {
+    content: "";
+    display: block;
+    height: 8vh;
+    margin-top: -8vh;
+  }
+  #intro #intro-text {
     font-size: 1.5rem;
   }
-  #intro {
-    margin: 8vh 0 0;
-  }
   #intro #intro-text #intro-btn {
-    border: solid 0.25rem #3a471f;
-    box-shadow: inset 0 0 0 0.25rem #fff8e6;
     height: 5rem;
     background: #fff8e6;
     color: #3a471f;
     border: solid 0.25rem #3a471f;
     border-radius: 50rem;
     box-shadow: inset 0 0 0 0.25rem #fff8e6;
+    padding: 0;
+    font: bold 1.5rem "Comfortaa", sans-serif;
     outline: none;
     transition: background 0.3s ease-in-out, color 0.3s ease-in-out, box-shadow 0.1s, opacity 0.3s ease-in-out;
   }
@@ -847,7 +1059,9 @@ footer {
     display: unset;
   }
   .grid-item .title-overlay {
-    border: 0.25rem solid #fff8e6;
+    background: #fff8e6;
+    color: #3a471f;
+    border: solid 0.25rem #fff8e6;
     border-radius: 0.75rem;
     box-shadow: inset 0 0 0 0.25rem #3a471f;
     padding: 0.4rem;
@@ -859,6 +1073,7 @@ footer {
     margin: 0.2rem 0;
   }
   .grid-item .title-overlay .tags p {
+    font-family: "Montserrat", sans-serif;
     padding: 0.4rem 1rem;
     margin: 0.2rem 0;
   }
@@ -871,19 +1086,60 @@ footer {
   .grid-item--height2, .grid-item--height2 img {
     height: 32rem;
   }
+  #about .card {
+    margin: 1rem;
+    padding: 2rem;
+    background: #fff8e6;
+    color: #3a471f;
+    border: solid 0.25rem #fff8e6;
+    border-radius: 0.75rem;
+    box-shadow: inset 0 0 0 0.25rem #3a471f;
+    padding: 1rem;
+  }
+  #about #toolbox .icon-link {
+    margin: 0.25rem;
+    padding: 1rem;
+    border: solid 0.25rem transparent;
+    border-radius: 50rem;
+    box-shadow: inset 0 0 #3a471f;
+    color: #3a471f;
+    outline: none;
+    transition: border 0.3s ease-in-out, box-shadow 0.1s;
+  }
+  #about #toolbox .icon-link:hover, #about #toolbox .icon-link:focus {
+    border: solid 0.25rem #3a471f;
+  }
+  #about #toolbox .icon-link:active {
+    box-shadow: inset 0 0 0 0.125rem #3a471f;
+  }
+  #about #toolbox .icon-link > svg {
+    fill: #3a471f;
+    display: block;
+    height: 2.5rem;
+    width: 2.5rem;
+  }
   #contact form {
     width: 50%;
+  }
+  #contact form p {
+    background: #fff8e6;
+    color: #3a471f;
+    border: solid 0.25rem #fff8e6;
+    border-radius: 0.75rem;
+    box-shadow: inset 0 0 0 0.25rem #3a471f;
+    padding: 1rem;
   }
   #contact form input, #contact form textarea {
     border-radius: 0.75rem;
   }
   #contact form input[type="submit"] {
-    font-size: 1.5rem;
     background: #3a471f;
     color: #fff8e6;
     border: solid 0.25rem #fff8e6;
     border-radius: 0.75rem;
     box-shadow: inset 0 0 0 0.25rem #3a471f;
+    padding: 1rem;
+    font: bold 1.5rem "Comfortaa", sans-serif;
     outline: none;
     transition: background 0.3s ease-in-out, color 0.3s ease-in-out, box-shadow 0.1s, opacity 0.3s ease-in-out;
   }
@@ -897,11 +1153,60 @@ footer {
   footer {
     margin: 8rem auto 2rem;
   }
+  footer #username-links > a {
+    margin: 0.25rem;
+    padding: 1rem;
+    border: solid 0.25rem transparent;
+    border-radius: 50rem;
+    box-shadow: inset 0 0 #fff8e6;
+    color: #fff8e6;
+    outline: none;
+    transition: border 0.3s ease-in-out, box-shadow 0.1s;
+  }
+  footer #username-links > a:hover, footer #username-links > a:focus {
+    border: solid 0.25rem #fff8e6;
+  }
+  footer #username-links > a:active {
+    box-shadow: inset 0 0 0 0.125rem #fff8e6;
+  }
+  footer #username-links > a > svg {
+    fill: #fff8e6;
+    display: block;
+    height: 2.5rem;
+    width: 2.5rem;
+  }
   footer #username {
     display: flex;
   }
   footer #username-small {
     display: none;
+  }
+  #thanks {
+    margin: 20vh 4rem 0;
+    background: #fff8e6;
+    color: #3a471f;
+    border: solid 0.25rem #fff8e6;
+    border-radius: 0.75rem;
+    box-shadow: inset 0 0 0 0.25rem #3a471f;
+    padding: 2rem;
+  }
+  #thanks a {
+    background: #fff8e6;
+    color: #3a471f;
+    border: solid 0.25rem #3a471f;
+    border-radius: 50rem;
+    box-shadow: inset 0 0 0 0.25rem #fff8e6;
+    padding: 1rem;
+    font: bold 1.5rem "Comfortaa", sans-serif;
+    outline: none;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out, box-shadow 0.1s, opacity 0.3s ease-in-out;
+  }
+  #thanks a:hover, #thanks a:focus {
+    background: #3a471f;
+    color: #fff8e6;
+  }
+  #thanks a:active {
+    box-shadow: inset 0 0 0 0.375rem #fff8e6;
   }
 }
 /*# sourceMappingURL=styles.css.map */

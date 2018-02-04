@@ -52,11 +52,8 @@
    }
 
    .title-overlay {
-      background: $bg;
-      border: $border solid $bg;
-      border-radius: $border * 3;
-      box-shadow: inset 0 0 0 $border $fg;
-      padding: ($titleFontSize / 5);
+      @include double-border($filled:true, $padding: ($titleFontSize / 5));
+
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -78,11 +75,9 @@
          color: $fg;
          margin: 0;
          font-size: $titleFontSize;
-         text-align: center;
       }
 
       .tags {
-         text-align: center;
          margin: ($titleFontSize / 10) 0;
 
          p {
@@ -138,10 +133,7 @@
       }
       
       .title-overlay {
-         border: $border solid $bg;
-         border-radius: $border * 3;
-         box-shadow: inset 0 0 0 $border $fg;
-         padding: ($titleFontSize / 5);
+         @include double-border($border: $border, $filled:true, $padding: ($titleFontSize / 5));
    
          .title {
             font-size: $titleFontSize;
@@ -151,6 +143,7 @@
             margin: ($titleFontSize / 10) 0;
    
             p {
+               font-family: $pFont;
                padding: ($titleFontSize / 5) ($titleFontSize / 2);
                margin: ($titleFontSize / 10) 0;
             }

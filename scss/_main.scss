@@ -9,39 +9,50 @@ html {
 body {
    background: $fg;
    color: $bg;
-   margin: 0;
+   margin: $headerHeight 0 0;
    font-family: $headingFont;
-   line-height: 1.25;
+   line-height: 1.5;
+   text-align: center;
 
    & > section {
       max-width: ($masonrySize * $maxColumns) + ($gutter * ($maxColumns + 1));
       margin: 0 auto;
       padding: 0 $gutter;
 
+      &:before {
+         content:"";
+         display:block;
+         height: $headerHeight;
+         margin-top: -$headerHeight;
+      }
+
       & > h1 {
          display: flex;
          align-items: center;
          justify-content: center;
-         text-align: center;
          font-size: 1.5rem;
          margin: 2rem 0;
+         
+         &:before, &:after {
+            content: "";
+            background: $bg;
+            border-radius: 0.5rem;
+            flex-grow: 1;
+            height: $border;
+            min-width: 3rem;
+         }
+
+         &:before {
+            margin-right: 0.5rem;
+         }
+
+         &:after {
+            margin-left: 0.5rem;
+         }
       }
 
-      & > h1:before, & > h1:after {
-         content: "";
-         background: $bg;
-         border-radius: 0.5rem;
-         flex-grow: 1;
-         height: $border;
-         min-width: 3rem;
-      }
-
-      & > h1:before {
-         margin-right: 0.5rem;
-      }
-
-      & > h1:after {
-         margin-left: 0.5rem;
+      h2 {
+         font-size: 1.25rem;
       }
    }
 }
@@ -57,25 +68,51 @@ body {
    right: 0;
    pointer-events: none;
    z-index: 1000;
+
+   -webkit-backface-visibility:hidden;
+   backface-visibility:hidden;
+   transform: translateZ(0);
+   will-change: transform;
  }
 
 @mixin main--sm() {
-   body > section > h1 {
-      font-size: 5vmin;
+   body > section {
+      & > h1 {
+         font-size: calc(4vmin + 0.5rem);
+      }
+
+      h2 {
+         font-size: calc(1vmin + 1rem);
+      }
    }
 }
 
 @mixin main--md($headerHeight, $gutter, $border, $masonrySize) {
-   body > section {
-      max-width: ($masonrySize * $maxColumns) + ($gutter * ($maxColumns + 1));
-      padding: 0 $gutter;
-      
-      & > h1 {
-         font-size: 2.5rem;
-      }
+   body {
+      margin: $headerHeight 0 0;
 
-      & > h1:before, & > h1:after {
-         height: $border;
+      & > section {
+         max-width: ($masonrySize * $maxColumns) + ($gutter * ($maxColumns + 1));
+         padding: 0 $gutter;
+         
+         &:before {
+            content:"";
+            display:block;
+            height: $headerHeight;
+            margin-top: -$headerHeight;
+         }
+         
+         & > h1 {
+            font-size: 2.5rem;
+
+            &:before, &:after {
+               height: $border;
+            }
+         }
+         
+         h2 {
+            font-size: 1.5rem;
+         }
       }
    }
 

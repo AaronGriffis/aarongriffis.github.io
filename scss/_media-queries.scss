@@ -2,6 +2,7 @@
    @include main--sm();
    @include header--sm();
    @include intro--sm();
+   @include about--sm();
 }
 
 @media (min-width: 768px) and (min-height: 768px) {
@@ -15,6 +16,8 @@
    @include header--md($headerHeight, $gutter, $border, $masonrySize, $titleFontSize);
    @include intro--md($headerHeight, $border);
    @include portfolio--md($headerHeight, $gutter, $border, $masonrySize, $titleFontSize);
+   @include about--md($gutter, $border);
    @include contact--md($border);
-   @include footer--md();
+   @include footer--md($border);
+   @include thanks--md($gutter, $border);
 }

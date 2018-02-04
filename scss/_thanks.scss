@@ -1,0 +1,25 @@
+#thanks {
+   display: inline-block;
+   margin: 10vh 4rem 0;
+
+   @include double-border($filled:true);
+
+   a {
+      display: inline-block;
+      text-decoration: none;
+
+      @include double-border-btn(50rem, $inv:true, $padding: 1rem);
+   }
+}
+
+@mixin thanks--md($gutter, $border) {
+   #thanks {
+      margin: 20vh 4rem 0;
+
+      @include double-border($border: $border, $filled:true, $padding: $gutter);
+
+      a {
+         @include double-border-btn(50rem, $border: $border, $font-size: 1.5rem, $inv:true, $padding: 1rem);
+      }
+   }
+}

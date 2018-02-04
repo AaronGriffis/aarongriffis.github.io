@@ -12,9 +12,14 @@
 
 #intro {
    position: relative;
-   margin: $headerHeight 0 0;
    overflow: hidden;
-   text-align: center;
+         
+   &:before {
+      content:"";
+      display:block;
+      height: $headerHeight;
+      margin-top: -$headerHeight;
+   }
   
    .terrain, #intro-text {
       display: block;
@@ -53,13 +58,10 @@
 
       #intro-btn {
          height: 3rem;
-         padding: 0;
          cursor: pointer;
-         font: bold 1rem $headingFont;
-         outline: none;
          pointer-events: all;
 
-         @include double-border(50rem, $inv: true);
+         @include double-border-btn(50rem, $inv: true, $padding: 0);
 
          p {
             display: inline-block;
@@ -149,32 +151,33 @@
    #loading-mask, #intro  {
       height: 100vh - ($headerHeight * 2);
    }
+         
+   #intro:before {
+      content:"";
+      display:block;
+      height: $headerHeight;
+      margin-top: -$headerHeight;
+   }
 
-   #intro #intro-text, #intro #intro-text #intro-btn {
+   #intro #intro-text {
       font-size: 1.5rem;
    }
 
-   #intro {
-      margin: $headerHeight 0 0;
+   #intro #intro-text #intro-btn {
+      height: 5rem;
 
-      #intro-text #intro-btn {
-         border: solid $border $fg;
-         box-shadow: inset 0 0 0 $border $bg;
-         height: 5rem;
+      @include double-border-btn(50rem, $border, $font-size: 1.5rem, $inv: true, $padding: 0);
 
-         @include double-border(50rem, $border, $inv: true);
+      p {
+         line-height: (5rem / 2) - ($border * 2);
+         margin: $border;
+         margin-left: 2rem;
+      }
 
-         p {
-            line-height: (5rem / 2) - ($border * 2);
-            margin: $border;
-            margin-left: 2rem;
-         }
-
-         #intro-arrow {
-            height: 5rem - ($border * 2);
-            width: 5rem - ($border * 2);
-            padding: calc(#{$border} - 1px);
-         }
+      #intro-arrow {
+         height: 5rem - ($border * 2);
+         width: 5rem - ($border * 2);
+         padding: calc(#{$border} - 1px);
       }
    }
 }

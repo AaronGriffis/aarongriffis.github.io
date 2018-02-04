@@ -1,5 +1,104 @@
 #about {
-   p {
-      font-family: $pFont;
+   .flex-wrapper {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+   }
+
+   & > .flex-wrapper {
+
+      #blurb {
+         display: flex;
+         flex-direction: column;
+         flex: 2;
+
+          & > div {
+             margin: auto 0;
+          }
+      }
+
+      & > .flex-wrapper {
+         flex: 1;
+      }
+   }
+
+   .card {
+      margin: ($gutter / 2);
+      max-width: 40rem;
+      min-width: 50vw;
+      flex: 1;
+
+      @include double-border($filled:true);
+
+      h2 {
+         margin-top: 0;
+      }
+   }
+
+   #toolbox {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      .icon-link {
+         @include single-border-icon($inv:true);
+      }
+   }
+
+   p, li {
+      font: bold 1rem $pFont;
+      line-height: 1.75rem;
+      text-align: left;
+   }
+
+   li {
+      margin: 1rem 0;
+      line-height: 1.5rem;
+   }
+
+   a:not(.icon-link) {
+      background: $bg;
+      border-radius: ($border * 3);
+      -webkit-box-decoration-break: clone;
+      color: $fg;
+      padding: ($border * 2) $border;
+      outline: none;
+      transition: background $btn-transition, 
+                  color $btn-transition,
+                  padding 0.1s;
+      
+      &:active {
+         padding: $border;
+      }
+
+      &:visited {
+         color: mix($fg, $bg, 75%);
+      }
+
+      &:hover, &:focus {
+         background: $fg;
+         color: $bg;
+      }
+   }
+}
+
+@mixin about--sm() {
+   #about .card {
+      min-width: 376px;
+   }
+}
+
+@mixin about--md($gutter, $border) {
+   #about {
+      .card {
+         margin: ($gutter / 2);
+         padding: $gutter;
+         @include double-border($border: $border, $filled:true);
+      }
+
+      #toolbox .icon-link {
+         @include single-border-icon($border: $border, $inv:true);
+      }
    }
 }

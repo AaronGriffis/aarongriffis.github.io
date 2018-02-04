@@ -1,8 +1,13 @@
 #contact {
    form {
-      width: 75%;
       margin: 0 auto;
+      width: 75%;
+      text-align: left;
       
+      p {
+         @include double-border($filled:true);
+      }
+
       input, textarea {
          display: block;
          width: 100%;
@@ -10,8 +15,8 @@
          color: $fg;
          border: none;
          border-radius: $border * 3;
-         font: bold 1rem $headingFont;
-         margin: $gutter 0;
+         font: bold 1rem $pFont;
+         margin: 1rem 0;
          padding: 1rem;
          outline: none;
       }
@@ -22,11 +27,13 @@
       }
 
       input[type="submit"] {
-         @include double-border();
+         cursor: pointer;
+         
+         @include double-border-btn();
       }
 
       ::placeholder {
-         color: transparentize($fg, 0.5);
+         color: mix($bg, $fg);
       }
    }
 }
@@ -35,13 +42,16 @@
    #contact form {
       width: 50%;
 
+      p {
+         @include double-border($border: $border, $filled:true);
+      }
+
       input, textarea {
          border-radius: $border * 3;
       }
 
       input[type="submit"] {
-         font-size: 1.5rem;
-         @include double-border($border: $border);
+         @include double-border-btn($border: $border, $font-size: 1.5rem);
       }
    }
 }

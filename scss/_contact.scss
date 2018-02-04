@@ -5,13 +5,15 @@
       text-align: left;
       
       p {
+         font: bold 1rem $pFont;
+         
          @include double-border($filled:true);
       }
 
       input, textarea {
          display: block;
          width: 100%;
-         background: $bg;
+         background: mix($bg, $fg, 80%);
          color: $fg;
          border: none;
          border-radius: $border * 3;
@@ -19,6 +21,10 @@
          margin: 1rem 0;
          padding: 1rem;
          outline: none;
+
+         &:focus {
+            background: $bg;
+         }
       }
 
       textarea {
@@ -33,7 +39,7 @@
       }
 
       ::placeholder {
-         color: mix($bg, $fg);
+         color: mix($bg, $fg, 33%);
       }
    }
 }

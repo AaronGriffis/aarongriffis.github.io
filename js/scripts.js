@@ -70,6 +70,15 @@ function loaded() {
       return false;
    });
 
+   //Form validation
+   $('input, textarea')
+      .on('invalid', function(e) {
+         $(this).addClass('error');
+      })
+      .blur(function(e) {
+         this.checkValidity();
+      });
+
    //Footer
    $('#link-github').hover(function() {onFooterHover(5, "github.com/");}, offFooterHover);
    $('#link-codepen').hover(function() {onFooterHover(5, "codepen.io/");}, offFooterHover);

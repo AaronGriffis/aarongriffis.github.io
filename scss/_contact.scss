@@ -6,24 +6,42 @@
       
       p {
          font: bold 1rem $pFont;
-         
+
          @include double-border($filled:true);
       }
 
       input, textarea {
          display: block;
          width: 100%;
-         background: mix($bg, $fg, 80%);
-         color: $fg;
-         border: none;
-         border-radius: $border * 3;
          font: bold 1rem $pFont;
          margin: 1rem 0;
-         padding: 1rem;
          outline: none;
+         transition: background $btn-transition, 
+         color $btn-transition,
+         border-color 0.1s;
+
+         @include double-border($filled:true);
+         background: mix($bg, $fg);
+
+         &.error {
+            border-color: hsl(10, 60%, 50%);
+         }
+
+         &:valid {
+            border-color: $bg;
+            // color: $fg;
+         }
 
          &:focus {
             background: $bg;
+            
+            &::placeholder {
+               color: mix($bg, $fg, 20%);
+            }
+         }
+
+         &::placeholder {
+            color: $fg;
          }
       }
 
@@ -36,10 +54,6 @@
          cursor: pointer;
          
          @include double-border-btn();
-      }
-
-      ::placeholder {
-         color: mix($bg, $fg, 33%);
       }
    }
 }
@@ -54,6 +68,9 @@
 
       input, textarea {
          border-radius: $border * 3;
+
+         @include double-border($border: $border, $filled:true);
+         background: mix($bg, $fg);
       }
 
       input[type="submit"] {

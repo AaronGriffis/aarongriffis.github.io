@@ -436,7 +436,7 @@
             </h2>
             <div>
                <p>I love experimenting with interactive design, and I have the technical skills to bring my ideas to life.</p>
-               <p>Recently, I've been having a lot of fun learning as much as I can about modern web development technologies, and <a href="https://codepen.io/aarongriffis/">getting my hands dirty</a> playing around with Sass, jQuery, and responsive design.</p>
+               <p>Recently, I've been having a lot of fun learning as much as I can about modern web development technologies, and <a href="https://codepen.io/aarongriffis/pens/public/">getting my hands dirty</a> playing around with Sass, jQuery, and responsive design.</p>
                <p>Before discovering my passion for web development, I dabbled in C# applications, and before that it was JavaFX and <a href="">Swing</a>.</p>
                <p>As a recent <a href="https://www.ewu.edu">EWU</a> graduate with a computer science degree and design minor in hand, I'm eager to begin my career so please don't hesitate to <a href="#contact">contact me</a> below if you're interested in hiring me!</p>
             </div>
@@ -498,11 +498,23 @@
       <form action="https://formspree.io/me@aarongriffis.com" method="POST">
          <p>Whether you'd like to discuss my work, request my r&#233;sum&#233; or references, or would just like to chat, I'd be happy to hear from you!</p>
          <input type="hidden" name="_next" value="//aarongriffis.com/thanks.html">
-         <input type="text" name="name" placeholder="Your Name*" required>
-         <input type="email" name="email" placeholder="Your Email*" required>
-         <textarea name="message" placeholder="Your Message*" required></textarea>
+         
+         <div class="input-group">
+            <label for="name">Name <span>(required)</span></label>
+            <input type="text" id="name" name="name" placeholder="John Doe" required>
+         </div>
+         
+         <div class="input-group">
+            <label for="email">Email <span>(required)</span></label>
+            <input type="email" id="email" name="email" placeholder="johndoe@address.com" required>
+         </div>
+         
+         <div class="input-group">
+            <label for="message">Message <span>(required)</span></label>
+            <textarea id="message" name="message" placeholder="Hello!" required></textarea>
+         </div>
+         
          <input type="submit" value="SEND">
-         <small>*Required</small>
       </form>
    </section>
 

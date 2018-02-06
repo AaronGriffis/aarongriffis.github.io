@@ -747,12 +747,18 @@ body > header nav ul li a:active {
   padding: 1rem;
 }
 
+#contact form .input-group span {
+  opacity: 0.5;
+  float: right;
+}
+
 #contact form input, #contact form textarea {
   display: block;
   width: 100%;
   font: bold 1rem "Montserrat", sans-serif;
-  margin: 1rem 0;
+  margin: 0 0 1rem 0;
   outline: none;
+  -webkit-appearance: none;
   transition: background 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.1s;
   background: #fff8e6;
   color: #3a471f;
@@ -764,7 +770,7 @@ body > header nav ul li a:active {
 }
 
 #contact form input.error, #contact form textarea.error {
-  border-color: #cc4d33;
+  border-color: #eb5d47;
 }
 
 #contact form input:valid, #contact form textarea:valid {

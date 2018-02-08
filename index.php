@@ -1,78 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111373198-1"></script>
-   <script>
-     window.dataLayer = window.dataLayer || [];
-     function gtag(){dataLayer.push(arguments);}
-     gtag('js', new Date());
-   
-     gtag('config', 'UA-111373198-1');
-   </script>
-   
-   <meta charset="UTF-8" />
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-   <title>Aaron Griffis</title>
-
-   <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
-   <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
-   <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
-   <link rel="manifest" href="img/favicon/manifest.json">
-   <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#3a471f">
-   <link rel="shortcut icon" href="img/favicon/favicon.ico">
-   <meta name="msapplication-config" content="img/favicon/browserconfig.xml">
-   <meta name="theme-color" content="#fff8e7">
-
-   <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-   <link rel="stylesheet" href="css/styles.css">
-</head>
-
-<body>
-   <svg id="vignette" viewbox="0 0 2 2" preserveAspectRatio="none">
-      <defs>
-         <filter id="vig-blur">
-            <feGaussianBlur stdDeviation="0.2" />
-         </filter>
-
-         <mask id="vig-mask">
-            <rect fill="#fff" width="100%" height="100%" />
-            <path fill="#000" d="M0 1 Q0 0 1 0 T2 1 T1 2 T0 1" filter="url(#vig-blur)" />
-         </mask>
-      </defs>
-      
-      <path d="M-1 -1 H4 V4 H-4 Z" mask="url(#vig-mask)" />
-   </svg>
-
-   <header>
-      <nav>
-         <ul>
-            <li><a href="#top">Home</a></li>
-            <li><a href="#portfolio">Work</a></li>
-         </ul>
-         <svg id="logo" class="tree" viewBox="15 15 20 25">
-            <g>
-               <path class="trunk" d="m25,22 l-0.5,15 a1,1 0 0,0 1,0 l-0.5,-15"/>
-               <path d="m25,18 a10,10 0 0 1 -2,6" class="left"/>
-               <path d="m25,21 a5,5 0 0 1 -2,3" class="left short"/>
-               <path d="m25,18 a15,15 0 0 0 3,9" class="right"/>
-               <path d="m25,23 a6,6 0 0 0 2,3.5" class="right short"/>
-               <path d="m25,21 a8,8 0 0 1 -4,8" class="left"/>
-               <path d="m25,23 a6,6 0 0 1 -3,6" class="left"/>
-               <path d="m25,24 a9,9 0 0 0 6,8" class="right"/>
-               <path d="m25,26 a8,8 0 0 0 5,6.5" class="right"/>
-               <path d="m25,29 a8,8 0 0 0 3,3.5" class="right short"/>
-               <path d="m25,25 a9,9 0 0 1 -6,9" class="left"/>
-               <path d="m25,27 a8,8 0 0 1 -5,7.5" class="left"/>
-               <path d="m25,28 a7,7 0 0 1 -3,6.5" class="left"/>
-            </g>
-         </svg>
-         <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-         </ul>
-      </nav>
-   </header>
+<?php 
+   $title = "Aaron Griffis";
+   require_once "html/header.php";
+ ?>
 
    <div id="loading-mask"></div>
    <div id="intro">
@@ -330,13 +259,13 @@
          </button>
       </div>
    </div>
-          
+            
    <section id="portfolio">
       <h1>Some of the Things I've Made</h1>
       <div class="grid">
          <div class="grid-sizer"></div>
          <div class="gutter-sizer"></div>
-         <a href="img/portfolio/fullsize/movies.png" class="grid-item grid-item--height2 grid-item--width2">
+         <a href="/work/movie-collection" class="grid-item grid-item--height2 grid-item--width2">
             <img class="thumb-md" src="img/portfolio/thumbs/movies-thumb-md.gif">
             <img class="thumb-sm" src="img/portfolio/thumbs/movies-thumb-sm.gif">
             <div class="title-overlay">
@@ -351,7 +280,7 @@
                </div>
             </div>
          </a>
-         <a href="img/portfolio/fullsize/google.png" class="grid-item grid-item--width2">
+         <a href="/work/google-doodle" class="grid-item grid-item--width2">
             <img class="thumb-md" src="img/portfolio/thumbs/google-thumb-md.gif">
             <img class="thumb-sm" src="img/portfolio/thumbs/google-thumb-sm.gif">
             <div class="title-overlay">
@@ -365,7 +294,7 @@
                </div>
             </div>
          </a>
-         <a href="img/portfolio/fullsize/spokane.png" class="grid-item">
+         <a href="/work/spokane-signal-box" class="grid-item">
             <img class="thumb-md" src="img/portfolio/thumbs/spokane-thumb-md.png">
             <img class="thumb-sm" src="img/portfolio/thumbs/spokane-thumb-sm.png">
             <div class="title-overlay">
@@ -376,7 +305,7 @@
                </div>
             </div>
          </a>
-         <a href="img/portfolio/fullsize/noodles.png" class="grid-item grid-item--height2">
+         <a href="/work/puzzle-game" class="grid-item grid-item--height2">
             <img class="thumb-md" src="img/portfolio/thumbs/noodles-thumb-md.gif">
             <img class="thumb-sm" src="img/portfolio/thumbs/noodles-thumb-sm.gif">
             <div class="title-overlay">
@@ -388,7 +317,7 @@
                </div>
             </div>
          </a>
-         <a href="img/portfolio/fullsize/preflight.png" class="grid-item">
+         <a href="/work/preflight-poster" class="grid-item">
             <img class="thumb-md" src="img/portfolio/thumbs/preflight-thumb-md.png">
             <img class="thumb-sm" src="img/portfolio/thumbs/preflight-thumb-sm.png">
             <div class="title-overlay">
@@ -399,7 +328,7 @@
                </div>
             </div>
          </a>
-         <a href="img/portfolio/fullsize/budapest.png" class="grid-item grid-item--width2">
+         <a href="/work/movie-trailer-website" class="grid-item grid-item--width2">
             <img class="thumb-md" src="img/portfolio/thumbs/budapest-thumb-md.gif">
             <img class="thumb-sm" src="img/portfolio/thumbs/budapest-thumb-sm.gif">
             <div class="title-overlay">
@@ -411,11 +340,11 @@
                </div>
             </div>
          </a>
-         <a href="img/portfolio/fullsize/scorekeeper.png" class="grid-item grid-item--width2">
+         <a href="/work/scorekeeper" class="grid-item grid-item--width2">
             <img class="thumb-md" src="img/portfolio/thumbs/scorekeeper-thumb-md.gif">
             <img class="thumb-sm" src="img/portfolio/thumbs/scorekeeper-thumb-sm.gif">
             <div class="title-overlay">
-               <h2 class="title">Online Scorekeeper</h1>
+               <h2 class="title">Scorekeeper Web App</h1>
                <div class="tags">
                   <p>Website</p>
                   <p>jQuery</p>
@@ -497,7 +426,7 @@
       <h1>Get In Touch</h1>
       <form action="https://formspree.io/me@aarongriffis.com" method="POST">
          <p>Whether you'd like to discuss my work, request my r&#233;sum&#233; or references, or would just like to chat, I'd be happy to hear from you!</p>
-         <input type="hidden" name="_next" value="//aarongriffis.com/thanks.html">
+         <input type="hidden" name="_next" value="//aarongriffis.com/thanks">
          
          <div class="input-group">
             <label for="name">Name <span>(required)</span></label>
@@ -518,38 +447,4 @@
       </form>
    </section>
 
-   <footer>
-      <div id="username" class="hidden-xs">
-         <span id="username-before"></span>
-         <span>Aaron</span>
-         <span id="username-space">&nbsp;</span>
-         <span>Griffis</span>
-         <span id="username-after">.com</span>
-      </div>
-      <span id="username-small" class="visible-xs-block">Aaron Griffis</span>
-   
-      <div id="username-links">
-         <a id="link-github" href="https://github.com/AaronGriffis" target="_blank">
-            <svg aria-labelledby="simpleicons-github-icon" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title id="simpleicons-github-icon">GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-         </a>
-         <a id="link-codepen" href="https://codepen.io/aarongriffis/" target="_blank">
-            <svg aria-labelledby="simpleicons-codepen-icon" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title id="simpleicons-codepen-icon">CodePen</title><path d="M24 8.182l-.018-.087-.017-.05c-.01-.024-.018-.05-.03-.075-.003-.018-.015-.034-.02-.05l-.035-.067-.03-.05-.044-.06-.046-.045-.06-.045-.046-.03-.06-.044-.044-.04-.015-.02L12.58.19c-.347-.232-.796-.232-1.142 0L.453 7.502l-.015.015-.044.035-.06.05-.038.04-.05.056-.037.045-.05.06c-.02.017-.03.03-.03.046l-.05.06-.02.06c-.02.01-.02.04-.03.07l-.01.05C0 8.12 0 8.15 0 8.18v7.497c0 .044.003.09.01.135l.01.046c.005.03.01.06.02.086l.015.05c.01.027.016.053.027.075l.022.05c0 .01.015.04.03.06l.03.04c.015.01.03.04.045.06l.03.04.04.04c.01.013.01.03.03.03l.06.042.04.03.01.014 10.97 7.33c.164.12.375.163.57.163s.39-.06.57-.18l10.99-7.28.014-.01.046-.037.06-.043.048-.036.052-.058.033-.045.04-.06.03-.05.03-.07.016-.052.03-.077.015-.045.03-.08v-7.5c0-.05 0-.095-.016-.14l-.014-.045.044.003zm-11.99 6.28l-3.65-2.44 3.65-2.442 3.65 2.44-3.65 2.44zm-1.034-6.674l-4.473 2.99L2.89 8.362l8.086-5.39V7.79zm-6.33 4.233l-2.582 1.73V10.3l2.582 1.726zm1.857 1.25l4.473 2.99v4.82L2.89 15.69l3.618-2.417v-.004zm6.537 2.99l4.474-2.98 3.613 2.42-8.087 5.39v-4.82zm6.33-4.23l2.583-1.72v3.456l-2.583-1.73zm-1.855-1.24L13.042 7.8V2.97l8.085 5.39-3.612 2.415v.003z"/></svg>
-         </a>
-         <a id="link-linkedin" href="https://www.linkedin.com/in/aarongriffis/" target="_blank">
-            <svg aria-labelledby="simpleicons-linkedin-icon" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title id="simpleicons-linkedin-icon">LinkedIn</title><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-         </a>
-         <a id="link-email" href="mailto:me@aarongriffis.com">
-            <svg aria-labelledby="email-icon" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title id="email-icon">Email</title><path d="M20,3H4C1.8,3,0,4.8,0,7v10c0,2.2,1.8,4,4,4h16c2.2,0,4-1.8,4-4V7C24,4.8,22.2,3,20,3z M16.6,11.8l5-5 C21.7,6.7,22,6.8,22,7v10c0,0.2-0.3,0.3-0.4,0.2l-5-5C16.5,12.1,16.5,11.9,16.6,11.8z M20.2,5.4l-6,6c-1.2,1.2-3.1,1.2-4.2,0l-6-6 C3.7,5.3,3.8,5,4,5h16C20.2,5,20.3,5.3,20.2,5.4z M2.4,6.8l5,5c0.1,0.1,0.1,0.3,0,0.4l-5,5C2.3,17.3,2,17.2,2,17V7 C2,6.8,2.3,6.7,2.4,6.8z M3.8,18.6l5.1-5.1c0.1-0.1,0.2-0.1,0.3,0C10,14,11,14.3,12,14.3c1,0,2-0.3,2.8-0.9c0.1-0.1,0.2-0.1,0.3,0 l5.1,5.1c0.2,0.2,0,0.4-0.2,0.4H4C3.8,19,3.7,18.7,3.8,18.6z"/></svg>
-         </a>
-      </div>
-   </footer>
-
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/plugins/ScrollToPlugin.min.js"></script>
-   <script src="https://masonry.desandro.com/masonry.pkgd.js"></script>
-   <script src="js/scripts.js"></script>
-</body>
-</html>
+<?php readfile("html/footer.html"); ?>

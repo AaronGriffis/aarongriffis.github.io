@@ -41,8 +41,23 @@
       flex-wrap: wrap;
       justify-content: center;
 
-      .icon-link {
-         @include single-border-icon($inv:true);
+      div {
+         flex: 1;
+         min-width: calc(33% - (#{$gutter} / 2));
+         padding: 0.5rem;
+
+         svg {
+            display: block;
+            fill: $fg;
+            height: 2.5rem;
+            width: 2.5rem;
+            margin: 0 auto;
+         }
+
+         p {
+            margin: 0;
+            text-align: center;
+         }
       }
    }
 
@@ -57,10 +72,11 @@
       line-height: 1.5rem;
    }
 
-   a:not(.icon-link) {
+   a {
       background: $bg;
       border-radius: ($border * 3);
       -webkit-box-decoration-break: clone;
+      box-decoration-break: clone;
       color: $fg;
       padding: ($border * 2) $border;
       outline: none;
@@ -93,12 +109,11 @@
    #about {
       .card {
          margin: ($gutter / 2);
-         padding: $gutter;
          @include double-border($border: $border, $filled:true);
       }
 
-      #toolbox .icon-link {
-         @include single-border-icon($border: $border, $inv:true);
+      #toolbox div {
+         min-width: calc(33% - (#{$gutter} / 2));
       }
    }
 }

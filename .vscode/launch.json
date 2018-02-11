@@ -16,30 +16,6 @@
          "type": "php",
          "request": "launch",
          "port": 9000
-      },
-      {
-         "name": "Launch currently open script",
-         "type": "php",
-         "request": "launch",
-         "program": "${file}",
-         "cwd": "${fileDirname}",
-         "port": 9000
-      },
-      {
-         "name": "Attach",
-         "type": "chrome",
-         "request": "attach",
-         "port": 9222,
-         "url": "http://localhost/aarongriffis.github.io/",
-         "webRoot": "${workspaceFolder}"
-      },
-      {
-         "name": "iOS Web",
-         "type": "chrome",
-         "request": "attach",
-         "port": 9000,
-         "url": "http://localhost:8080/aarongriffis.github.io/",
-         "webRoot": "${workspaceFolder}"
       }
    ]
 }

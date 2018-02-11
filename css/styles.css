@@ -13,7 +13,8 @@ progress, sub, sup {
 }
 
 [type=checkbox], [type=radio], legend {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 0;
 }
 
@@ -41,7 +42,8 @@ figure {
 }
 
 hr {
-  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
   height: 0;
 }
 
@@ -58,7 +60,8 @@ a {
 abbr[title] {
   border-bottom: none;
   text-decoration: underline;
-  text-decoration: underline dotted;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
 }
 
 b, strong {
@@ -171,7 +174,8 @@ summary {
 }
 
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 html {
@@ -201,9 +205,15 @@ body > section:before {
 }
 
 body > section > h1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-size: 1.5rem;
   margin: 2rem 0;
 }
@@ -212,7 +222,9 @@ body > section > h1:before, body > section > h1:after {
   content: "";
   background: #fff8e6;
   border-radius: 0.5rem;
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   height: 0.125rem;
   min-width: 3rem;
 }
@@ -242,14 +254,16 @@ body > section h2 {
   z-index: 1000;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
   will-change: transform;
 }
 
 body > header {
   background: #3a471f;
   border-bottom: 0.125rem solid #3a471f;
-  box-shadow: inset 0 -0.125rem #fff8e6;
+  -webkit-box-shadow: inset 0 -0.125rem #fff8e6;
+          box-shadow: inset 0 -0.125rem #fff8e6;
   position: fixed;
   top: 0;
   height: 10vh;
@@ -258,8 +272,12 @@ body > header {
 }
 
 body > header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 0 auto;
   padding: 0;
   height: 100%;
@@ -267,10 +285,16 @@ body > header nav {
 }
 
 body > header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  flex: 1;
-  justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   margin: 0;
   padding: 0;
 }
@@ -285,12 +309,16 @@ body > header nav ul li a {
   padding: 0.25rem 0.5rem;
   text-decoration: none;
   font: bold 0.75rem "Comfortaa", sans-serif;
-  border: solid 0.125rem transparent;
+  border: solid 0.125rem #3a471f;
   border-radius: 50rem;
-  box-shadow: inset 0 0 #fff8e6;
+  -webkit-box-shadow: inset 0 0 #3a471f;
+          box-shadow: inset 0 0 #3a471f;
   color: #fff8e6;
   outline: none;
+  -webkit-transition: border 0.3s ease-in-out, -webkit-box-shadow 0.1s;
+  transition: border 0.3s ease-in-out, -webkit-box-shadow 0.1s;
   transition: border 0.3s ease-in-out, box-shadow 0.1s;
+  transition: border 0.3s ease-in-out, box-shadow 0.1s, -webkit-box-shadow 0.1s;
 }
 
 body > header nav ul li a:hover, body > header nav ul li a:focus {
@@ -298,28 +326,37 @@ body > header nav ul li a:hover, body > header nav ul li a:focus {
 }
 
 body > header nav ul li a:active {
-  box-shadow: inset 0 0 0 0.0625rem #fff8e6;
+  -webkit-box-shadow: inset 0 0 0 0.0625rem #fff8e6;
+          box-shadow: inset 0 0 0 0.0625rem #fff8e6;
 }
 
 #logo {
-  align-self: flex-end;
-  flex-shrink: 0;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   height: calc(10vh - (0.125rem * 2));
   width: calc(10vh - (0.125rem * 2));
-  pointer-events: unset;
   background: #fff8e6;
   color: #3a471f;
   border: solid 0.125rem #fff8e6;
   border-radius: 50rem;
-  box-shadow: inset 0 0 0 0.125rem #3a471f;
+  -webkit-box-shadow: inset 0 0 0 0.125rem #3a471f;
+          box-shadow: inset 0 0 0 0.125rem #3a471f;
   padding: 0;
 }
 
-#logo path {
+#logo svg {
+  height: 100%;
+  width: 100%;
+  pointer-events: unset;
+}
+
+#logo svg path {
   stroke: #3a471f;
 }
 
-#logo .trunk {
+#logo svg .trunk {
   fill: #3a471f;
 }
 
@@ -391,11 +428,15 @@ body > header nav ul li a:active {
   color: #3a471f;
   border: solid 0.125rem #3a471f;
   border-radius: 50rem;
-  box-shadow: inset 0 0 0 0.125rem #fff8e6;
+  -webkit-box-shadow: inset 0 0 0 0.125rem #fff8e6;
+          box-shadow: inset 0 0 0 0.125rem #fff8e6;
   padding: 0;
   font: bold 1rem "Comfortaa", sans-serif;
   outline: none;
+  -webkit-transition: background 0.3s ease-in-out, color 0.3s ease-in-out, opacity 0.3s ease-in-out, -webkit-box-shadow 0.1s;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out, opacity 0.3s ease-in-out, -webkit-box-shadow 0.1s;
   transition: background 0.3s ease-in-out, color 0.3s ease-in-out, box-shadow 0.1s, opacity 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out, box-shadow 0.1s, opacity 0.3s ease-in-out, -webkit-box-shadow 0.1s;
 }
 
 #intro #intro-text #intro-btn:hover, #intro #intro-text #intro-btn:focus {
@@ -404,7 +445,8 @@ body > header nav ul li a:active {
 }
 
 #intro #intro-text #intro-btn:active {
-  box-shadow: inset 0 0 0 0.1875rem #fff8e6;
+  -webkit-box-shadow: inset 0 0 0 0.1875rem #fff8e6;
+          box-shadow: inset 0 0 0 0.1875rem #fff8e6;
 }
 
 #intro #intro-text #intro-btn p {
@@ -560,7 +602,8 @@ body > header nav ul li a:active {
 }
 
 .grid-item:active .title-overlay {
-  box-shadow: inset 0 0 0 0.25rem #3a471f;
+  -webkit-box-shadow: inset 0 0 0 0.25rem #3a471f;
+          box-shadow: inset 0 0 0 0.25rem #3a471f;
 }
 
 .grid-item img {
@@ -580,19 +623,32 @@ body > header nav ul li a:active {
   color: #3a471f;
   border: solid 0.125rem #fff8e6;
   border-radius: 0.375rem;
-  box-shadow: inset 0 0 0 0.125rem #3a471f;
+  -webkit-box-shadow: inset 0 0 0 0.125rem #3a471f;
+          box-shadow: inset 0 0 0 0.125rem #3a471f;
   padding: 0.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   opacity: 1;
+  -webkit-transition: opacity 0.3s ease-in-out, -webkit-box-shadow 0.1s;
+  transition: opacity 0.3s ease-in-out, -webkit-box-shadow 0.1s;
   transition: opacity 0.3s ease-in-out, box-shadow 0.1s;
+  transition: opacity 0.3s ease-in-out, box-shadow 0.1s, -webkit-box-shadow 0.1s;
 }
 
 .grid-item .title-overlay .title, .grid-item .title-overlay .tags {
@@ -628,16 +684,31 @@ body > header nav ul li a:active {
 }
 
 #about .flex-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #about > .flex-wrapper #blurb {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  flex: 2;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
 }
 
 #about > .flex-wrapper #blurb > div {
@@ -645,19 +716,24 @@ body > header nav ul li a:active {
 }
 
 #about > .flex-wrapper > .flex-wrapper {
-  flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 #about .card {
   margin: 0.5rem;
   max-width: 40rem;
   min-width: 50vw;
-  flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   background: #fff8e6;
   color: #3a471f;
   border: solid 0.125rem #fff8e6;
   border-radius: 0.375rem;
-  box-shadow: inset 0 0 0 0.125rem #3a471f;
+  -webkit-box-shadow: inset 0 0 0 0.125rem #3a471f;
+          box-shadow: inset 0 0 0 0.125rem #3a471f;
   padding: 1rem;
 }
 
@@ -666,35 +742,35 @@ body > header nav ul li a:active {
 }
 
 #about #toolbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-#about #toolbox .icon-link {
-  margin: 0.25rem;
-  padding: 1rem;
-  border: solid 0.125rem transparent;
-  border-radius: 50rem;
-  box-shadow: inset 0 0 #3a471f;
-  color: #3a471f;
-  outline: none;
-  transition: border 0.3s ease-in-out, box-shadow 0.1s;
+#about #toolbox div {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  min-width: calc(33% - (1rem / 2));
+  padding: 0.5rem;
 }
 
-#about #toolbox .icon-link:hover, #about #toolbox .icon-link:focus {
-  border: solid 0.125rem #3a471f;
-}
-
-#about #toolbox .icon-link:active {
-  box-shadow: inset 0 0 0 0.0625rem #3a471f;
-}
-
-#about #toolbox .icon-link > svg {
-  fill: #3a471f;
+#about #toolbox div svg {
   display: block;
+  fill: #3a471f;
   height: 2.5rem;
   width: 2.5rem;
+  margin: 0 auto;
+}
+
+#about #toolbox div p {
+  margin: 0;
+  text-align: center;
 }
 
 #about p, #about li {
@@ -708,25 +784,27 @@ body > header nav ul li a:active {
   line-height: 1.5rem;
 }
 
-#about a:not(.icon-link) {
+#about a {
   background: #fff8e6;
   border-radius: 0.375rem;
   -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
   color: #3a471f;
   padding: 0.25rem 0.125rem;
   outline: none;
+  -webkit-transition: background 0.3s ease-in-out, color 0.3s ease-in-out, padding 0.1s;
   transition: background 0.3s ease-in-out, color 0.3s ease-in-out, padding 0.1s;
 }
 
-#about a:not(.icon-link):active {
+#about a:active {
   padding: 0.125rem;
 }
 
-#about a:not(.icon-link):visited {
+#about a:visited {
   color: #6b7350;
 }
 
-#about a:not(.icon-link):hover, #about a:not(.icon-link):focus {
+#about a:hover, #about a:focus {
   background: #3a471f;
   color: #fff8e6;
 }
@@ -743,7 +821,8 @@ body > header nav ul li a:active {
   color: #3a471f;
   border: solid 0.125rem #fff8e6;
   border-radius: 0.375rem;
-  box-shadow: inset 0 0 0 0.125rem #3a471f;
+  -webkit-box-shadow: inset 0 0 0 0.125rem #3a471f;
+          box-shadow: inset 0 0 0 0.125rem #3a471f;
   padding: 1rem;
 }
 
@@ -759,12 +838,14 @@ body > header nav ul li a:active {
   margin: 0 0 1rem 0;
   outline: none;
   -webkit-appearance: none;
+  -webkit-transition: background 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.1s;
   transition: background 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.1s;
   background: #fff8e6;
   color: #3a471f;
   border: solid 0.125rem #fff8e6;
   border-radius: 0.375rem;
-  box-shadow: inset 0 0 0 0.125rem #3a471f;
+  -webkit-box-shadow: inset 0 0 0 0.125rem #3a471f;
+          box-shadow: inset 0 0 0 0.125rem #3a471f;
   padding: 1rem;
   background: #9ca082;
 }
@@ -781,8 +862,32 @@ body > header nav ul li a:active {
   background: #fff8e6;
 }
 
+#contact form input:focus::-webkit-input-placeholder, #contact form textarea:focus::-webkit-input-placeholder {
+  color: #616b46;
+}
+
+#contact form input:focus:-ms-input-placeholder, #contact form textarea:focus:-ms-input-placeholder {
+  color: #616b46;
+}
+
+#contact form input:focus::-ms-input-placeholder, #contact form textarea:focus::-ms-input-placeholder {
+  color: #616b46;
+}
+
 #contact form input:focus::placeholder, #contact form textarea:focus::placeholder {
   color: #616b46;
+}
+
+#contact form input::-webkit-input-placeholder, #contact form textarea::-webkit-input-placeholder {
+  color: #3a471f;
+}
+
+#contact form input:-ms-input-placeholder, #contact form textarea:-ms-input-placeholder {
+  color: #3a471f;
+}
+
+#contact form input::-ms-input-placeholder, #contact form textarea::-ms-input-placeholder {
+  color: #3a471f;
 }
 
 #contact form input::placeholder, #contact form textarea::placeholder {
@@ -800,11 +905,15 @@ body > header nav ul li a:active {
   color: #fff8e6;
   border: solid 0.125rem #fff8e6;
   border-radius: 0.375rem;
-  box-shadow: inset 0 0 0 0.125rem #3a471f;
+  -webkit-box-shadow: inset 0 0 0 0.125rem #3a471f;
+          box-shadow: inset 0 0 0 0.125rem #3a471f;
   padding: 1rem;
   font: bold 1rem "Comfortaa", sans-serif;
   outline: none;
+  -webkit-transition: background 0.3s ease-in-out, color 0.3s ease-in-out, opacity 0.3s ease-in-out, -webkit-box-shadow 0.1s;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out, opacity 0.3s ease-in-out, -webkit-box-shadow 0.1s;
   transition: background 0.3s ease-in-out, color 0.3s ease-in-out, box-shadow 0.1s, opacity 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out, box-shadow 0.1s, opacity 0.3s ease-in-out, -webkit-box-shadow 0.1s;
 }
 
 #contact form input[type="submit"]:hover, #contact form input[type="submit"]:focus {
@@ -813,7 +922,8 @@ body > header nav ul li a:active {
 }
 
 #contact form input[type="submit"]:active {
-  box-shadow: inset 0 0 0 0.1875rem #3a471f;
+  -webkit-box-shadow: inset 0 0 0 0.1875rem #3a471f;
+          box-shadow: inset 0 0 0 0.1875rem #3a471f;
 }
 
 footer {
@@ -823,21 +933,34 @@ footer {
 }
 
 #username-links, #username {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #username-links > a {
   margin: 0.25rem;
   padding: 1rem;
-  border: solid 0.125rem transparent;
+  border: solid 0.125rem #3a471f;
   border-radius: 50rem;
-  box-shadow: inset 0 0 #fff8e6;
+  -webkit-box-shadow: inset 0 0 #3a471f;
+          box-shadow: inset 0 0 #3a471f;
   color: #fff8e6;
   outline: none;
+  -webkit-transition: border 0.3s ease-in-out, -webkit-box-shadow 0.1s;
+  transition: border 0.3s ease-in-out, -webkit-box-shadow 0.1s;
   transition: border 0.3s ease-in-out, box-shadow 0.1s;
+  transition: border 0.3s ease-in-out, box-shadow 0.1s, -webkit-box-shadow 0.1s;
 }
 
 #username-links > a:hover, #username-links > a:focus {
@@ -845,7 +968,8 @@ footer {
 }
 
 #username-links > a:active {
-  box-shadow: inset 0 0 0 0.0625rem #fff8e6;
+  -webkit-box-shadow: inset 0 0 0 0.0625rem #fff8e6;
+          box-shadow: inset 0 0 0 0.0625rem #fff8e6;
 }
 
 #username-links > a > svg {
@@ -857,14 +981,20 @@ footer {
 
 #username {
   display: none;
-  align-items: baseline;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -webkit-transition: margin-left 0.5s;
   transition: margin-left 0.5s;
 }
 
 #username-before, #username-after {
   color: transparent;
+  -webkit-transition: color 0.5s;
   transition: color 0.5s;
-  flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 #username-before {
@@ -888,6 +1018,7 @@ footer {
 #username-space {
   font-size: 0;
   width: 0.5rem;
+  -webkit-transition: width 0.5s 0.25s;
   transition: width 0.5s 0.25s;
 }
 
@@ -902,7 +1033,8 @@ footer {
   color: #3a471f;
   border: solid 0.125rem #fff8e6;
   border-radius: 0.375rem;
-  box-shadow: inset 0 0 0 0.125rem #3a471f;
+  -webkit-box-shadow: inset 0 0 0 0.125rem #3a471f;
+          box-shadow: inset 0 0 0 0.125rem #3a471f;
   padding: 1rem;
 }
 
@@ -913,11 +1045,15 @@ footer {
   color: #3a471f;
   border: solid 0.125rem #3a471f;
   border-radius: 50rem;
-  box-shadow: inset 0 0 0 0.125rem #fff8e6;
+  -webkit-box-shadow: inset 0 0 0 0.125rem #fff8e6;
+          box-shadow: inset 0 0 0 0.125rem #fff8e6;
   padding: 1rem;
   font: bold 1rem "Comfortaa", sans-serif;
   outline: none;
+  -webkit-transition: background 0.3s ease-in-out, color 0.3s ease-in-out, opacity 0.3s ease-in-out, -webkit-box-shadow 0.1s;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out, opacity 0.3s ease-in-out, -webkit-box-shadow 0.1s;
   transition: background 0.3s ease-in-out, color 0.3s ease-in-out, box-shadow 0.1s, opacity 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out, box-shadow 0.1s, opacity 0.3s ease-in-out, -webkit-box-shadow 0.1s;
 }
 
 #thanks a:hover, #thanks a:focus {
@@ -926,7 +1062,8 @@ footer {
 }
 
 #thanks a:active {
-  box-shadow: inset 0 0 0 0.1875rem #fff8e6;
+  -webkit-box-shadow: inset 0 0 0 0.1875rem #fff8e6;
+          box-shadow: inset 0 0 0 0.1875rem #fff8e6;
 }
 
 @media (min-width: 376px) and (min-height: 376px) {
@@ -987,7 +1124,8 @@ footer {
   }
   body > header {
     border-bottom: 0.25rem solid #3a471f;
-    box-shadow: inset 0 -0.25rem #fff8e6;
+    -webkit-box-shadow: inset 0 -0.25rem #fff8e6;
+            box-shadow: inset 0 -0.25rem #fff8e6;
     height: 8vh;
   }
   body > header nav {
@@ -997,18 +1135,23 @@ footer {
     font: bold 1.5rem "Comfortaa", sans-serif;
     margin: 0.5rem;
     padding: 0.5rem 1rem;
-    border: solid 0.25rem transparent;
+    border: solid 0.25rem #3a471f;
     border-radius: 50rem;
-    box-shadow: inset 0 0 #fff8e6;
+    -webkit-box-shadow: inset 0 0 #3a471f;
+            box-shadow: inset 0 0 #3a471f;
     color: #fff8e6;
     outline: none;
+    -webkit-transition: border 0.3s ease-in-out, -webkit-box-shadow 0.1s;
+    transition: border 0.3s ease-in-out, -webkit-box-shadow 0.1s;
     transition: border 0.3s ease-in-out, box-shadow 0.1s;
+    transition: border 0.3s ease-in-out, box-shadow 0.1s, -webkit-box-shadow 0.1s;
   }
   body > header nav ul li a:hover, body > header nav ul li a:focus {
     border: solid 0.25rem #fff8e6;
   }
   body > header nav ul li a:active {
-    box-shadow: inset 0 0 0 0.125rem #fff8e6;
+    -webkit-box-shadow: inset 0 0 0 0.125rem #fff8e6;
+            box-shadow: inset 0 0 0 0.125rem #fff8e6;
   }
   body > header #logo {
     height: calc(8vh - (0.25rem * 2));
@@ -1017,7 +1160,8 @@ footer {
     color: #3a471f;
     border: solid 0.25rem #fff8e6;
     border-radius: 50rem;
-    box-shadow: inset 0 0 0 0.25rem #3a471f;
+    -webkit-box-shadow: inset 0 0 0 0.25rem #3a471f;
+            box-shadow: inset 0 0 0 0.25rem #3a471f;
     padding: 0;
   }
   #loading-mask, #intro {
@@ -1038,18 +1182,23 @@ footer {
     color: #3a471f;
     border: solid 0.25rem #3a471f;
     border-radius: 50rem;
-    box-shadow: inset 0 0 0 0.25rem #fff8e6;
+    -webkit-box-shadow: inset 0 0 0 0.25rem #fff8e6;
+            box-shadow: inset 0 0 0 0.25rem #fff8e6;
     padding: 0;
     font: bold 1.5rem "Comfortaa", sans-serif;
     outline: none;
+    -webkit-transition: background 0.3s ease-in-out, color 0.3s ease-in-out, opacity 0.3s ease-in-out, -webkit-box-shadow 0.1s;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out, opacity 0.3s ease-in-out, -webkit-box-shadow 0.1s;
     transition: background 0.3s ease-in-out, color 0.3s ease-in-out, box-shadow 0.1s, opacity 0.3s ease-in-out;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out, box-shadow 0.1s, opacity 0.3s ease-in-out, -webkit-box-shadow 0.1s;
   }
   #intro #intro-text #intro-btn:hover, #intro #intro-text #intro-btn:focus {
     background: #3a471f;
     color: #fff8e6;
   }
   #intro #intro-text #intro-btn:active {
-    box-shadow: inset 0 0 0 0.375rem #fff8e6;
+    -webkit-box-shadow: inset 0 0 0 0.375rem #fff8e6;
+            box-shadow: inset 0 0 0 0.375rem #fff8e6;
   }
   #intro #intro-text #intro-btn p {
     line-height: 2rem;
@@ -1090,7 +1239,8 @@ footer {
     color: #3a471f;
     border: solid 0.25rem #fff8e6;
     border-radius: 0.75rem;
-    box-shadow: inset 0 0 0 0.25rem #3a471f;
+    -webkit-box-shadow: inset 0 0 0 0.25rem #3a471f;
+            box-shadow: inset 0 0 0 0.25rem #3a471f;
     padding: 0.4rem;
   }
   .grid-item .title-overlay .title {
@@ -1104,7 +1254,8 @@ footer {
     margin: 0.2rem 0;
   }
   .grid-item .title-overlay:active {
-    box-shadow: inset 0 0 0 0.5rem #3a471f;
+    -webkit-box-shadow: inset 0 0 0 0.5rem #3a471f;
+            box-shadow: inset 0 0 0 0.5rem #3a471f;
   }
   .grid-item--width2, .grid-item--width2 img {
     width: 32rem;
@@ -1114,35 +1265,16 @@ footer {
   }
   #about .card {
     margin: 1rem;
-    padding: 2rem;
     background: #fff8e6;
     color: #3a471f;
     border: solid 0.25rem #fff8e6;
     border-radius: 0.75rem;
-    box-shadow: inset 0 0 0 0.25rem #3a471f;
+    -webkit-box-shadow: inset 0 0 0 0.25rem #3a471f;
+            box-shadow: inset 0 0 0 0.25rem #3a471f;
     padding: 1rem;
   }
-  #about #toolbox .icon-link {
-    margin: 0.25rem;
-    padding: 1rem;
-    border: solid 0.25rem transparent;
-    border-radius: 50rem;
-    box-shadow: inset 0 0 #3a471f;
-    color: #3a471f;
-    outline: none;
-    transition: border 0.3s ease-in-out, box-shadow 0.1s;
-  }
-  #about #toolbox .icon-link:hover, #about #toolbox .icon-link:focus {
-    border: solid 0.25rem #3a471f;
-  }
-  #about #toolbox .icon-link:active {
-    box-shadow: inset 0 0 0 0.125rem #3a471f;
-  }
-  #about #toolbox .icon-link > svg {
-    fill: #3a471f;
-    display: block;
-    height: 2.5rem;
-    width: 2.5rem;
+  #about #toolbox div {
+    min-width: calc(33% - (2rem / 2));
   }
   #contact form {
     width: 50%;
@@ -1152,7 +1284,8 @@ footer {
     color: #3a471f;
     border: solid 0.25rem #fff8e6;
     border-radius: 0.75rem;
-    box-shadow: inset 0 0 0 0.25rem #3a471f;
+    -webkit-box-shadow: inset 0 0 0 0.25rem #3a471f;
+            box-shadow: inset 0 0 0 0.25rem #3a471f;
     padding: 1rem;
   }
   #contact form input, #contact form textarea {
@@ -1161,7 +1294,8 @@ footer {
     color: #3a471f;
     border: solid 0.25rem #fff8e6;
     border-radius: 0.75rem;
-    box-shadow: inset 0 0 0 0.25rem #3a471f;
+    -webkit-box-shadow: inset 0 0 0 0.25rem #3a471f;
+            box-shadow: inset 0 0 0 0.25rem #3a471f;
     padding: 1rem;
     background: #9ca082;
   }
@@ -1170,18 +1304,23 @@ footer {
     color: #fff8e6;
     border: solid 0.25rem #fff8e6;
     border-radius: 0.75rem;
-    box-shadow: inset 0 0 0 0.25rem #3a471f;
+    -webkit-box-shadow: inset 0 0 0 0.25rem #3a471f;
+            box-shadow: inset 0 0 0 0.25rem #3a471f;
     padding: 1rem;
     font: bold 1.5rem "Comfortaa", sans-serif;
     outline: none;
+    -webkit-transition: background 0.3s ease-in-out, color 0.3s ease-in-out, opacity 0.3s ease-in-out, -webkit-box-shadow 0.1s;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out, opacity 0.3s ease-in-out, -webkit-box-shadow 0.1s;
     transition: background 0.3s ease-in-out, color 0.3s ease-in-out, box-shadow 0.1s, opacity 0.3s ease-in-out;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out, box-shadow 0.1s, opacity 0.3s ease-in-out, -webkit-box-shadow 0.1s;
   }
   #contact form input[type="submit"]:hover, #contact form input[type="submit"]:focus {
     background: #fff8e6;
     color: #3a471f;
   }
   #contact form input[type="submit"]:active {
-    box-shadow: inset 0 0 0 0.375rem #3a471f;
+    -webkit-box-shadow: inset 0 0 0 0.375rem #3a471f;
+            box-shadow: inset 0 0 0 0.375rem #3a471f;
   }
   footer {
     margin: 8rem auto 2rem;
@@ -1189,18 +1328,23 @@ footer {
   footer #username-links > a {
     margin: 0.25rem;
     padding: 1rem;
-    border: solid 0.25rem transparent;
+    border: solid 0.25rem #3a471f;
     border-radius: 50rem;
-    box-shadow: inset 0 0 #fff8e6;
+    -webkit-box-shadow: inset 0 0 #3a471f;
+            box-shadow: inset 0 0 #3a471f;
     color: #fff8e6;
     outline: none;
+    -webkit-transition: border 0.3s ease-in-out, -webkit-box-shadow 0.1s;
+    transition: border 0.3s ease-in-out, -webkit-box-shadow 0.1s;
     transition: border 0.3s ease-in-out, box-shadow 0.1s;
+    transition: border 0.3s ease-in-out, box-shadow 0.1s, -webkit-box-shadow 0.1s;
   }
   footer #username-links > a:hover, footer #username-links > a:focus {
     border: solid 0.25rem #fff8e6;
   }
   footer #username-links > a:active {
-    box-shadow: inset 0 0 0 0.125rem #fff8e6;
+    -webkit-box-shadow: inset 0 0 0 0.125rem #fff8e6;
+            box-shadow: inset 0 0 0 0.125rem #fff8e6;
   }
   footer #username-links > a > svg {
     fill: #fff8e6;
@@ -1209,6 +1353,8 @@ footer {
     width: 2.5rem;
   }
   footer #username {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
   footer #username-small {
@@ -1220,7 +1366,8 @@ footer {
     color: #3a471f;
     border: solid 0.25rem #fff8e6;
     border-radius: 0.75rem;
-    box-shadow: inset 0 0 0 0.25rem #3a471f;
+    -webkit-box-shadow: inset 0 0 0 0.25rem #3a471f;
+            box-shadow: inset 0 0 0 0.25rem #3a471f;
     padding: 2rem;
   }
   #thanks a {
@@ -1228,18 +1375,23 @@ footer {
     color: #3a471f;
     border: solid 0.25rem #3a471f;
     border-radius: 50rem;
-    box-shadow: inset 0 0 0 0.25rem #fff8e6;
+    -webkit-box-shadow: inset 0 0 0 0.25rem #fff8e6;
+            box-shadow: inset 0 0 0 0.25rem #fff8e6;
     padding: 1rem;
     font: bold 1.5rem "Comfortaa", sans-serif;
     outline: none;
+    -webkit-transition: background 0.3s ease-in-out, color 0.3s ease-in-out, opacity 0.3s ease-in-out, -webkit-box-shadow 0.1s;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out, opacity 0.3s ease-in-out, -webkit-box-shadow 0.1s;
     transition: background 0.3s ease-in-out, color 0.3s ease-in-out, box-shadow 0.1s, opacity 0.3s ease-in-out;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out, box-shadow 0.1s, opacity 0.3s ease-in-out, -webkit-box-shadow 0.1s;
   }
   #thanks a:hover, #thanks a:focus {
     background: #3a471f;
     color: #fff8e6;
   }
   #thanks a:active {
-    box-shadow: inset 0 0 0 0.375rem #fff8e6;
+    -webkit-box-shadow: inset 0 0 0 0.375rem #fff8e6;
+            box-shadow: inset 0 0 0 0.375rem #fff8e6;
   }
 }
 /*# sourceMappingURL=styles.css.map */

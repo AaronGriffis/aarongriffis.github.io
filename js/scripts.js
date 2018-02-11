@@ -8,8 +8,8 @@ function loaded() {
 
    TweenMax.set('.terrain.left', {attr: {viewBox:'50 0 50 50'}});
    TweenMax.set('.terrain.right', {attr: {viewBox:'-50 0 50 50'}});
-   TweenMax.set('.tree:not(#logo) path:not(.trunk,.short)', {strokeDasharray: '12px', strokeDashoffset: '12px'});
-   TweenMax.set('.tree:not(#logo) path.short', {strokeDasharray: '6px', strokeDashoffset: '6px'});
+   TweenMax.set('.tree:not(#logo svg) path:not(.trunk,.short)', {strokeDasharray: '12px', strokeDashoffset: '12px'});
+   TweenMax.set('.tree:not(#logo svg) path.short', {strokeDasharray: '6px', strokeDashoffset: '6px'});
 
    $('#loading-mask').hide();
 
@@ -49,24 +49,12 @@ function loaded() {
    //event handlers
 
    //shake trees
-   $('.tree:not(#logo) .trunk').click(shakeTree).hover(shakeTree);
-   $('#logo').click(function(e) {shakeTree(e, $('#logo .trunk'));});
+   $('.tree:not(#logo svg) .trunk').click(shakeTree).hover(shakeTree);
+   $('#logo svg').click(function(e) {shakeTree(e, $('#logo .trunk'));});
 
    //scrollTop
    $('#intro-btn').click(function() {
       $('html, body').scrollTop($('#portfolio').offset().top);
-      return false;
-   });
-
-   $('body > header > nav a').click(function() {
-      var href = $(this).attr('href'),
-          offset = 0;
-
-      if (href !== "#top") {
-         offset = $(href).offset().top;
-      }
-
-      $('html, body').scrollTop(offset);
       return false;
    });
 

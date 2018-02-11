@@ -46,16 +46,21 @@ body > header {
    flex-shrink: 0;
    height: calc(#{$headerHeight} - (#{$border} * 2));
    width: calc(#{$headerHeight} - (#{$border} * 2));
-   pointer-events: unset;
    
    @include double-border(50rem, $filled:true, $padding: 0);
 
-   path {
-      stroke: $fg;
-   }
+   svg {
+      height: 100%;
+      width: 100%;
+      pointer-events: unset;
 
-   .trunk {
-      fill: $fg;
+      path {
+         stroke: $fg;
+      }
+
+      .trunk {
+         fill: $fg;
+      }
    }
 }
 

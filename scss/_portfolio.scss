@@ -64,8 +64,8 @@
       left: 0;
       right: 0;
       opacity: 1;
-      transition: opacity $btn-transition,
-                  box-shadow 0.1s;
+      transition: opacity 0.4s ease-in-out,
+                  box-shadow 0.1s ease-in-out;
 
       .title, .tags {
          width: 100%;
@@ -85,7 +85,6 @@
             border-radius: 5rem;
             color: $bg;
             display: inline-block;
-            font: bold 1rem $pFont;
             margin: ($titleFontSize / 10) 0;
             padding: ($titleFontSize / 5) ($titleFontSize / 2);
          }

@@ -5,9 +5,7 @@
       text-align: left;
       
       p {
-         font: bold 1rem $pFont;
-
-         @include double-border($filled:true);
+         @include double-border($filled:true, $padding: 1rem);
       }
       
       .input-group {
@@ -20,7 +18,6 @@
       input, textarea {
          display: block;
          width: 100%;
-         font: bold 1rem $pFont;
          margin: 0 0 1rem 0;
          outline: none;
          -webkit-appearance: none;
@@ -28,7 +25,7 @@
                      color $btn-transition,
                      border-color 0.1s;
 
-         @include double-border($filled:true);
+         @include double-border($filled:true, $padding: 1rem);
          background: mix($bg, $fg);
 
          &.error {
@@ -61,28 +58,28 @@
       input[type="submit"] {
          cursor: pointer;
          
-         @include double-border-btn();
+         @include double-border-btn($padding: 1rem);
       }
    }
 }
 
-@mixin contact--md($border) {
+@mixin contact--md($gutter, $border) {
    #contact form {
       width: 50%;
 
       p {
-         @include double-border($border: $border, $filled:true);
+         @include double-border($border: $border, $filled:true, $padding: 1rem);
       }
 
       input, textarea {
          border-radius: $border * 3;
 
-         @include double-border($border: $border, $filled:true);
+         @include double-border($border: $border, $filled:true, $padding: 1rem);
          background: mix($bg, $fg);
       }
 
       input[type="submit"] {
-         @include double-border-btn($border: $border, $font-size: 1.5rem);
+         @include double-border-btn($border: $border, $font-size: 1.5rem, $padding: 1rem);
       }
    }
 }

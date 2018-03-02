@@ -1,0 +1,162 @@
+.project-intro {
+   min-height: 40vmin;
+
+   .intro-text {
+      top: 5vmin;
+      
+      .intro-btns.no-link {
+         justify-content: space-around;
+      }
+
+      .intro-btns {
+         display: flex;
+         justify-content: center;
+
+         #website-link, .arrow {
+            height: 3.5rem;
+            pointer-events: all;
+            text-decoration: none;
+         }
+
+         #website-link {
+            margin: 0 $border;
+            white-space: nowrap;
+            @include double-border-btn(50rem, $inv:true, $padding:1rem);
+
+            line-height: 1.5rem;
+         }
+
+         .arrow {
+            width: 3.5rem;
+            @include double-border-btn(50rem, $inv:true, $padding:0);
+
+            &:hover, &:focus {
+               svg {
+                  stroke: $bg;
+               }
+            }
+
+            svg {
+               fill: none;
+               stroke: $fg;
+               stroke-linecap: round;
+               stroke-linejoin: round;
+               stroke-width: 0.5px;
+               height: 100%;
+               width: 100%;
+               padding: calc(#{$border} - 1px);
+               transition: stroke $btn-transition;
+
+               circle {
+                  stroke: none;
+               }
+            }
+         }
+      }
+   }
+
+   svg.terrain {
+      height: 40vmin;
+      max-width: 100vmin;
+   }
+
+   div.terrain {
+      height: 0;
+      width: 0;
+      padding: 20vmin 50vw;
+   }
+}
+
+#google-doodle-bg {
+   background: url(/img/google-doodle/google-doodle.png) center/cover no-repeat;
+   opacity: 0.15;
+}
+
+#movie-collection-bg {
+   background: url(/img/movie-collection/movie-collection.png) center 10%/cover no-repeat;
+   opacity: 0.15;
+}
+
+#movie-trailer-website-bg {
+   background: url(/img/movie-trailer-website/movie-trailer-website.png) center/cover no-repeat;
+   opacity: 0.25;
+}
+
+#preflight-poster-bg {
+   background: url(/img/preflight-poster/preflight-poster.png) center 10%/cover no-repeat;
+   opacity: 0.25;
+}
+
+#puzzle-game-bg {
+   background: url(/img/puzzle-game/puzzle-game.png) center/cover no-repeat;
+   opacity: 0.25;
+}
+
+#spokane-signal-box-bg {
+   background: url(/img/spokane-signal-box/spokane-signal-box.png) center 75%/cover no-repeat;
+   opacity: 0.15;
+}
+
+#movie-trailer-website .tool-wrapper {
+   min-width: 50%;
+}
+
+#images {
+   figure {
+      margin: ($gutter * 2) 0;
+      @include double-border($filled:true);
+
+      &:first-of-type {
+         margin-top: 0;
+      }
+
+      figcaption {
+         margin-top: $gutter - ($border * 2);
+      }
+
+      img {
+         width: 100%;
+         vertical-align: bottom;
+      }
+
+      iframe {
+         height: 480px;
+         width: 100%;
+      }
+   }
+}
+
+@mixin project--md($gutter, $border) {
+   .project-intro .intro-text .intro-btns {
+      #website-link, .arrow {
+         height: 4rem;
+      }
+
+      #website-link {
+         margin: 0 $border;
+         @include double-border-btn(50rem, $border, $font-size:1.5rem, $inv:true, $padding:1rem);
+
+         line-height: 1.75rem;
+      }
+      
+      .arrow {
+         width: 4rem;
+         @include double-border-btn(50rem, $border, $font-size:1.5rem, $inv:true, $padding:0);
+
+         svg {
+            padding: calc(#{$border} - 1px);
+         }
+      }
+   }
+
+   #images {
+      figure {
+         margin: ($gutter * 2) 0;
+         @include double-border($border: $border, $filled:true, $padding:$gutter);
+
+         figcaption {
+            margin-top: $gutter - ($border * 2);
+         }
+      }
+   }
+}

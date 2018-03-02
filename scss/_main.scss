@@ -11,6 +11,7 @@ body {
    color: $bg;
    margin: $headerHeight 0 0;
    font-family: $headingFont;
+   font-weight: bold;
    line-height: 1.5;
    text-align: center;
 
@@ -24,6 +25,11 @@ body {
          display:block;
          height: $headerHeight;
          margin-top: -$headerHeight;
+      }
+
+      & > .flex-wrapper {
+         margin: (-$gutter / 2);
+         margin-bottom: 0;
       }
 
       & > h1 {
@@ -57,11 +63,19 @@ body {
    }
 }
 
+p, input, textarea, li, figcaption {
+   font: bold 1rem $pFont;
+}
+
+figcaption {
+   font-size: 1.125rem;
+}
+
 #vignette {
    fill: rgba(0, 0, 0, 0.33);
    position: fixed;
    width: 100vw;
-   height: 100vh - $headerHeight;
+   height: calc(100vh - #{$headerHeight});
    top: $headerHeight;
    bottom: 0;
    left: 0;
@@ -73,7 +87,7 @@ body {
    backface-visibility:hidden;
    transform: translateZ(0);
    will-change: transform;
- }
+}
 
 @mixin main--sm() {
    body > section {
@@ -101,6 +115,11 @@ body {
             height: $headerHeight;
             margin-top: -$headerHeight;
          }
+
+         & > .flex-wrapper {
+            margin: (-$gutter / 2);
+            margin-bottom: 0;
+         }
          
          & > h1 {
             font-size: 2.5rem;
@@ -117,7 +136,7 @@ body {
    }
 
    #vignette {
-      height: 100vh - $headerHeight;
+      height: calc(100vh - #{$headerHeight});
       top: $headerHeight;
    }
 }

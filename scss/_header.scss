@@ -46,6 +46,7 @@ body > header {
    flex-shrink: 0;
    height: calc(#{$headerHeight} - (#{$border} * 2));
    width: calc(#{$headerHeight} - (#{$border} * 2));
+   outline: none;
    
    @include double-border(50rem, $filled:true, $padding: 0);
 

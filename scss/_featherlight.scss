@@ -1,0 +1,55 @@
+/**
+ * Featherlight – ultra slim jQuery lightbox
+ * Version 1.7.12 - http://noelboss.github.io/featherlight/
+ *
+ * Copyright 2017, Noël Raoul Bossart (http://www.noelboss.com)
+ * MIT Licensed.
+**/
+
+html.with-featherlight {
+   overflow: hidden;
+}
+
+.featherlight {
+   display: none;
+   position:fixed;
+   top: 0; right: 0; bottom: 0; left: 0;
+   z-index: 2147483647;
+   text-align: center;
+   white-space: nowrap;
+   cursor: pointer;
+   background: rgba(0, 0, 0, 0.6);
+}
+
+.featherlight:before {
+   content: '';
+   display: inline-block;
+   height: 100%;
+   vertical-align: middle;
+}
+
+.featherlight .featherlight-content {
+   text-align: left;
+   vertical-align: middle;
+   display: inline-block;
+   margin-left: 5%;
+   margin-right: 5%;
+   max-height: 95%;
+   white-space: normal;
+   
+   @include double-border($filled:true);
+}
+
+.featherlight .featherlight-inner {
+   display: block;
+}
+
+.featherlight .featherlight-image {
+   width: 100%;
+}
+
+@mixin featherlight--md($gutter, $border) {
+   .featherlight .featherlight-content {
+      @include double-border($border: $border, $filled:true, $padding: $gutter);
+   }
+}

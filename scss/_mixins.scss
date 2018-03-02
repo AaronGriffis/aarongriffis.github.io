@@ -64,3 +64,29 @@
       width: 2.5rem;
    }
 }
+
+@mixin text-link($border: $border) {
+   background: $bg;
+   border-radius: ($border * 3);
+   -webkit-box-decoration-break: clone;
+   box-decoration-break: clone;
+   color: $fg;
+   padding: ($border * 2) $border;
+   outline: none;
+   transition: background $btn-transition, 
+               color $btn-transition,
+               padding 0.1s;
+   
+   &:active {
+      padding: $border;
+   }
+
+   &:visited {
+      color: mix($fg, $bg, 75%);
+   }
+
+   &:hover, &:focus {
+      background: $fg;
+      color: $bg;
+   }
+}

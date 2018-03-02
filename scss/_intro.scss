@@ -1,52 +1,8 @@
-#loading-mask, #intro  {
-   background: $bg;
-   height: 100vh - ($headerHeight * 2);
-}
+#homepage-intro {
+   height: calc(100vh - (#{$headerHeight} * 2));
 
-#loading-mask {
-   display: none;
-   position: absolute;
-   width: 100%;
-   z-index: 99;
-}
-
-#intro {
-   position: relative;
-   overflow: hidden;
-         
-   &:before {
-      content:"";
-      display:block;
-      height: $headerHeight;
-      margin-top: -$headerHeight;
-   }
-  
-   .terrain, #intro-text {
-      display: block;
-      position: absolute;
-   }
-
-   .terrain {
-      bottom: 0;
-      fill: $fg;
-      max-width: 75vmin;
-      pointer-events: none;
-   }
-
-   .terrain.right {
-      right: 0;
-   }
-
-   #intro-text {
+   .intro-text {
       top: 15vmin;
-      width: 100%;
-      color: $fg;
-      padding: 0 1.5rem;
-      pointer-events: none;
-
-      h1, h2 {
-         pointer-events: all;
-      }
 
       h1 {
          margin-bottom: 0;
@@ -65,6 +21,7 @@
 
          p {
             display: inline-block;
+            font-family: $headingFont;
             white-space: nowrap;
             margin: $border;
             margin-left: 1rem;
@@ -89,6 +46,57 @@
          }
       }
    }
+}
+
+#loading-mask {
+   background: $bg;
+   display: none;
+   position: absolute;
+   height: 100%;
+   width: 100%;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   top: 0;
+   z-index: 99;
+}
+
+.intro {
+   background: $bg;
+   position: relative;
+   overflow: hidden;
+
+   .intro-text {
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      width: fit-content;
+      color: $fg;
+      padding: 0 $gutter;
+      pointer-events: none;
+
+      h1, h2 {
+         pointer-events: all;
+      }
+   }
+}
+
+.terrain {
+   display: block;
+   position: absolute;
+   bottom: 0;
+   fill: $fg;
+   max-width: 75vmin;
+   pointer-events: none;
+}
+
+.terrain.left {
+   left: 0;
+}
+
+.terrain.right {
+   right: 0;
 }
 
 .tree {
@@ -128,11 +136,11 @@
 }
 
 @mixin intro--sm() {
-   #intro #intro-text, #intro #intro-text #intro-btn {
+   .intro .intro-text, #homepage-intro .intro-text #intro-btn p {
       font-size: 3vmin;
    }
 
-   #intro #intro-text #intro-btn {
+   #homepage-intro .intro-text #intro-btn {
       height: 10vmin;
 
       p {
@@ -147,28 +155,23 @@
    }
 }
 
-@mixin intro--md($headerHeight, $border) {
-   #loading-mask, #intro  {
-      height: 100vh - ($headerHeight * 2);
-   }
-         
-   #intro:before {
-      content:"";
-      display:block;
-      height: $headerHeight;
-      margin-top: -$headerHeight;
+@mixin intro--md($headerHeight, $gutter, $border) {
+   #homepage-intro {
+      height: calc(100vh - (#{$headerHeight} * 2));
    }
 
-   #intro #intro-text {
+   .intro .intro-text {
       font-size: 1.5rem;
+      padding: 0 $gutter;
    }
 
-   #intro #intro-text #intro-btn {
+   #homepage-intro .intro-text #intro-btn {
       height: 5rem;
 
       @include double-border-btn(50rem, $border, $font-size: 1.5rem, $inv: true, $padding: 0);
 
       p {
+         font-size: 1.5rem;
          line-height: (5rem / 2) - ($border * 2);
          margin: $border;
          margin-left: 2rem;

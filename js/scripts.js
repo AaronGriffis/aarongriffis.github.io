@@ -6,19 +6,19 @@ function loaded() {
 
    $('#loading-mask').show();
 
-   TweenMax.set('.terrain.left', {attr: {viewBox:'50 0 50 50'}});
-   TweenMax.set('.terrain.right', {attr: {viewBox:'-50 0 50 50'}});
+   TweenMax.set('.terrain.left', {attr: {viewBox:'10 -50 50 50'}});
+   TweenMax.set('.terrain.right', {attr: {viewBox:'-10 -50 50 50'}});
    TweenMax.set('.tree:not(#logo svg) path:not(.trunk,.short)', {strokeDasharray: '12px', strokeDashoffset: '12px'});
    TweenMax.set('.tree:not(#logo svg) path.short', {strokeDasharray: '6px', strokeDashoffset: '6px'});
 
    $('#loading-mask').hide();
 
    //intro slide in animations
-   introTimeline.staggerFrom('.terrain', 1, {onStart:animateTerrain, onStartParams:["{self}"]}, 0.25)
-      .from('#intro-text', 1, {css: {autoAlpha:0, top:'-12vh'}, ease:Power2.easeOut}, 0.5);
+   introTimeline.staggerFrom('.terrain', 1, {onStart:animateTerrain, onStartParams:["{self}"]}, -0.1)
+      .from('.intro-text', 1, {css: {autoAlpha:0, y:'-100vh'}, ease:Power2.easeOut}, 0.5);
 
    //portfolio overlay rotation
-   var overlayTransition = 0.3,
+   var overlayTransition = 0.35,
        overlayPause = 4;
    $('.title-overlay').each(function(index, element) {
       overlayTimeline.to(element, overlayTransition, {opacity:0, ease:Linear.easeNone})
@@ -26,13 +26,19 @@ function loaded() {
    });
 
    //intro parallax
+   var introYOffsets = ['110%', '90%', '70%', '50%', '30%'];
+   if ( $('.intro').hasClass('project-intro') ) {
+      introYOffsets = ['220%', '180%', '140%', '100%', '60%'];
+   }
+
+
 	var controller = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "100%"}});
    var parallaxTween = new TimelineMax().add([
-      TweenMax.to('.terrain.layer1', 1, {y: '110%', ease:Linear.easeNone}),
-      TweenMax.to('.terrain.layer2', 1, {y: '90%', ease:Linear.easeNone}),
-      TweenMax.to('.terrain.layer3', 1, {y: '70%', ease:Linear.easeNone}),
-      TweenMax.to('.terrain.layer4', 1, {y: '50%', ease:Linear.easeNone}),
-      TweenMax.to('.terrain.layer5', 1, {y: '30%', ease:Linear.easeNone})
+      TweenMax.to('.terrain.layer1', 1, {y: introYOffsets[0], ease:Linear.easeNone}),
+      TweenMax.to('.terrain.layer2', 1, {y: introYOffsets[1], ease:Linear.easeNone}),
+      TweenMax.to('.terrain.layer3', 1, {y: introYOffsets[2], ease:Linear.easeNone}),
+      TweenMax.to('.terrain.layer4', 1, {y: introYOffsets[3], ease:Linear.easeNone}),
+      TweenMax.to('.terrain.layer5', 1, {y: introYOffsets[4], ease:Linear.easeNone})
    ]);
    var scene = new ScrollMagic.Scene()
       .setTween(parallaxTween)
@@ -50,7 +56,7 @@ function loaded() {
 
    //shake trees
    $('.tree:not(#logo svg) .trunk').click(shakeTree).hover(shakeTree);
-   $('#logo svg').click(function(e) {shakeTree(e, $('#logo .trunk'));});
+   $('#logo').on('mouseenter focus', function(e) {shakeTree(e, $('#logo .trunk'));});
 
    //scrollTop
    $('#intro-btn').click(function() {
@@ -68,18 +74,19 @@ function loaded() {
       });
 
    //Footer
-   $('#link-github').hover(function() {onFooterHover(5, "github.com/");}, offFooterHover);
-   $('#link-codepen').hover(function() {onFooterHover(5, "codepen.io/");}, offFooterHover);
-   $('#link-linkedin').hover(function() {onFooterHover(8, "linkedin.com/in/");}, offFooterHover);
+   $('#link-github').hover(function() {onFooterHover(6, "github.com/");}, offFooterHover);
+   $('#link-codepen').hover(function() {onFooterHover(6, "codepen.io/");}, offFooterHover);
+   $('#link-linkedin').hover(function() {onFooterHover(9, "linkedin.com/in/");}, offFooterHover);
    $('#link-email').hover(function() {onFooterHover(0, "me@", ".com");}, offFooterHover);
 }
 
 
 function animateTerrain(terrain) {
    var $this = terrain.target,
+      viewbox = '0 0 50 50',
       trees = $('.tree', $this);
 
-   TweenMax.to($($this), 1, {attr: {viewBox:'0 0 50 50'}, ease: Power1.easeOut});
+   TweenMax.to($($this), 1, {attr: {viewBox:viewbox}, ease: Power1.easeOut});
    if (trees.length > 0) {
       TweenMax.staggerFrom(trees, 1, {onStart:animateTree, onStartParams:["{self}"]}, 0);
    }

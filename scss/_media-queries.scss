@@ -1,8 +1,8 @@
 @media (min-width: 376px) and (min-height: 376px) {
    @include main--sm();
+   @include card--sm();
    @include header--sm();
    @include intro--sm();
-   @include about--sm();
 }
 
 @media (min-width: 768px) and (min-height: 768px) {
@@ -13,11 +13,13 @@
    $titleFontSize: $titleFontSize * 1.6;
 
    @include main--md($headerHeight, $gutter, $border, $masonrySize);
+   @include card--md($gutter, $border);
    @include header--md($headerHeight, $gutter, $border, $masonrySize, $titleFontSize);
-   @include intro--md($headerHeight, $border);
+   @include intro--md($headerHeight, $gutter, $border);
    @include portfolio--md($headerHeight, $gutter, $border, $masonrySize, $titleFontSize);
-   @include about--md($gutter, $border);
-   @include contact--md($border);
+   @include contact--md($gutter, $border);
    @include footer--md($border);
    @include thanks--md($gutter, $border);
+   @include project--md($gutter, $border);
+   @include featherlight--md($gutter, $border);
 }

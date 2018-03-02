@@ -1,13 +1,15 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat|Comfortaa');
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,600|Comfortaa');
 @import "variables";
 @import "mixins";
 @import "normalize";
 @import "main";
+@import "card";
 @import "header";
 @import "intro";
 @import "portfolio";
-@import "about";
 @import "contact";
 @import "footer";
 @import "thanks";
+@import "project";
+@import "featherlight";
 @import "media-queries";

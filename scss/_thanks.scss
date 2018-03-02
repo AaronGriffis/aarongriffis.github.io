@@ -1,6 +1,7 @@
 #thanks {
    display: inline-block;
    margin: 10vh 4rem 0;
+   max-width: 40rem;
 
    @include double-border($filled:true);
 

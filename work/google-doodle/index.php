@@ -1,5 +1,5 @@
 <?php 
-   $title = "Google Doodle";
+   $title = "Google Doodle Project";
    $description = "Custom Google doodle project built with Sass and animated SVGs";
    $hasLink = true;
    $link = "google-doodle";

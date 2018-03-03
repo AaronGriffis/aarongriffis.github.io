@@ -13,19 +13,14 @@
       }
 
       #intro-btn {
-         height: 3rem;
-         cursor: pointer;
+         display: inline-block;
          pointer-events: all;
+         text-decoration: none;
 
-         @include double-border-btn(50rem, $inv: true, $padding: 0);
+         @include double-border-btn(50rem, $inv:true, $padding:0);
 
-         p {
-            display: inline-block;
-            font-family: $headingFont;
-            white-space: nowrap;
-            margin: $border;
+         span {
             margin-left: 1rem;
-            line-height: (3rem / 2) - ($border * 2);
          }
       }
 
@@ -35,7 +30,8 @@
          stroke-linecap: round;
          stroke-linejoin: round;
          stroke-width: 0.5px;
-         float: right;
+         display: inline-block;
+         vertical-align: middle;
          height: 3rem - ($border * 2);
          width: 3rem - ($border * 2);
          padding: calc(#{$border} - 1px);
@@ -136,21 +132,14 @@
 }
 
 @mixin intro--sm() {
-   .intro .intro-text, #homepage-intro .intro-text #intro-btn p {
+   .intro .intro-text, #homepage-intro .intro-text #intro-btn {
       font-size: 3vmin;
    }
 
-   #homepage-intro .intro-text #intro-btn {
-      height: 10vmin;
-
-      p {
-         line-height: calc((10vmin / 2) - (#{$border} * 2));
-         margin-left: 4vmin;
-      }
-
+   #homepage-intro .intro-text {
       #intro-arrow {
-         height: calc(10vmin - (#{$border} * 2));
-         width: calc(10vmin - (#{$border} * 2));
+         height: calc(12vmin - (#{$border} * 2));
+         width: calc(12vmin - (#{$border} * 2));
       }
    }
 }
@@ -165,16 +154,9 @@
       padding: 0 $gutter;
    }
 
-   #homepage-intro .intro-text #intro-btn {
-      height: 5rem;
-
-      @include double-border-btn(50rem, $border, $font-size: 1.5rem, $inv: true, $padding: 0);
-
-      p {
-         font-size: 1.5rem;
-         line-height: (5rem / 2) - ($border * 2);
-         margin: $border;
-         margin-left: 2rem;
+   #homepage-intro .intro-text {
+      #intro-btn {
+         @include double-border-btn(50rem, $border, $font-size:1.5rem, $inv:true, $padding:0);
       }
 
       #intro-arrow {

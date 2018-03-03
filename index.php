@@ -8,20 +8,18 @@
       <div class="intro-text">
          <h1>Hi, I'm Aaron Griffis</h1>
          <h2>and I enjoy making things</h2>
-         <button id="intro-btn">
-            <span>
-               <p>Take a look at some of<br/>the things I've made</p>
-               <svg xmlns="http://www.w3.org/2000/svg" id="intro-arrow" viewbox="0 0 8 8" alt="" aria-hidden="true" focusable=”false”>
-                  <circle cx="4" cy="4" r="4"/>
-                  <path d="m4 2.5 v3 m -1 -1 l1 1 l 1 -1"/>
-               </svg>
-            </span>
-         </button>
+         <a href="http://www.aarongriffis.com/#portfolio" id="intro-btn">
+            <span>View my work</span>
+            <svg xmlns="http://www.w3.org/2000/svg" id="intro-arrow" viewbox="0 0 8 8" alt="" aria-hidden="true" focusable=”false”>
+               <circle cx="4" cy="4" r="4"/>
+               <path d="m4 2.5 v3 m -1 -1 l1 1 l 1 -1"/>
+            </svg>
+         </a>
       </div>
    </div>
             
    <section id="portfolio">
-      <h1>Some of the Things I've Made</h1>
+      <h1>Portfolio</h1>
       <div class="grid">
          <div class="grid-sizer"></div>
          <div class="gutter-sizer"></div>

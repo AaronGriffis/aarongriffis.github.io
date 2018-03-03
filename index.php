@@ -7,7 +7,7 @@
 
       <div class="intro-text">
          <h1>Hi, I'm Aaron Griffis</h1>
-         <h2>and I enjoy making things</h2>
+         <h3>Web designer and programmer</h3>
          <a href="http://www.aarongriffis.com/#portfolio" id="intro-btn">
             <span>View my work</span>
             <svg xmlns="http://www.w3.org/2000/svg" id="intro-arrow" viewbox="0 0 8 8" alt="" aria-hidden="true" focusable=”false”>
@@ -19,7 +19,7 @@
    </div>
             
    <section id="portfolio">
-      <h1>Portfolio</h1>
+      <h1>Websites &amp; Illustrations</h1>
       <div class="grid">
          <div class="grid-sizer"></div>
          <div class="gutter-sizer"></div>

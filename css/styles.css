@@ -187,7 +187,7 @@ body {
   background: #3a471f;
   color: #fff8e6;
   margin: 3rem 0 0;
-  font-family: "Comfortaa", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-weight: bold;
   line-height: 1.5;
   text-align: center;
@@ -455,7 +455,7 @@ body > header nav ul li a {
   margin: 0.125rem;
   padding: 0.25rem 0.5rem;
   text-decoration: none;
-  font: bold 0.75rem "Comfortaa", sans-serif;
+  font: bold 0.75rem "Nunito", sans-serif;
   border: solid 0.125rem #3a471f;
   border-radius: 50rem;
   -webkit-box-shadow: inset 0 0 #3a471f;
@@ -520,7 +520,7 @@ body > header nav ul li a:active {
   margin-bottom: 0;
 }
 
-#homepage-intro .intro-text h2 {
+#homepage-intro .intro-text h3 {
   margin-top: 0;
 }
 
@@ -535,7 +535,7 @@ body > header nav ul li a:active {
   -webkit-box-shadow: inset 0 0 0 0.125rem #fff8e6;
           box-shadow: inset 0 0 0 0.125rem #fff8e6;
   padding: 0;
-  font: bold 1rem "Comfortaa", sans-serif;
+  font: bold 1rem "Nunito", sans-serif;
   outline: none;
   -webkit-transition: background 0.25s ease-in-out, color 0.25s ease-in-out, opacity 0.25s ease-in-out, -webkit-box-shadow 0.1s;
   transition: background 0.25s ease-in-out, color 0.25s ease-in-out, opacity 0.25s ease-in-out, -webkit-box-shadow 0.1s;
@@ -554,7 +554,7 @@ body > header nav ul li a:active {
 }
 
 #homepage-intro .intro-text #intro-btn span {
-  margin-left: 1rem;
+  margin-left: 1.5rem;
 }
 
 #homepage-intro .intro-text #intro-arrow {
@@ -607,7 +607,7 @@ body > header nav ul li a:active {
   pointer-events: none;
 }
 
-.intro .intro-text h1, .intro .intro-text h2 {
+.intro .intro-text h1, .intro .intro-text h2, .intro .intro-text h3 {
   pointer-events: all;
 }
 
@@ -933,7 +933,7 @@ body > header nav ul li a:active {
   -webkit-box-shadow: inset 0 0 0 0.125rem #3a471f;
           box-shadow: inset 0 0 0 0.125rem #3a471f;
   padding: 1rem;
-  font: bold 1rem "Comfortaa", sans-serif;
+  font: bold 1rem "Nunito", sans-serif;
   outline: none;
   -webkit-transition: background 0.25s ease-in-out, color 0.25s ease-in-out, opacity 0.25s ease-in-out, -webkit-box-shadow 0.1s;
   transition: background 0.25s ease-in-out, color 0.25s ease-in-out, opacity 0.25s ease-in-out, -webkit-box-shadow 0.1s;
@@ -1074,7 +1074,7 @@ footer {
   -webkit-box-shadow: inset 0 0 0 0.125rem #fff8e6;
           box-shadow: inset 0 0 0 0.125rem #fff8e6;
   padding: 1rem;
-  font: bold 1rem "Comfortaa", sans-serif;
+  font: bold 1rem "Nunito", sans-serif;
   outline: none;
   -webkit-transition: background 0.25s ease-in-out, color 0.25s ease-in-out, opacity 0.25s ease-in-out, -webkit-box-shadow 0.1s;
   transition: background 0.25s ease-in-out, color 0.25s ease-in-out, opacity 0.25s ease-in-out, -webkit-box-shadow 0.1s;
@@ -1130,7 +1130,7 @@ footer {
   -webkit-box-shadow: inset 0 0 0 0.125rem #fff8e6;
           box-shadow: inset 0 0 0 0.125rem #fff8e6;
   padding: 1rem;
-  font: bold 1rem "Comfortaa", sans-serif;
+  font: bold 1rem "Nunito", sans-serif;
   outline: none;
   -webkit-transition: background 0.25s ease-in-out, color 0.25s ease-in-out, opacity 0.25s ease-in-out, -webkit-box-shadow 0.1s;
   transition: background 0.25s ease-in-out, color 0.25s ease-in-out, opacity 0.25s ease-in-out, -webkit-box-shadow 0.1s;
@@ -1158,7 +1158,7 @@ footer {
   -webkit-box-shadow: inset 0 0 0 0.125rem #fff8e6;
           box-shadow: inset 0 0 0 0.125rem #fff8e6;
   padding: 0;
-  font: bold 1rem "Comfortaa", sans-serif;
+  font: bold 1rem "Nunito", sans-serif;
   outline: none;
   -webkit-transition: background 0.25s ease-in-out, color 0.25s ease-in-out, opacity 0.25s ease-in-out, -webkit-box-shadow 0.1s;
   transition: background 0.25s ease-in-out, color 0.25s ease-in-out, opacity 0.25s ease-in-out, -webkit-box-shadow 0.1s;
@@ -1339,7 +1339,7 @@ html.with-featherlight {
     min-width: calc(344px - 2rem);
   }
   body > header nav ul li a {
-    font: bold 1rem "Comfortaa", sans-serif;
+    font: bold 1rem "Nunito", sans-serif;
   }
   .intro .intro-text, #homepage-intro .intro-text #intro-btn {
     font-size: 3vmin;
@@ -1401,7 +1401,7 @@ html.with-featherlight {
     max-width: 70rem;
   }
   body > header nav ul li a {
-    font: bold 1.5rem "Comfortaa", sans-serif;
+    font: bold 1.5rem "Nunito", sans-serif;
     margin: 0.5rem;
     padding: 0.5rem 1rem;
     border: solid 0.25rem #3a471f;
@@ -1448,7 +1448,7 @@ html.with-featherlight {
     -webkit-box-shadow: inset 0 0 0 0.25rem #fff8e6;
             box-shadow: inset 0 0 0 0.25rem #fff8e6;
     padding: 0;
-    font: bold 1.5rem "Comfortaa", sans-serif;
+    font: bold 1.5rem "Nunito", sans-serif;
     outline: none;
     -webkit-transition: background 0.25s ease-in-out, color 0.25s ease-in-out, opacity 0.25s ease-in-out, -webkit-box-shadow 0.1s;
     transition: background 0.25s ease-in-out, color 0.25s ease-in-out, opacity 0.25s ease-in-out, -webkit-box-shadow 0.1s;
@@ -1552,7 +1552,7 @@ html.with-featherlight {
     -webkit-box-shadow: inset 0 0 0 0.25rem #3a471f;
             box-shadow: inset 0 0 0 0.25rem #3a471f;
     padding: 1rem;
-    font: bold 1.5rem "Comfortaa", sans-serif;
+    font: bold 1.5rem "Nunito", sans-serif;
     outline: none;
     -webkit-transition: background 0.25s ease-in-out, color 0.25s ease-in-out, opacity 0.25s ease-in-out, -webkit-box-shadow 0.1s;
     transition: background 0.25s ease-in-out, color 0.25s ease-in-out, opacity 0.25s ease-in-out, -webkit-box-shadow 0.1s;
@@ -1623,7 +1623,7 @@ html.with-featherlight {
     -webkit-box-shadow: inset 0 0 0 0.25rem #fff8e6;
             box-shadow: inset 0 0 0 0.25rem #fff8e6;
     padding: 1rem;
-    font: bold 1.5rem "Comfortaa", sans-serif;
+    font: bold 1.5rem "Nunito", sans-serif;
     outline: none;
     -webkit-transition: background 0.25s ease-in-out, color 0.25s ease-in-out, opacity 0.25s ease-in-out, -webkit-box-shadow 0.1s;
     transition: background 0.25s ease-in-out, color 0.25s ease-in-out, opacity 0.25s ease-in-out, -webkit-box-shadow 0.1s;
@@ -1650,7 +1650,7 @@ html.with-featherlight {
     -webkit-box-shadow: inset 0 0 0 0.25rem #fff8e6;
             box-shadow: inset 0 0 0 0.25rem #fff8e6;
     padding: 1rem;
-    font: bold 1.5rem "Comfortaa", sans-serif;
+    font: bold 1.5rem "Nunito", sans-serif;
     outline: none;
     -webkit-transition: background 0.25s ease-in-out, color 0.25s ease-in-out, opacity 0.25s ease-in-out, -webkit-box-shadow 0.1s;
     transition: background 0.25s ease-in-out, color 0.25s ease-in-out, opacity 0.25s ease-in-out, -webkit-box-shadow 0.1s;
@@ -1675,7 +1675,7 @@ html.with-featherlight {
     -webkit-box-shadow: inset 0 0 0 0.25rem #fff8e6;
             box-shadow: inset 0 0 0 0.25rem #fff8e6;
     padding: 0;
-    font: bold 1.5rem "Comfortaa", sans-serif;
+    font: bold 1.5rem "Nunito", sans-serif;
     outline: none;
     -webkit-transition: background 0.25s ease-in-out, color 0.25s ease-in-out, opacity 0.25s ease-in-out, -webkit-box-shadow 0.1s;
     transition: background 0.25s ease-in-out, color 0.25s ease-in-out, opacity 0.25s ease-in-out, -webkit-box-shadow 0.1s;

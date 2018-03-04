@@ -1,6 +1,6 @@
 <?php 
    $title = "Spokane Signal Box";
-   $description = "";
+   $description = "Illustration project by Aaron Griffis for Spokane Art's signal box contest to decorate downtown Spokane's traffic light signal boxes.";
    $hasLink = false;
    $link = "spokane-signal-box";
    $prev = "google-doodle";

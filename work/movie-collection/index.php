@@ -1,6 +1,6 @@
 <?php 
    $title = "Movie Collection Web App";
-   $description = "";
+   $description = "Custom movie collection web app made by Aaron Griffis. Built with Bootstrap, jQuery, and SQL and relies on TMDB's API.";
    $hasLink = true;
    $link = "movie-collection";
    $prev = "movie-trailer-website";

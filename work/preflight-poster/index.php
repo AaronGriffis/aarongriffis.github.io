@@ -1,6 +1,6 @@
 <?php 
    $title = "PreFlight Poster";
-   $description = "";
+   $description = "Illustration project by Aaron Griffis for the Spokane AAF PreFlight contest to create promotional branding for the event.";
    $hasLink = false;
    $link = "preflight-poster";
    $prev = "puzzle-game";

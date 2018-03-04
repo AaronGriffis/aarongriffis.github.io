@@ -1,13 +1,13 @@
 <?php 
    $title = "Movie Trailer Website";
-   $description = "";
+   $description = "A movie trailer website for The Grand Budapest Hotel made by Aaron Griffis. It served as a practice project for building fully responsive, mobile first websites.";
    $hasLink = true;
    $link = "movie-trailer-website";
    $prev = "preflight-poster";
    $next = "movie-collection";
 
    $challenge = "<p>As an assignment for one of my web design classes, I was tasked with creating a movie trailer website.</p>
-                 <p>The main objective of this project was to focus on making it fully responsive, and mobile first.</p>
+                 <p>The main objective of this project was to focus on designing it to be fully responsive and mobile first.</p>
                  <p>This was the first time I worked with Sass and JavaScript plugins and I've been hooked ever since.</p>
                  <p>I experimented with some fun features like scaling and curving the banner text and animating the cast photos.</p>";
    

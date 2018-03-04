@@ -1,6 +1,6 @@
 <?php 
    $title = "Google Doodle Project";
-   $description = "Custom Google doodle project built with Sass and animated SVGs";
+   $description = "Custom Google doodle of falling autumn leaves made by Aaron Griffis. Built with Sass and animated SVGs.";
    $hasLink = true;
    $link = "google-doodle";
    $prev = "movie-collection";

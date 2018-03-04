@@ -7,7 +7,7 @@
 
       <div class="intro-text">
          <h1>Hi, I'm Aaron Griffis</h1>
-         <h3>Web designer and programmer</h3>
+         <h2>Web designer and programmer</h2>
          <a href="http://www.aarongriffis.com/#portfolio" id="intro-btn">
             <span>View my work</span>
             <svg xmlns="http://www.w3.org/2000/svg" id="intro-arrow" viewbox="0 0 8 8" alt="" aria-hidden="true" focusable=”false”>

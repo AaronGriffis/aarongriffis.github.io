@@ -16,7 +16,7 @@
 @mixin double-border-btn($bdr-rds: ($border * 3), $border: $border, $font-size: 1rem, $filled: false, $inv:false, $padding: $gutter) {
    @include double-border($bdr-rds, $border, $filled, $inv, $padding);
 
-   font: bold $font-size $headingFont;
+   font: $header-weight $font-size $header-font;
    outline: none;
    transition: background $btn-transition, 
                color $btn-transition,

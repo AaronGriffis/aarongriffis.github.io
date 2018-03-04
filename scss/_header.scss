@@ -4,7 +4,7 @@ body > header {
    box-shadow: inset 0 (-$border) $bg;
    position: fixed;
    top: 0;
-   height: $headerHeight;
+   height: $header-height;
    width: 100%;
    z-index: 100;
 
@@ -14,7 +14,7 @@ body > header {
       margin: 0 auto;
       padding: 0;
       height: 100%;
-      max-width: ($masonrySize * $maxColumns) + ($gutter * ($maxColumns + 1));
+      max-width: ($masonry-size * $max-columns) + ($gutter * ($max-columns + 1));
 
       ul {
          display: flex;
@@ -32,7 +32,7 @@ body > header {
                margin: $border;
                padding: 0.25rem 0.5rem;
                text-decoration: none;
-               font: bold 0.75rem $headingFont;
+               font: $header-weight 0.75rem $header-font;
 
                @include single-border();
             }
@@ -44,8 +44,8 @@ body > header {
 #logo {
    align-self: flex-end;
    flex-shrink: 0;
-   height: calc(#{$headerHeight} - (#{$border} * 2));
-   width: calc(#{$headerHeight} - (#{$border} * 2));
+   height: calc(#{$header-height} - (#{$border} * 2));
+   width: calc(#{$header-height} - (#{$border} * 2));
    outline: none;
    
    @include double-border(50rem, $filled:true, $padding: 0);
@@ -67,21 +67,21 @@ body > header {
 
 @mixin header--sm() {
    body > header nav ul li a {
-      font: bold 1rem $headingFont;
+      font: $header-weight 1rem $header-font;
    }
 }
 
-@mixin header--md($headerHeight, $gutter, $border, $masonrySize, $titleFontSize) {
+@mixin header--md($header-height, $gutter, $border, $masonry-size) {
    body > header {
       border-bottom: $border solid $fg;
       box-shadow: inset 0 (-$border) $bg;
-      height: $headerHeight;
+      height: $header-height;
 
       nav {
-         max-width: ($masonrySize * $maxColumns) + ($gutter * ($maxColumns + 1));
+         max-width: ($masonry-size * $max-columns) + ($gutter * ($max-columns + 1));
 
          ul li a {
-            font: bold 1.5rem $headingFont;
+            font: $header-weight 1.5rem $header-font;
             margin: ($border * 2);
             padding: 0.5rem 1rem;
 
@@ -90,8 +90,8 @@ body > header {
       }
       
       #logo {
-         height: calc(#{$headerHeight} - (#{$border} * 2));
-         width: calc(#{$headerHeight} - (#{$border} * 2));
+         height: calc(#{$header-height} - (#{$border} * 2));
+         width: calc(#{$header-height} - (#{$border} * 2));
 
          @include double-border(50rem, $border: $border, $filled:true, $padding: 0);
       }

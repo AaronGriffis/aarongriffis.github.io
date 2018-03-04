@@ -1,5 +1,5 @@
 #homepage-intro {
-   height: calc(100vh - (#{$headerHeight} * 2));
+   height: calc(100vh - (#{$header-height} * 2));
 
    .intro-text {
       top: 15vmin;
@@ -138,15 +138,15 @@
 
    #homepage-intro .intro-text {
       #intro-arrow {
-         height: calc(12vmin - (#{$border} * 2));
-         width: calc(12vmin - (#{$border} * 2));
+         height: calc(10vmin - (#{$border} * 2));
+         width: calc(10vmin - (#{$border} * 2));
       }
    }
 }
 
-@mixin intro--md($headerHeight, $gutter, $border) {
+@mixin intro--md($header-height, $gutter, $border) {
    #homepage-intro {
-      height: calc(100vh - (#{$headerHeight} * 2));
+      height: calc(100vh - (#{$header-height} * 2));
    }
 
    .intro .intro-text {
@@ -160,8 +160,8 @@
       }
 
       #intro-arrow {
-         height: 5rem - ($border * 2);
-         width: 5rem - ($border * 2);
+         height: 4.5rem - ($border * 2);
+         width: 4.5rem - ($border * 2);
          padding: calc(#{$border} - 1px);
       }
    }

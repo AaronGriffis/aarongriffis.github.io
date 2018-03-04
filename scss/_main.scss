@@ -9,22 +9,22 @@ html {
 body {
    background: $fg;
    color: $bg;
-   margin: $headerHeight 0 0;
-   font-family: $headingFont;
-   font-weight: bold;
+   margin: $header-height 0 0;
+   font-family: $header-font;
+   font-weight: $header-weight;
    line-height: 1.5;
    text-align: center;
 
    & > section {
-      max-width: ($masonrySize * $maxColumns) + ($gutter * ($maxColumns + 1));
+      max-width: ($masonry-size * $max-columns) + ($gutter * ($max-columns + 1));
       margin: 0 auto;
       padding: 0 $gutter;
 
       &:before {
          content:"";
          display:block;
-         height: $headerHeight;
-         margin-top: -$headerHeight;
+         height: $header-height;
+         margin-top: -$header-height;
       }
 
       & > .flex-wrapper {
@@ -64,7 +64,7 @@ body {
 }
 
 p, input, textarea, li, figcaption {
-   font: bold 1rem $pFont;
+   font: $body-weight 1rem $body-font;
 }
 
 figcaption {
@@ -75,8 +75,8 @@ figcaption {
    fill: rgba(0, 0, 0, 0.33);
    position: fixed;
    width: 100vw;
-   height: calc(100vh - #{$headerHeight});
-   top: $headerHeight;
+   height: calc(100vh - #{$header-height});
+   top: $header-height;
    bottom: 0;
    left: 0;
    right: 0;
@@ -101,19 +101,19 @@ figcaption {
    }
 }
 
-@mixin main--md($headerHeight, $gutter, $border, $masonrySize) {
+@mixin main--md($header-height, $gutter, $border, $masonry-size) {
    body {
-      margin: $headerHeight 0 0;
+      margin: $header-height 0 0;
 
       & > section {
-         max-width: ($masonrySize * $maxColumns) + ($gutter * ($maxColumns + 1));
+         max-width: ($masonry-size * $max-columns) + ($gutter * ($max-columns + 1));
          padding: 0 $gutter;
          
          &:before {
             content:"";
             display:block;
-            height: $headerHeight;
-            margin-top: -$headerHeight;
+            height: $header-height;
+            margin-top: -$header-height;
          }
 
          & > .flex-wrapper {
@@ -136,7 +136,7 @@ figcaption {
    }
 
    #vignette {
-      height: calc(100vh - #{$headerHeight});
-      top: $headerHeight;
+      height: calc(100vh - #{$header-height});
+      top: $header-height;
    }
 }

@@ -1,4 +1,4 @@
-#thanks {
+#thanks, #not-found {
    display: inline-block;
    margin: 10vh 4rem 0;
    max-width: 40rem;
@@ -13,8 +13,14 @@
    }
 }
 
+#not-found:before {
+   content: '404';
+   font-weight: bold;
+   font-size: 5rem;
+}
+
 @mixin thanks--md($gutter, $border) {
-   #thanks {
+   #thanks, #not-found {
       margin: 20vh 4rem 0;
 
       @include double-border($border: $border, $filled:true, $padding: $gutter);

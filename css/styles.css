@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css?family=Nunito:400,600|Comfortaa");
+@import url("https://fonts.googleapis.com/css?family=Dosis:500, 700");
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 button, hr, input {
   overflow: visible;
@@ -187,8 +187,8 @@ body {
   background: #3a471f;
   color: #fff8e6;
   margin: 3rem 0 0;
-  font-family: "Nunito", sans-serif;
-  font-weight: bold;
+  font-family: "Dosis", sans-serif;
+  font-weight: 700;
   line-height: 1.5;
   text-align: center;
 }
@@ -249,7 +249,7 @@ body > section h2 {
 }
 
 p, input, textarea, li, figcaption {
-  font: bold 1rem "Nunito", sans-serif;
+  font: 500 1rem "Dosis", sans-serif;
 }
 
 figcaption {
@@ -281,10 +281,6 @@ figcaption {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-pack: center;
@@ -374,6 +370,10 @@ figcaption {
   margin: auto 0;
 }
 
+#description > div p:first-of-type {
+  margin-top: 0;
+}
+
 #toolbox {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -455,7 +455,7 @@ body > header nav ul li a {
   margin: 0.125rem;
   padding: 0.25rem 0.5rem;
   text-decoration: none;
-  font: bold 0.75rem "Nunito", sans-serif;
+  font: 700 0.75rem "Dosis", sans-serif;
   border: solid 0.125rem #3a471f;
   border-radius: 50rem;
   -webkit-box-shadow: inset 0 0 #3a471f;
@@ -535,7 +535,7 @@ body > header nav ul li a:active {
   -webkit-box-shadow: inset 0 0 0 0.125rem #fff8e6;
           box-shadow: inset 0 0 0 0.125rem #fff8e6;
   padding: 0;
-  font: bold 1rem "Nunito", sans-serif;
+  font: 700 1rem "Dosis", sans-serif;
   outline: none;
   -webkit-transition: background 0.25s ease-in-out, color 0.25s ease-in-out, opacity 0.25s ease-in-out, -webkit-box-shadow 0.1s;
   transition: background 0.25s ease-in-out, color 0.25s ease-in-out, opacity 0.25s ease-in-out, -webkit-box-shadow 0.1s;
@@ -799,10 +799,10 @@ body > header nav ul li a:active {
   left: 0;
   right: 0;
   opacity: 1;
-  -webkit-transition: opacity 0.4s ease-in-out, -webkit-box-shadow 0.1s ease-in-out;
-  transition: opacity 0.4s ease-in-out, -webkit-box-shadow 0.1s ease-in-out;
-  transition: opacity 0.4s ease-in-out, box-shadow 0.1s ease-in-out;
-  transition: opacity 0.4s ease-in-out, box-shadow 0.1s ease-in-out, -webkit-box-shadow 0.1s ease-in-out;
+  -webkit-transition: opacity 0.4s ease-in-out, -webkit-box-shadow 0.1s;
+  transition: opacity 0.4s ease-in-out, -webkit-box-shadow 0.1s;
+  transition: opacity 0.4s ease-in-out, box-shadow 0.1s;
+  transition: opacity 0.4s ease-in-out, box-shadow 0.1s, -webkit-box-shadow 0.1s;
 }
 
 .grid-item .title-overlay .title, .grid-item .title-overlay .tags {
@@ -933,7 +933,7 @@ body > header nav ul li a:active {
   -webkit-box-shadow: inset 0 0 0 0.125rem #3a471f;
           box-shadow: inset 0 0 0 0.125rem #3a471f;
   padding: 1rem;
-  font: bold 1rem "Nunito", sans-serif;
+  font: 700 1rem "Dosis", sans-serif;
   outline: none;
   -webkit-transition: background 0.25s ease-in-out, color 0.25s ease-in-out, opacity 0.25s ease-in-out, -webkit-box-shadow 0.1s;
   transition: background 0.25s ease-in-out, color 0.25s ease-in-out, opacity 0.25s ease-in-out, -webkit-box-shadow 0.1s;
@@ -1032,7 +1032,7 @@ footer {
 
 #username > span:not(#username-before):not(#username-after), #username-small {
   font-size: 2rem;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 #username-small {
@@ -1051,7 +1051,7 @@ footer {
   width: 0;
 }
 
-#thanks {
+#thanks, #not-found {
   display: inline-block;
   margin: 10vh 4rem 0;
   max-width: 40rem;
@@ -1064,7 +1064,7 @@ footer {
   padding: 1rem;
 }
 
-#thanks a {
+#thanks a, #not-found a {
   display: inline-block;
   text-decoration: none;
   background: #fff8e6;
@@ -1074,7 +1074,7 @@ footer {
   -webkit-box-shadow: inset 0 0 0 0.125rem #fff8e6;
           box-shadow: inset 0 0 0 0.125rem #fff8e6;
   padding: 1rem;
-  font: bold 1rem "Nunito", sans-serif;
+  font: 700 1rem "Dosis", sans-serif;
   outline: none;
   -webkit-transition: background 0.25s ease-in-out, color 0.25s ease-in-out, opacity 0.25s ease-in-out, -webkit-box-shadow 0.1s;
   transition: background 0.25s ease-in-out, color 0.25s ease-in-out, opacity 0.25s ease-in-out, -webkit-box-shadow 0.1s;
@@ -1082,14 +1082,20 @@ footer {
   transition: background 0.25s ease-in-out, color 0.25s ease-in-out, box-shadow 0.1s, opacity 0.25s ease-in-out, -webkit-box-shadow 0.1s;
 }
 
-#thanks a:hover, #thanks a:focus {
+#thanks a:hover, #thanks a:focus, #not-found a:hover, #not-found a:focus {
   background: #3a471f;
   color: #fff8e6;
 }
 
-#thanks a:active {
+#thanks a:active, #not-found a:active {
   -webkit-box-shadow: inset 0 0 0 0.1875rem #fff8e6;
           box-shadow: inset 0 0 0 0.1875rem #fff8e6;
+}
+
+#not-found:before {
+  content: '404';
+  font-weight: bold;
+  font-size: 5rem;
 }
 
 .project-intro {
@@ -1130,13 +1136,13 @@ footer {
   -webkit-box-shadow: inset 0 0 0 0.125rem #fff8e6;
           box-shadow: inset 0 0 0 0.125rem #fff8e6;
   padding: 1rem;
-  font: bold 1rem "Nunito", sans-serif;
+  font: 700 1rem "Dosis", sans-serif;
   outline: none;
   -webkit-transition: background 0.25s ease-in-out, color 0.25s ease-in-out, opacity 0.25s ease-in-out, -webkit-box-shadow 0.1s;
   transition: background 0.25s ease-in-out, color 0.25s ease-in-out, opacity 0.25s ease-in-out, -webkit-box-shadow 0.1s;
   transition: background 0.25s ease-in-out, color 0.25s ease-in-out, box-shadow 0.1s, opacity 0.25s ease-in-out;
   transition: background 0.25s ease-in-out, color 0.25s ease-in-out, box-shadow 0.1s, opacity 0.25s ease-in-out, -webkit-box-shadow 0.1s;
-  line-height: 1.5rem;
+  line-height: 1.25rem;
 }
 
 .project-intro .intro-text .intro-btns #website-link:hover, .project-intro .intro-text .intro-btns #website-link:focus {
@@ -1158,7 +1164,7 @@ footer {
   -webkit-box-shadow: inset 0 0 0 0.125rem #fff8e6;
           box-shadow: inset 0 0 0 0.125rem #fff8e6;
   padding: 0;
-  font: bold 1rem "Nunito", sans-serif;
+  font: 700 1rem "Dosis", sans-serif;
   outline: none;
   -webkit-transition: background 0.25s ease-in-out, color 0.25s ease-in-out, opacity 0.25s ease-in-out, -webkit-box-shadow 0.1s;
   transition: background 0.25s ease-in-out, color 0.25s ease-in-out, opacity 0.25s ease-in-out, -webkit-box-shadow 0.1s;
@@ -1339,14 +1345,14 @@ html.with-featherlight {
     min-width: calc(344px - 2rem);
   }
   body > header nav ul li a {
-    font: bold 1rem "Nunito", sans-serif;
+    font: 700 1rem "Dosis", sans-serif;
   }
   .intro .intro-text, #homepage-intro .intro-text #intro-btn {
     font-size: 3vmin;
   }
   #homepage-intro .intro-text #intro-arrow {
-    height: calc(12vmin - (0.125rem * 2));
-    width: calc(12vmin - (0.125rem * 2));
+    height: calc(10vmin - (0.125rem * 2));
+    width: calc(10vmin - (0.125rem * 2));
   }
 }
 
@@ -1401,7 +1407,7 @@ html.with-featherlight {
     max-width: 70rem;
   }
   body > header nav ul li a {
-    font: bold 1.5rem "Nunito", sans-serif;
+    font: 700 1.5rem "Dosis", sans-serif;
     margin: 0.5rem;
     padding: 0.5rem 1rem;
     border: solid 0.25rem #3a471f;
@@ -1448,7 +1454,7 @@ html.with-featherlight {
     -webkit-box-shadow: inset 0 0 0 0.25rem #fff8e6;
             box-shadow: inset 0 0 0 0.25rem #fff8e6;
     padding: 0;
-    font: bold 1.5rem "Nunito", sans-serif;
+    font: 700 1.5rem "Dosis", sans-serif;
     outline: none;
     -webkit-transition: background 0.25s ease-in-out, color 0.25s ease-in-out, opacity 0.25s ease-in-out, -webkit-box-shadow 0.1s;
     transition: background 0.25s ease-in-out, color 0.25s ease-in-out, opacity 0.25s ease-in-out, -webkit-box-shadow 0.1s;
@@ -1464,8 +1470,8 @@ html.with-featherlight {
             box-shadow: inset 0 0 0 0.375rem #fff8e6;
   }
   #homepage-intro .intro-text #intro-arrow {
-    height: 4.5rem;
-    width: 4.5rem;
+    height: 4rem;
+    width: 4rem;
     padding: calc(0.25rem - 1px);
   }
   #portfolio {
@@ -1552,7 +1558,7 @@ html.with-featherlight {
     -webkit-box-shadow: inset 0 0 0 0.25rem #3a471f;
             box-shadow: inset 0 0 0 0.25rem #3a471f;
     padding: 1rem;
-    font: bold 1.5rem "Nunito", sans-serif;
+    font: 700 1.5rem "Dosis", sans-serif;
     outline: none;
     -webkit-transition: background 0.25s ease-in-out, color 0.25s ease-in-out, opacity 0.25s ease-in-out, -webkit-box-shadow 0.1s;
     transition: background 0.25s ease-in-out, color 0.25s ease-in-out, opacity 0.25s ease-in-out, -webkit-box-shadow 0.1s;
@@ -1605,7 +1611,7 @@ html.with-featherlight {
   footer #username-small {
     display: none;
   }
-  #thanks {
+  #thanks, #not-found {
     margin: 20vh 4rem 0;
     background: #fff8e6;
     color: #3a471f;
@@ -1615,7 +1621,7 @@ html.with-featherlight {
             box-shadow: inset 0 0 0 0.25rem #3a471f;
     padding: 2rem;
   }
-  #thanks a {
+  #thanks a, #not-found a {
     background: #fff8e6;
     color: #3a471f;
     border: solid 0.25rem #3a471f;
@@ -1623,18 +1629,18 @@ html.with-featherlight {
     -webkit-box-shadow: inset 0 0 0 0.25rem #fff8e6;
             box-shadow: inset 0 0 0 0.25rem #fff8e6;
     padding: 1rem;
-    font: bold 1.5rem "Nunito", sans-serif;
+    font: 700 1.5rem "Dosis", sans-serif;
     outline: none;
     -webkit-transition: background 0.25s ease-in-out, color 0.25s ease-in-out, opacity 0.25s ease-in-out, -webkit-box-shadow 0.1s;
     transition: background 0.25s ease-in-out, color 0.25s ease-in-out, opacity 0.25s ease-in-out, -webkit-box-shadow 0.1s;
     transition: background 0.25s ease-in-out, color 0.25s ease-in-out, box-shadow 0.1s, opacity 0.25s ease-in-out;
     transition: background 0.25s ease-in-out, color 0.25s ease-in-out, box-shadow 0.1s, opacity 0.25s ease-in-out, -webkit-box-shadow 0.1s;
   }
-  #thanks a:hover, #thanks a:focus {
+  #thanks a:hover, #thanks a:focus, #not-found a:hover, #not-found a:focus {
     background: #3a471f;
     color: #fff8e6;
   }
-  #thanks a:active {
+  #thanks a:active, #not-found a:active {
     -webkit-box-shadow: inset 0 0 0 0.375rem #fff8e6;
             box-shadow: inset 0 0 0 0.375rem #fff8e6;
   }
@@ -1650,13 +1656,13 @@ html.with-featherlight {
     -webkit-box-shadow: inset 0 0 0 0.25rem #fff8e6;
             box-shadow: inset 0 0 0 0.25rem #fff8e6;
     padding: 1rem;
-    font: bold 1.5rem "Nunito", sans-serif;
+    font: 700 1.5rem "Dosis", sans-serif;
     outline: none;
     -webkit-transition: background 0.25s ease-in-out, color 0.25s ease-in-out, opacity 0.25s ease-in-out, -webkit-box-shadow 0.1s;
     transition: background 0.25s ease-in-out, color 0.25s ease-in-out, opacity 0.25s ease-in-out, -webkit-box-shadow 0.1s;
     transition: background 0.25s ease-in-out, color 0.25s ease-in-out, box-shadow 0.1s, opacity 0.25s ease-in-out;
     transition: background 0.25s ease-in-out, color 0.25s ease-in-out, box-shadow 0.1s, opacity 0.25s ease-in-out, -webkit-box-shadow 0.1s;
-    line-height: 1.75rem;
+    line-height: 1.33rem;
   }
   .project-intro .intro-text .intro-btns #website-link:hover, .project-intro .intro-text .intro-btns #website-link:focus {
     background: #3a471f;
@@ -1675,7 +1681,7 @@ html.with-featherlight {
     -webkit-box-shadow: inset 0 0 0 0.25rem #fff8e6;
             box-shadow: inset 0 0 0 0.25rem #fff8e6;
     padding: 0;
-    font: bold 1.5rem "Nunito", sans-serif;
+    font: 700 1.5rem "Dosis", sans-serif;
     outline: none;
     -webkit-transition: background 0.25s ease-in-out, color 0.25s ease-in-out, opacity 0.25s ease-in-out, -webkit-box-shadow 0.1s;
     transition: background 0.25s ease-in-out, color 0.25s ease-in-out, opacity 0.25s ease-in-out, -webkit-box-shadow 0.1s;

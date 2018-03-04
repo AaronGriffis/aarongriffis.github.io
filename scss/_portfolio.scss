@@ -1,5 +1,5 @@
 #portfolio {
-   margin-top: $headerHeight;
+   margin-top: $header-height;
 }
 
 .grid {
@@ -13,8 +13,8 @@
 }
 
 .grid-sizer, .grid-item {
-   width: $masonrySize;
-   height: $masonrySize;
+   width: $masonry-size;
+   height: $masonry-size;
 }
 
 .grid-sizer {
@@ -43,8 +43,8 @@
       border: $border solid $bg;
       border-radius: $border * 3;
       padding: $border;
-      width: $masonrySize;
-      height: $masonrySize;
+      width: $masonry-size;
+      height: $masonry-size;
    }
 
    .thumb-md {
@@ -52,7 +52,7 @@
    }
 
    .title-overlay {
-      @include double-border($filled:true, $padding: ($titleFontSize / 5));
+      @include double-border($filled:true, $padding: ($title-font-size / 5));
 
       display: flex;
       flex-direction: column;
@@ -65,7 +65,7 @@
       right: 0;
       opacity: 1;
       transition: opacity 0.4s ease-in-out,
-                  box-shadow 0.1s ease-in-out;
+                  box-shadow 0.1s;
 
       .title, .tags {
          width: 100%;
@@ -74,40 +74,40 @@
       .title {
          color: $fg;
          margin: 0;
-         font-size: $titleFontSize;
+         font-size: $title-font-size;
       }
 
       .tags {
-         margin: ($titleFontSize / 10) 0;
+         margin: ($title-font-size / 10) 0;
 
          p {
             background: $fg;
             border-radius: 5rem;
             color: $bg;
             display: inline-block;
-            margin: ($titleFontSize / 10) 0;
-            padding: ($titleFontSize / 5) ($titleFontSize / 2);
+            margin: ($title-font-size / 10) 0;
+            padding: ($title-font-size / 5) ($title-font-size / 2);
          }
       }
    }
 }
 
 .grid-item--width2, .grid-item--width2 img {
-   width: ($masonrySize * 2) + $gutter;
+   width: ($masonry-size * 2) + $gutter;
 }
 
 .grid-item--height2, .grid-item--height2 img {
-   height: ($masonrySize * 2) + $gutter;
+   height: ($masonry-size * 2) + $gutter;
 }
 
-@mixin portfolio--md($headerHeight, $gutter, $border, $masonrySize, $titleFontSize) {
+@mixin portfolio--md($header-height, $gutter, $border, $masonry-size, $title-font-size) {
    #portfolio {
-      margin-top: $headerHeight;
+      margin-top: $header-height;
    }
 
    .grid-sizer, .grid-item {
-      width: $masonrySize;
-      height: $masonrySize;
+      width: $masonry-size;
+      height: $masonry-size;
       margin-bottom: $gutter;
    }
 
@@ -120,8 +120,8 @@
          border: $border solid $bg;
          border-radius: $border * 3;
          padding: $border;
-         width: $masonrySize;
-         height: $masonrySize;
+         width: $masonry-size;
+         height: $masonry-size;
       }
 
       .thumb-sm {
@@ -133,18 +133,18 @@
       }
       
       .title-overlay {
-         @include double-border($border: $border, $filled:true, $padding: ($titleFontSize / 5));
+         @include double-border($border: $border, $filled:true, $padding: ($title-font-size / 5));
    
          .title {
-            font-size: $titleFontSize;
+            font-size: $title-font-size;
          }
    
          .tags {
-            margin: ($titleFontSize / 10) 0;
+            margin: ($title-font-size / 10) 0;
    
             p {
-               padding: ($titleFontSize / 5) ($titleFontSize / 2);
-               margin: ($titleFontSize / 10) 0;
+               padding: ($title-font-size / 5) ($title-font-size / 2);
+               margin: ($title-font-size / 10) 0;
             }
          }
 
@@ -155,10 +155,10 @@
    }
    
    .grid-item--width2, .grid-item--width2 img {
-      width: ($masonrySize * 2) + $gutter;
+      width: ($masonry-size * 2) + $gutter;
    }
    
    .grid-item--height2, .grid-item--height2 img {
-      height: ($masonrySize * 2) + $gutter;
+      height: ($masonry-size * 2) + $gutter;
    }
 }

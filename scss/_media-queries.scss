@@ -6,17 +6,17 @@
 }
 
 @media (min-width: 768px) and (min-height: 768px) {
-   $headerHeight: 8vh;
+   $header-height: 8vh;
    $gutter: $gutter * 2;
    $border: $border * 2;
-   $masonrySize: $masonrySize * 1.5;
-   $titleFontSize: $titleFontSize * 1.6;
+   $masonry-size: $masonry-size * 1.5;
+   $title-font-size: $title-font-size * 1.6;
 
-   @include main--md($headerHeight, $gutter, $border, $masonrySize);
+   @include main--md($header-height, $gutter, $border, $masonry-size);
    @include card--md($gutter, $border);
-   @include header--md($headerHeight, $gutter, $border, $masonrySize, $titleFontSize);
-   @include intro--md($headerHeight, $gutter, $border);
-   @include portfolio--md($headerHeight, $gutter, $border, $masonrySize, $titleFontSize);
+   @include header--md($header-height, $gutter, $border, $masonry-size);
+   @include intro--md($header-height, $gutter, $border);
+   @include portfolio--md($header-height, $gutter, $border, $masonry-size, $title-font-size);
    @include contact--md($gutter, $border);
    @include footer--md($border);
    @include thanks--md($gutter, $border);

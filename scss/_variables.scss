@@ -4,26 +4,27 @@ $fg: hsl(80, 40%, 20%);
 $error-red: hsl(8, 80%, 60%);
 
 //Fonts
-$headingFont: 'Nunito', sans-serif;
-$pFont: 'Nunito', sans-serif;
+$header-font: 'Dosis', sans-serif;
+$body-font: 'Dosis', sans-serif;
+$header-weight: 700;
+$body-weight: 500;
 
 //Transitions
 $btn-transition: 0.25s ease-in-out;
 
 //Header
-$headerHeight: 3rem;
+$header-height: 3rem;
 
 //Intro
 $layers: 6;
-$treeCount: 20;
 
 //Masonry
-$masonrySize: 10rem;
+$masonry-size: 10rem;
 $gutter: 1rem;
-$maxColumns: 4;
+$max-columns: 4;
 $border: 0.125rem;
-$titleFontSize: 1.25rem;
+$title-font-size: 1.25rem;
 
 //Footer
-$usernameFontSize: 1rem;
-$usernameTransition: 0.5s;
+$username-font-size: 1rem;
+$username-transition: 0.5s;

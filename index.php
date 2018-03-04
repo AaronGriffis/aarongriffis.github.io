@@ -129,7 +129,7 @@
             <div class="text-card">
                <h2>Fun Facts</h2>
                <ul>
-                  <li>Born and raised in the Pacific Northwest</li>
+                  <li>Born and raised in the Pacific Northwest, and I enjoy the great outdoors (if you couldn't tell by now)</li>
                   <li>I custom-built my own PC <a href="/img/computer.jpg" data-featherlight>from parts</a></li>
                   <li>I once made a <a href="/img/fireplace.jpg" data-featherlight>fireplace out of cardboard</a> for my college dorm room</li>
                   <li>In my free time, I enjoy knitting 

@@ -23,7 +23,7 @@
             white-space: nowrap;
             @include double-border-btn(50rem, $inv:true, $padding:1rem);
 
-            line-height: 1.5rem;
+            line-height: 1.25rem;
          }
 
          .arrow {
@@ -136,7 +136,7 @@
          margin: 0 $border;
          @include double-border-btn(50rem, $border, $font-size:1.5rem, $inv:true, $padding:1rem);
 
-         line-height: 1.75rem;
+         line-height: 1.33rem;
       }
       
       .arrow {

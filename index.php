@@ -1,4 +1,5 @@
 <?php 
+   $isHome = true;
    require_once "html/header.php";
  ?>
 
@@ -23,9 +24,9 @@
       <div class="grid">
          <div class="grid-sizer"></div>
          <div class="gutter-sizer"></div>
-         <a href="http://www.aarongriffis.com/work/movie-collection" class="grid-item grid-item--height2 grid-item--width2">
-            <img class="thumb-md" src="img/thumbs/movies-thumb-md.gif">
-            <img class="thumb-sm" src="img/thumbs/movies-thumb-sm.gif">
+         <a href="http://www.aarongriffis.com/work/movie-collection/" class="grid-item grid-item--height2 grid-item--width2">
+            <img class="thumb-md" src="img/thumbs/movies-thumb-md.gif" alt="" aria-hidden="true">
+            <img class="thumb-sm" src="img/thumbs/movies-thumb-sm.gif" alt="" aria-hidden="true">
             <div class="title-overlay">
                <h2 class="title">Movie Collection Web App</h2>
                <div class="tags">
@@ -38,9 +39,9 @@
                </div>
             </div>
          </a>
-         <a href="http://www.aarongriffis.com/work/google-doodle" class="grid-item grid-item--width2">
-            <img class="thumb-md" src="img/thumbs/google-thumb-md.gif">
-            <img class="thumb-sm" src="img/thumbs/google-thumb-sm.gif">
+         <a href="http://www.aarongriffis.com/work/google-doodle/" class="grid-item grid-item--width2">
+            <img class="thumb-md" src="img/thumbs/google-thumb-md.gif" alt="" aria-hidden="true">
+            <img class="thumb-sm" src="img/thumbs/google-thumb-sm.gif" alt="" aria-hidden="true">
             <div class="title-overlay">
                <h2 class="title">Google Doodle</h2>
                <div class="tags">
@@ -52,9 +53,9 @@
                </div>
             </div>
          </a>
-         <a href="http://www.aarongriffis.com/work/spokane-signal-box" class="grid-item">
-            <img class="thumb-md" src="img/thumbs/spokane-thumb-md.png">
-            <img class="thumb-sm" src="img/thumbs/spokane-thumb-sm.png">
+         <a href="http://www.aarongriffis.com/work/spokane-signal-box/" class="grid-item">
+            <img class="thumb-md" src="img/thumbs/spokane-thumb-md.png" alt="" aria-hidden="true">
+            <img class="thumb-sm" src="img/thumbs/spokane-thumb-sm.png" alt="" aria-hidden="true">
             <div class="title-overlay">
                <h2 class="title">Spokane Signal Box</h2>
                <div class="tags">
@@ -63,9 +64,9 @@
                </div>
             </div>
          </a>
-         <a href="http://www.aarongriffis.com/work/puzzle-game" class="grid-item grid-item--height2">
-            <img class="thumb-md" src="img/thumbs/noodles-thumb-md.gif">
-            <img class="thumb-sm" src="img/thumbs/noodles-thumb-sm.gif">
+         <a href="http://www.aarongriffis.com/work/puzzle-game/" class="grid-item grid-item--height2">
+            <img class="thumb-md" src="img/thumbs/noodles-thumb-md.gif" alt="" aria-hidden="true">
+            <img class="thumb-sm" src="img/thumbs/noodles-thumb-sm.gif" alt="" aria-hidden="true">
             <div class="title-overlay">
                <h2 class="title">Puzzle Game</h2>
                <div class="tags">
@@ -75,9 +76,9 @@
                </div>
             </div>
          </a>
-         <a href="http://www.aarongriffis.com/work/preflight-poster" class="grid-item">
-            <img class="thumb-md" src="img/thumbs/preflight-thumb-md.png">
-            <img class="thumb-sm" src="img/thumbs/preflight-thumb-sm.png">
+         <a href="http://www.aarongriffis.com/work/preflight-poster/" class="grid-item">
+            <img class="thumb-md" src="img/thumbs/preflight-thumb-md.png" alt="" aria-hidden="true">
+            <img class="thumb-sm" src="img/thumbs/preflight-thumb-sm.png" alt="" aria-hidden="true">
             <div class="title-overlay">
                <h2 class="title">PreFlight Poster</h2>
                <div class="tags">
@@ -86,9 +87,9 @@
                </div>
             </div>
          </a>
-         <a href="http://www.aarongriffis.com/work/movie-trailer-website" class="grid-item grid-item--width2">
-            <img class="thumb-md" src="img/thumbs/budapest-thumb-md.gif">
-            <img class="thumb-sm" src="img/thumbs/budapest-thumb-sm.gif">
+         <a href="http://www.aarongriffis.com/work/movie-trailer-website/" class="grid-item grid-item--width2">
+            <img class="thumb-md" src="img/thumbs/budapest-thumb-md.gif" alt="" aria-hidden="true">
+            <img class="thumb-sm" src="img/thumbs/budapest-thumb-sm.gif" alt="" aria-hidden="true">
             <div class="title-overlay">
                <h2 class="title">Movie Trailer Website</h2>
                <div class="tags">
@@ -122,7 +123,7 @@
             <div class="text-card">
                <h2>My Toolbox</h2>
                <div id="toolbox">
-                  <?php buildTools( $tools = array("HTML5", "CSS3", "jQuery", "GitHub", "Sass", "Bootstrap", "Java", "Illustrator", "PHP") ); ?>
+                  <?php buildTools( $tools = array("HTML5", "CSS3", "Bootstrap", "PHP", "Sass", "jQuery", "GitHub", "Illustrator", "Java") ); ?>
                </div>
             </div>
 
@@ -148,7 +149,7 @@
       <h1>Get In Touch</h1>
       <form action="https://formspree.io/me@aarongriffis.com" method="POST">
          <p>Whether you'd like to discuss my work, request my r&#233;sum&#233; or references, or would just like to chat, I'd be happy to hear from you!</p>
-         <input type="hidden" name="_next" value="http://www.aarongriffis.com/thanks">
+         <input type="hidden" aria-hidden="true" name="_next" value="http://www.aarongriffis.com/thanks">
          <input type="text" name="_gotcha" style="display:none" />
 
          <div class="input-group">

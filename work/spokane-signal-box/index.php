@@ -1,7 +1,8 @@
 <?php 
    $title = "Spokane Signal Box";
    $description = "Illustration project by Aaron Griffis for Spokane Art's signal box contest to decorate downtown Spokane's traffic light signal boxes.";
-   $hasLink = false;
+   $hasWebsite = false;
+   $hasGithub = false;
    $link = "spokane-signal-box";
    $prev = "google-doodle";
    $next = "puzzle-game";
@@ -24,14 +25,17 @@
       ), 
       array(
          "src" => "moodboard.png", 
+         "alt" => "A moodboard made up of pictures of Riverfront Park and artwork of the attractions",
          "caption" => "I established a color scheme and collected various sources of inspiration into a mood board"
       ), 
       array(
          "src" => "sketch.jpg", 
+         "alt" => "A hand-drawn sketch of the design across the four faces of the box",
          "caption" => "I sketched out Spokane's most recognizable landmarks into a single composition"
       ), 
       array(
          "src" => "spokane-signal-box.png", 
+         "alt" => "A picture of the design containing the wagon sculpture, bridge, clock tower, and pavillion with a street map in the background",
          "caption" => "This is what the final design looks like layed out flat. The background is a map of downtown Spokane"
       )
    );

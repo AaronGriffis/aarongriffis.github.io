@@ -3,6 +3,7 @@
 
    .intro-text {
       top: 15vmin;
+      width: unset;
 
       h1 {
          margin-bottom: 0;
@@ -10,7 +11,6 @@
 
       h2 {
          margin-top: 0;
-         font-size: 1.75rem;
       }
 
       #intro-btn {
@@ -73,10 +73,24 @@
       padding: 0 $gutter;
       pointer-events: none;
 
-      h1, h2, h3 {
+      h1, h2 {
          pointer-events: all;
       }
+      
+      h1 {
+         font-size: 1.5rem;
+      }
+
+      h2 {
+         font-size: 1rem;
+      }
    }
+}
+
+.terrain, .tree {
+   transform: translate3d(0, 0, 0);
+   backface-visibility: hidden;
+   perspective: 1000;
 }
 
 .terrain {
@@ -133,8 +147,18 @@
 }
 
 @mixin intro--sm() {
-   .intro .intro-text, #homepage-intro .intro-text #intro-btn {
-      font-size: 3vmin;
+   .intro .intro-text {
+      h1 {
+         font-size: 6vmin;
+      }
+
+      h2 {
+         font-size: 3.5vmin;
+      }
+   }
+   
+   #homepage-intro .intro-text #intro-btn {
+      font-size: 5vmin;
    }
 
    #homepage-intro .intro-text {
@@ -151,8 +175,17 @@
    }
 
    .intro .intro-text {
-      font-size: 1.5rem;
       padding: 0 $gutter;
+
+      h1 {
+         margin-bottom: 0;
+         font-size: 3rem;
+      }
+
+      h2 {
+         margin-top: 0;
+         font-size: 1.75rem;
+      }
    }
 
    #homepage-intro .intro-text {

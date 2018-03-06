@@ -1,7 +1,8 @@
 <?php 
    $title = "Google Doodle Project";
-   $description = "Custom Google doodle of falling autumn leaves made by Aaron Griffis. Built with Sass and animated SVGs.";
-   $hasLink = true;
+   $description = "Case study of the custom Google doodle project made by Aaron Griffis. Built with Sass and animated SVGs.";
+   $hasWebsite = true;
+   $hasGithub = true;
    $link = "google-doodle";
    $prev = "movie-collection";
    $next = "spokane-signal-box";
@@ -20,10 +21,12 @@
    $images = array(
       array(
          "src" => "animated.gif", 
+         "alt" => "A gif of leaves blowing in the wind past the Google logo",
          "caption" => "After the initial animation, the leaves continue falling infinitely"
       ),
       array(
          "src" => "leaves.svg", 
+         "alt" => "A row of leaves in a gradient of colors from green to red",
          "caption" => "Close-up of the leaves and the full range of colors"
       )
    );

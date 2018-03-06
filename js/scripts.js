@@ -58,10 +58,18 @@ function loaded() {
    $('.tree:not(#logo svg) .trunk').click(shakeTree).hover(shakeTree);
    $('#logo').on('mouseenter focus', function(e) {shakeTree(e, $('#logo .trunk'));});
 
-   //scrollTop
-   $('#intro-btn').click(function() {
-      $('html, body').scrollTop($('#portfolio').offset().top);
-      return false;
+   //scrollTo
+   $('#intro-btn').click(function(e) {scroll(e, $('#portfolio').offset().top);});
+   $('#to-top-btn').click(function(e) {scroll(e, 0);});
+   $('body > header > nav a').click(function(e) {
+      if ( $('body')[0].id === "home" ) {
+         var pos = 0;
+         if ($(this).data("tag") != "#top") {
+            pos = $( $(this).data("tag") ).offset().top;
+         }
+
+         scroll(e, pos);
+      }
    });
 
    //Form validation
@@ -74,9 +82,9 @@ function loaded() {
       });
 
    //Footer
-   $('#link-github').hover(function() {onFooterHover(6, "github.com/");}, offFooterHover);
-   $('#link-codepen').hover(function() {onFooterHover(6, "codepen.io/");}, offFooterHover);
-   $('#link-linkedin').hover(function() {onFooterHover(9, "linkedin.com/in/");}, offFooterHover);
+   $('#link-github').hover(function() {onFooterHover(5, "github.com/");}, offFooterHover);
+   $('#link-codepen').hover(function() {onFooterHover(5, "codepen.io/");}, offFooterHover);
+   $('#link-linkedin').hover(function() {onFooterHover(7, "linkedin.com/in/");}, offFooterHover);
    $('#link-email').hover(function() {onFooterHover(0, "me@", ".com");}, offFooterHover);
 }
 
@@ -150,4 +158,11 @@ function offFooterHover() {
   $('#username-before').css("color", "transparent");
   $('#username-after').css("color", "transparent");
   $('#username-space').removeClass("no-width");
+}
+
+function scroll(e, pos) {
+   var scrollSpeed = 1500;
+   e.preventDefault();
+   $('html, body').animate({scrollTop:pos}, scrollSpeed);
+   return false;
 }

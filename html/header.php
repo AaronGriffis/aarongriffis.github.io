@@ -41,7 +41,7 @@
          }
 
          echo '<div class="tool-wrapper">
-                  <svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">'.$toolSVG.'</svg>
+                  <svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="'.$tool.'-tool-title" focusable=”false”><title id="'.$tool.'-tool-title">'.$tool.' logo</title>'.$toolSVG.'</svg>
                   <p>'.$tool.'</p>
                </div>';
       }
@@ -76,10 +76,11 @@
    <meta name="msapplication-config" content="/img/favicon/browserconfig.xml">
    <meta name="theme-color" content="#fff8e7">
 
-   <link rel="stylesheet" type="text/css" href="/css/styles.css">
+   <link href="https://fonts.googleapis.com/css?family=Dosis:500, 700" rel="stylesheet">
+   <link href="/css/styles.css" rel="stylesheet" type="text/css">
 </head>
 
-<body>
+<body <?php if( isset($isHome) && $isHome ) echo 'id="home"' ?>>
    <svg id="vignette" viewbox="0 0 2 2" preserveAspectRatio="none" alt="" aria-hidden="true" focusable=”false”>
       <defs>
          <filter id="vig-blur">
@@ -98,11 +99,11 @@
    <header>
       <nav>
          <ul>
-            <li><a href="http://www.aarongriffis.com">Home</a></li>
-            <li><a href="http://www.aarongriffis.com/#portfolio">Work</a></li>
+            <li><a href="http://www.aarongriffis.com" data-tag="#top">Home</a></li>
+            <li><a href="http://www.aarongriffis.com/#portfolio" data-tag="#portfolio">Work</a></li>
          </ul>
-         <a href="http://www.aarongriffis.com" id="logo" aria-hidden="true">
-            <svg class="tree" viewBox="15 15 20 25" alt="" focusable=”false”>
+         <a href="http://www.aarongriffis.com" data-tag="#top" id="logo" aria-hidden="true">
+            <svg class="tree" viewBox="15 15 20 25" alt="" aria-hidden="true" focusable=”false”>
                <g>
                   <path class="trunk" d="m25,22 l-0.5,15 a1,1 0 0,0 1,0 l-0.5,-15"/>
                   <path d="m25,18 a10,10 0 0 1 -2,6" class="left"/>
@@ -121,8 +122,8 @@
             </svg>
          </a>
          <ul>
-            <li><a href="http://www.aarongriffis.com/#about">About</a></li>
-            <li><a href="http://www.aarongriffis.com/#contact">Contact</a></li>
+            <li><a href="http://www.aarongriffis.com/#about" data-tag="#about">About</a></li>
+            <li><a href="http://www.aarongriffis.com/#contact" data-tag="#contact">Contact</a></li>
          </ul>
       </nav>
    </header>

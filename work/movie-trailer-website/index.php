@@ -1,7 +1,8 @@
 <?php 
    $title = "Movie Trailer Website";
-   $description = "A movie trailer website for The Grand Budapest Hotel made by Aaron Griffis. It served as a practice project for building fully responsive, mobile first websites.";
-   $hasLink = true;
+   $description = "Case study of the movie trailer website made by Aaron Griffis. It served as a practice project for building fully responsive, mobile first websites.";
+   $hasWebsite = true;
+   $hasGithub = true;
    $link = "movie-trailer-website";
    $prev = "preflight-poster";
    $next = "movie-collection";
@@ -20,14 +21,17 @@
    $images = array(
       array(
          "src" => "trailer.png", 
+         "alt" => "a screenshot of the top of the website showing the movie's title and a trailer",
          "caption" => "The image, banner text, and trailer all scale with the page"
       ), 
       array(
          "src" => "poster.jpg", 
+         "alt" => "a movie poster featuring a board with cast member pictures",
          "caption" => "This poster served as my main inspiration, as well as a guide for my color scheme"
       ), 
       array(
          "src" => "cast.gif", 
+         "alt" => "a screenshot of the second half of the website with the movie's info and a recreation of the cast board from the poster",
          "caption" => "I recreated the cast board from the poster in HTML in order for it to be responsive, and also to allow me to animate each tag individually"
       )
    );

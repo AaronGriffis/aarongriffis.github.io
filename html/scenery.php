@@ -1,11 +1,11 @@
 <div id="loading-mask" aria-hidden="true" focusable=”false”></div>
-<svg xmlns="http://www.w3.org/2000/svg" class="terrain right layer1" viewbox="0 0 50 50" preserveAspectRatio="xMinYMax">
+<svg xmlns="http://www.w3.org/2000/svg" class="terrain right layer1" viewbox="0 0 50 50" preserveAspectRatio="xMinYMax" alt="" aria-hidden="true" focusable=”false”>
    <path d="M50 0 l-35 50 h35z"/>
 </svg>
-<svg xmlns="http://www.w3.org/2000/svg" class="terrain left layer1" viewbox="0 0 50 50" preserveAspectRatio="xMinYMax">
+<svg xmlns="http://www.w3.org/2000/svg" class="terrain left layer1" viewbox="0 0 50 50" preserveAspectRatio="xMinYMax" alt="" aria-hidden="true" focusable=”false”>
    <path d="M0 0 l35 50 h-35z"/>
 </svg>
-<svg xmlns="http://www.w3.org/2000/svg" class="terrain right layer2" viewbox="0 0 50 50" preserveAspectRatio="xMinYMax">
+<svg xmlns="http://www.w3.org/2000/svg" class="terrain right layer2" viewbox="0 0 50 50" preserveAspectRatio="xMinYMax" alt="" aria-hidden="true" focusable=”false”>
    <path d="M50 15 h-30 q-5 0 -5 5 v30 h35z" transform="rotate(-5, 50, 15)"/>
    <path d="M20 30 h-15 q-5 0 -5 5 v15 h20z" transform="rotate(15, 0, 50)"/>
    <svg class="tree" x="20" y="-11.5" width="5" viewBox="15 0 20 40">
@@ -44,7 +44,7 @@
       </g>
    </svg>
 </svg>
-<svg xmlns="http://www.w3.org/2000/svg" class="terrain left layer3" viewbox="0 0 50 50" preserveAspectRatio="xMinYMax">
+<svg xmlns="http://www.w3.org/2000/svg" class="terrain left layer3" viewbox="0 0 50 50" preserveAspectRatio="xMinYMax" alt="" aria-hidden="true" focusable=”false”>
    <path d="M0 25 h30 q5 0 5 5 v10 h-35z" transform="rotate(-20, 0, 40)"/>
    <path d="M0 20 h45 q5 0 5 5 v25 h-50z" transform="rotate(-5, 50, 50)"/>
    <svg class="tree" x="30" y="-7.5" width="5" viewBox="15 0 20 40">
@@ -65,7 +65,7 @@
       </g>
    </svg>
 </svg>
-<svg xmlns="http://www.w3.org/2000/svg" class="terrain right layer4" viewbox="0 0 50 50" preserveAspectRatio="xMinYMax">
+<svg xmlns="http://www.w3.org/2000/svg" class="terrain right layer4" viewbox="0 0 50 50" preserveAspectRatio="xMinYMax" alt="" aria-hidden="true" focusable=”false”>
    <path d="M50 12 h-5 q-5 0 -5 5 v18 h10z" transform="rotate(10, 50, 35)"/>
    <path d="M20 36 h-10 q-5 0 -5 5 v9 h15z" transform="rotate(5, 5, 50)"/>
    <path d="M50 20 h-31 q-5 0 -5 5 v25 h36z" transform="rotate(25, 14, 50)"/>
@@ -87,7 +87,7 @@
       </g>
    </svg>
 </svg>
-<svg xmlns="http://www.w3.org/2000/svg" class="terrain left layer5" viewbox="0 0 50 50" preserveAspectRatio="xMinYMax">
+<svg xmlns="http://www.w3.org/2000/svg" class="terrain left layer5" viewbox="0 0 50 50" preserveAspectRatio="xMinYMax" alt="" aria-hidden="true" focusable=”false”>
    <path d="M0 20 h25 q5 0 5 5 v25 h-30z" transform="rotate(10, 0, 20)"/>
    <path d="M25 35 h15 q5 0 5 5 v10 h-20z" transform="rotate(-15, 45, 50)"/>
    <svg class="tree" x="33" y="6" width="7" viewBox="15 0 20 40">
@@ -126,7 +126,7 @@
       </g>
    </svg>
 </svg>
-<svg xmlns="http://www.w3.org/2000/svg" class="terrain right layer6" viewbox="0 0 50 50" preserveAspectRatio="xMinYMax">
+<svg xmlns="http://www.w3.org/2000/svg" class="terrain right layer6" viewbox="0 0 50 50" preserveAspectRatio="xMinYMax" alt="" aria-hidden="true" focusable=”false”>
    <path d="M50 25 h-10 q-5 0 -5 5 v20 h15z" transform="rotate(-5, 50, 25)"/>
    <path d="M42 40 h-25 q-5 0 -5 5 v5 h30z" transform="rotate(-10, 42, 50)"/>
    <svg class="tree" x="25" y="9.5" width="9" viewBox="15 0 20 40">
@@ -182,7 +182,7 @@
       </g>
    </svg>
 </svg>
-<svg xmlns="http://www.w3.org/2000/svg" class="terrain left layer6" viewbox="0 0 50 50" preserveAspectRatio="xMinYMax">
+<svg xmlns="http://www.w3.org/2000/svg" class="terrain left layer6" viewbox="0 0 50 50" preserveAspectRatio="xMinYMax" alt="" aria-hidden="true" focusable=”false”>
    <path d="M0 30 h15 q5 0 5 5 v15 h-20z" transform="rotate(-10, 20, 50)"/>
    <path d="M18 40 h15 q5 0 5 5 v10 h-20z" transform="rotate(15, 18, 40)"/>
    <svg class="tree" x="2" y="-2" width="11" viewBox="15 0 20 40">

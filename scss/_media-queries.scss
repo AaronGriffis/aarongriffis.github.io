@@ -3,6 +3,7 @@
    @include card--sm();
    @include header--sm();
    @include intro--sm();
+   @include project--sm();
 }
 
 @media (min-width: 768px) and (min-height: 768px) {

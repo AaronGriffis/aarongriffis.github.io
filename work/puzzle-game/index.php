@@ -1,7 +1,8 @@
 <?php 
    $title = "Puzzle Game";
-   $description = "Java desktop application by Aaron Griffis recreating the game Noodles. A puzzle game consisting of rotating and connecting hexagons or squares.";
-   $hasLink = false;
+   $description = "Case study of the java desktop application by Aaron Griffis recreating the game Noodles. A puzzle game consisting of rotating and connecting hexagons or squares.";
+   $hasWebsite = true;
+   $hasGithub = true;
    $link = "puzzle-game";
    $prev = "spokane-signal-box";
    $next = "preflight-poster";
@@ -19,22 +20,27 @@
    $images = array(
       array(
          "src" => "solving-hex.gif", 
+         "alt" => "A gif showing the puzzle game with hexagon tiles being solved",
          "caption" => "The basic idea is to get all the tiles to connect by rotating them individually"
       ), 
       array(
          "src" => "solving-square.gif", 
+         "alt" => "A gif showing the puzzle game with square tiles being solved",
          "caption" => "You can play with hexagonal tiles, or square ones"
       ), 
       array(
          "src" => "large.png", 
+         "alt" => "A screenshot of a large puzzle with 30 rows and columns",
          "caption" => "There's a <i>large</i> variety of sizes"
       ), 
       array(
          "src" => "stranded.png", 
+         "alt" => "A screenshot of the game with a blue background and tan tiles to look like an island",
          "caption" => "I also included themed color schemes such as a stranded island..."
       ), 
       array(
          "src" => "volcano.png", 
+         "alt" => "A screenshot of the game with a dark red background and orange tiles to look like a volcano",
          "caption" => "...and a volcano just for funsies"
       )
    );

@@ -1,7 +1,7 @@
 <?php 
    $title = "Puzzle Game";
    $description = "Case study of the java desktop application by Aaron Griffis recreating the game Noodles. A puzzle game consisting of rotating and connecting hexagons or squares.";
-   $hasWebsite = true;
+   $hasWebsite = false;
    $hasGithub = true;
    $link = "puzzle-game";
    $prev = "spokane-signal-box";

@@ -42,7 +42,7 @@
       margin: 1rem 0;
    }
 
-   a {
+   p a, li a {
       @include text-link();
    }
 }
@@ -52,7 +52,7 @@
    flex-direction: column;
    flex: 2;
 
-   & > div {
+   & > div:not(.btn-group) {
       margin: auto 0;
 
       p:first-of-type {

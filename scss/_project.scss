@@ -57,14 +57,15 @@
 .btn-group {
    display: flex;
    justify-content: center;
+   margin: 0;
 
-   #website-link, .arrow {
+   .website-link, .arrow {
       height: 3rem - ($border * 2);
       pointer-events: all;
       text-decoration: none;
    }
 
-   #website-link {
+   .website-link {
       margin: $border;
       white-space: nowrap;
       @include double-border-btn(50rem, $inv:true, $padding:0 1rem);
@@ -128,7 +129,7 @@
    min-width: 50%;
 }
 
-#description.with-github {
+#description.with-links {
    align-items: center;
    justify-content: space-between;
 
@@ -186,11 +187,11 @@
    }
 
    .btn-group {
-      #website-link, .arrow {
+      .website-link, .arrow {
          height: 4rem;
       }
 
-      #website-link {
+      .website-link {
          margin: $border;
          @include double-border-btn(50rem, $border, $font-size:1.5rem, $inv:true, $padding:0 1rem);
 

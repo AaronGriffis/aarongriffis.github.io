@@ -13,7 +13,7 @@
             <span>View my work</span>
             <svg xmlns="http://www.w3.org/2000/svg" id="intro-arrow" viewbox="0 0 8 8" alt="" aria-hidden="true" focusable=”false”>
                <circle cx="4" cy="4" r="4"/>
-               <path d="m4 2.5 v3 m -1 -1 l1 1 l 1 -1"/>
+               <path d="m4 2.5 v3 m -1 -1 a2 2 0 0 1 1 1 2 2 0 0 1 1 -1"/>
             </svg>
          </a>
       </div>

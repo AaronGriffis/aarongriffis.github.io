@@ -12,18 +12,18 @@
                <title id="left-arrow-title">Previous project</title>
                <desc id="left-arrow-desc">Arrow pointing left</desc>
                <circle cx="4" cy="4" r="4"/>
-               <path d="m5.5 4 h -3 m1 -1 l -1 1 l1 1"/>
+               <path d="m5.5 4 h -3 m1 -1 a2 2 0 0 1 -1 1 2 2 0 0 1 1 1"/>
             </svg>
          </a>
 
-         <?php if ($hasWebsite) echo '<a href="http://www.aarongriffis.com/' . $link . '/" id="website-link">View Website</a>'; ?>
+         <?php if ($hasWebsite) echo '<a href="http://www.aarongriffis.com/' . $link . '/" class="website-link">View Website</a>'; ?>
       
          <a href="http://www.aarongriffis.com/work/<?php echo $next ?>" class="arrow arrow-right" aria-label="Next project">
             <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 8 8" role="img" aria-labelledby="right-arrow-title right-arrow-desc" focusable=”false”>
                <title id="right-arrow-title">Next project</title>
                <desc id="right-arrow-desc">Arrow pointing right</desc>
                <circle cx="4" cy="4" r="4"/>
-               <path d="m2.5 4 h3 m -1 -1 l1 1 l -1 1"/>
+               <path d="m2.5 4 h3 m -1 -1 a2 2 0 0 0 1 1 2 2 0 0 0 -1 1"/>
             </svg>
          </a>
       </div>
@@ -33,16 +33,25 @@
 <section id="<?php echo $link ?>">
    <h1>What it's all about</h1>
    <div class="flex-wrapper">
-      <div id="description" class="text-card<?php if($hasGithub) echo ' with-github' ?>">
+      <div id="description" class="text-card<?php if($hasGithub) echo ' with-links' ?>">
          <h2>The Challenge</h2>
          <div>
             <?php echo $challenge ?>
          </div>
 
          <?php
-            if ($hasGithub) {
-               echo '<a href="https://github.com/AaronGriffis/'.$link.'" id="github-link">View on GitHub</a>';
+            if ($hasWebsite || $hasGithub) {
+               echo '<div class="btn-group">';
+               if ($hasWebsite) {
+                  echo '<a href="http://www.aarongriffis.com/' . $link . '/" class="website-link">View Website</a>';
+               }
+
+               if ($hasGithub) {
+                  echo '<a href="https://github.com/AaronGriffis/' . $link . '" class="website-link">View on GitHub</a>';
+               }
+               echo '</div>';
             }
+            
          ?>
       </div>
 
@@ -87,7 +96,7 @@
          <title id="left-arrow-title">Previous project</title>
          <desc id="left-arrow-desc">Arrow pointing left</desc>
          <circle cx="4" cy="4" r="4"/>
-         <path d="m5.5 4 h -3 m1 -1 l -1 1 l1 1"/>
+         <path d="m5.5 4 h -3 m1 -1 a2 2 0 0 1 -1 1 2 2 0 0 1 1 1"/>
       </svg>
    </a>
 
@@ -96,7 +105,7 @@
          <title id="up-arrow-title">Back to top</title>
          <desc id="up-arrow-desc">Arrow pointing up</desc>
          <circle cx="4" cy="4" r="4"/>
-         <path d="m4 5.5 v-3 m -1 1 l1 -1 l1 1"/>
+         <path d="m4 5.5 v-3 m -1 1 a2 2 0 0 0 1 -1 2 2 0 0 0 1 1"/>
       </svg>
    </a>
 
@@ -105,7 +114,7 @@
          <title id="right-arrow-title">Next project</title>
          <desc id="right-arrow-desc">Arrow pointing right</desc>
          <circle cx="4" cy="4" r="4"/>
-         <path d="m2.5 4 h3 m -1 -1 l1 1 l -1 1"/>
+         <path d="m2.5 4 h3 m -1 -1 a2 2 0 0 0 1 1 2 2 0 0 0 -1 1"/>
       </svg>
    </a>
 </div>

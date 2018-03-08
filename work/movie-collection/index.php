@@ -16,7 +16,7 @@
               <li>Building a Bootstrap interface</li>
               <li>Writing prepared SQL statements with PDO</li>";
 
-   $tools = array("HTML5", "CSS3", "Bootstrap", "PHP", "Sass", "jQuery");
+   $tools = array("HTML5", "CSS3", "Bootstrap", "PHP", "jQuery", "MySQL");
 
    $images = array(
       array(

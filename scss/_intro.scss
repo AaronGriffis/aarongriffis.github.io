@@ -3,7 +3,6 @@
 
    .intro-text {
       top: 15vmin;
-      width: unset;
 
       h1 {
          margin-bottom: 0;
@@ -68,7 +67,6 @@
       left: 0;
       right: 0;
       margin: 0 auto;
-      width: fit-content;
       color: $fg;
       padding: 0 $gutter;
       pointer-events: none;
@@ -178,7 +176,6 @@
       padding: 0 $gutter;
 
       h1 {
-         margin-bottom: 0;
          font-size: 3rem;
       }
 

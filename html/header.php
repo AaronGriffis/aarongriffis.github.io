@@ -79,7 +79,7 @@
    <meta name="msapplication-config" content="/img/favicon/browserconfig.xml">
    <meta name="theme-color" content="#fff8e7">
 
-   <link href="https://fonts.googleapis.com/css?family=Dosis:500, 700" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Dosis:700|Quicksand:500" rel="stylesheet">
    <link href="/css/styles.css" rel="stylesheet" type="text/css">
 </head>
 

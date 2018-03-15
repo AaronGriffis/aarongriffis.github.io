@@ -3,6 +3,10 @@
 
    .intro-text {
       top: 0;
+
+      h1 {
+         margin: 0 1rem;
+      }
    }
 
    svg.terrain {
@@ -17,13 +21,9 @@
    }
 }
 
-
-.btn-group.no-link {
-   justify-content: space-around;
-}
-
 .btn-group.inv {
    .arrow {
+      flex-shrink: 0;
       @include double-border-btn(50rem, $inv:true, $padding:0);
 
       &:hover, &:focus {
@@ -56,27 +56,16 @@
 
 .btn-group {
    display: flex;
+   align-items: center;
    justify-content: center;
    margin: 0;
-
-   .website-link, .arrow {
-      height: 3rem - ($border * 2);
-      pointer-events: all;
-      text-decoration: none;
-   }
-
-   .website-link {
-      margin: $border;
-      white-space: nowrap;
-      @include double-border-btn(50rem, $inv:true, $padding:0 1rem);
-
-      line-height: 2.75rem - ($border * 2);
-   }
 
    .arrow {
       height: 3rem - ($border * 2);
       width: 3rem - ($border * 2);
       margin: $border;
+      pointer-events: all;
+      text-decoration: none;
 
       svg {
          fill: none;
@@ -129,19 +118,6 @@
    min-width: 50%;
 }
 
-#description.with-links {
-   align-items: center;
-   justify-content: space-between;
-
-   #github-link {
-      display: inline-block;
-      text-decoration: none;
-      z-index: 1;
-      
-      @include double-border-btn(50rem, $inv:true, $padding:1rem);
-   }
-}
-
 #images {
    figure {
       margin: ($gutter * 2) 0;
@@ -187,17 +163,6 @@
    }
 
    .btn-group {
-      .website-link, .arrow {
-         height: 4rem;
-      }
-
-      .website-link {
-         margin: $border;
-         @include double-border-btn(50rem, $border, $font-size:1.5rem, $inv:true, $padding:0 1rem);
-
-         line-height: 4rem - ($border * 2);
-      }
-      
       .arrow {
          height: 4.5rem - ($border * 2);
          width: 4.5rem - ($border * 2);

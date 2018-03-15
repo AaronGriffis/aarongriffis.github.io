@@ -117,6 +117,8 @@
                <p>Before discovering my passion for web development, I dabbled in C# applications, and before that it was JavaFX and Swing.</p>
                <p>As a recent <a href="https://www.ewu.edu">EWU</a> graduate with a computer science degree and design minor in hand, I'm eager to begin my career so please don't hesitate to <a href="#contact">contact me</a> below if you're interested in hiring me!</p>
             </div>
+
+            <a href="/docs/resume.pdf" class="card-btn">View my r&#233;sum&#233;</a>
          </div>
 
          <div class="flex-wrapper">
@@ -148,7 +150,7 @@
    <section id="contact">
       <h1>Get In Touch</h1>
       <form action="https://formspree.io/me@aarongriffis.com" method="POST">
-         <p>Whether you'd like to discuss my work, request my r&#233;sum&#233; or references, or would just like to chat, I'd be happy to hear from you!</p>
+         <p>Whether you'd like to discuss my work, ask me a question, or would just like to chat, I'd be happy to hear from you!</p>
          <input type="hidden" aria-hidden="true" name="_next" value="http://www.aarongriffis.com/thanks">
          <input type="text" name="_gotcha" style="display:none" />
 

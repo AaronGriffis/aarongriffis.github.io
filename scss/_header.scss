@@ -48,7 +48,7 @@ body > header {
    width: calc(#{$header-height} - (#{$border} * 2));
    outline: none;
    
-   @include double-border(50rem, $filled:true, $padding: 0);
+   @include double-border(50rem, $filled:true, $padding: $border);
 
    svg {
       height: 100%;
@@ -93,7 +93,7 @@ body > header {
          height: calc(#{$header-height} - (#{$border} * 2));
          width: calc(#{$header-height} - (#{$border} * 2));
 
-         @include double-border(50rem, $border: $border, $filled:true, $padding: 0);
+         @include double-border(50rem, $border: $border, $filled:true, $padding: $border);
       }
    }
 }

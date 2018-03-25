@@ -26,23 +26,19 @@ function loaded() {
    });
 
    //intro parallax
-   var introYOffsets = ['110%', '90%', '70%', '50%', '30%'];
+   var introYOffsets = ['110', '90', '70', '50', '30'];
    if ( $('.intro').hasClass('project-intro') ) {
-      introYOffsets = ['220%', '180%', '140%', '100%', '60%'];
+      introYOffsets = ['220', '180', '140', '100', '60'];
    }
+   window.addEventListener("scroll", function(event) {
+      var scrollPercent = this.pageYOffset / $(window).height();
 
-
-	var controller = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "100%"}});
-   var parallaxTween = new TimelineMax().add([
-      TweenMax.to('.terrain.layer1', 1, {y: introYOffsets[0], ease:Linear.easeNone}),
-      TweenMax.to('.terrain.layer2', 1, {y: introYOffsets[1], ease:Linear.easeNone}),
-      TweenMax.to('.terrain.layer3', 1, {y: introYOffsets[2], ease:Linear.easeNone}),
-      TweenMax.to('.terrain.layer4', 1, {y: introYOffsets[3], ease:Linear.easeNone}),
-      TweenMax.to('.terrain.layer5', 1, {y: introYOffsets[4], ease:Linear.easeNone})
-   ]);
-   var scene = new ScrollMagic.Scene()
-      .setTween(parallaxTween)
-      .addTo(controller);
+      for (var i = 1; i <= 5; i++) {
+         speed = introYOffsets[i-1];
+         var yPos = scrollPercent * speed;
+         $('.layer' + i).attr('style', 'transform: translate(0%, ' + yPos + '%)');
+      }
+   });
   
    //Masonry
    $('#portfolio .grid').masonry({

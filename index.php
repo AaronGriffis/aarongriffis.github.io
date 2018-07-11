@@ -9,7 +9,7 @@
       <div class="intro-text">
          <h1>Hi, I'm Aaron Griffis</h1>
          <h2>Web designer and programmer</h2>
-         <a href="http://www.aarongriffis.com/#portfolio" id="intro-btn">
+         <a href="https://www.aarongriffis.com/#portfolio" id="intro-btn">
             <span>View my work</span>
             <svg xmlns="http://www.w3.org/2000/svg" id="intro-arrow" viewbox="0 0 8 8" alt="" aria-hidden="true" focusable=”false”>
                <circle cx="4" cy="4" r="4"/>
@@ -24,7 +24,7 @@
       <div class="grid">
          <div class="grid-sizer"></div>
          <div class="gutter-sizer"></div>
-         <a href="http://www.aarongriffis.com/work/movie-collection/" class="grid-item grid-item--height2 grid-item--width2">
+         <a href="https://www.aarongriffis.com/work/movie-collection/" class="grid-item grid-item--height2 grid-item--width2">
             <img class="thumb-md" src="img/thumbs/movies-thumb-md.gif" alt="" aria-hidden="true">
             <img class="thumb-sm" src="img/thumbs/movies-thumb-sm.gif" alt="" aria-hidden="true">
             <div class="title-overlay">
@@ -39,7 +39,7 @@
                </div>
             </div>
          </a>
-         <a href="http://www.aarongriffis.com/work/google-doodle/" class="grid-item grid-item--width2">
+         <a href="https://www.aarongriffis.com/work/google-doodle/" class="grid-item grid-item--width2">
             <img class="thumb-md" src="img/thumbs/google-thumb-md.gif" alt="" aria-hidden="true">
             <img class="thumb-sm" src="img/thumbs/google-thumb-sm.gif" alt="" aria-hidden="true">
             <div class="title-overlay">
@@ -53,7 +53,7 @@
                </div>
             </div>
          </a>
-         <a href="http://www.aarongriffis.com/work/spokane-signal-box/" class="grid-item">
+         <a href="https://www.aarongriffis.com/work/spokane-signal-box/" class="grid-item">
             <img class="thumb-md" src="img/thumbs/spokane-thumb-md.png" alt="" aria-hidden="true">
             <img class="thumb-sm" src="img/thumbs/spokane-thumb-sm.png" alt="" aria-hidden="true">
             <div class="title-overlay">
@@ -64,7 +64,7 @@
                </div>
             </div>
          </a>
-         <a href="http://www.aarongriffis.com/work/puzzle-game/" class="grid-item grid-item--height2">
+         <a href="https://www.aarongriffis.com/work/puzzle-game/" class="grid-item grid-item--height2">
             <img class="thumb-md" src="img/thumbs/noodles-thumb-md.gif" alt="" aria-hidden="true">
             <img class="thumb-sm" src="img/thumbs/noodles-thumb-sm.gif" alt="" aria-hidden="true">
             <div class="title-overlay">
@@ -76,7 +76,7 @@
                </div>
             </div>
          </a>
-         <a href="http://www.aarongriffis.com/work/preflight-poster/" class="grid-item">
+         <a href="https://www.aarongriffis.com/work/preflight-poster/" class="grid-item">
             <img class="thumb-md" src="img/thumbs/preflight-thumb-md.png" alt="" aria-hidden="true">
             <img class="thumb-sm" src="img/thumbs/preflight-thumb-sm.png" alt="" aria-hidden="true">
             <div class="title-overlay">
@@ -87,7 +87,7 @@
                </div>
             </div>
          </a>
-         <a href="http://www.aarongriffis.com/work/movie-trailer-website/" class="grid-item grid-item--width2">
+         <a href="https://www.aarongriffis.com/work/movie-trailer-website/" class="grid-item grid-item--width2">
             <img class="thumb-md" src="img/thumbs/budapest-thumb-md.gif" alt="" aria-hidden="true">
             <img class="thumb-sm" src="img/thumbs/budapest-thumb-sm.gif" alt="" aria-hidden="true">
             <div class="title-overlay">
@@ -151,7 +151,7 @@
       <h1>Get In Touch</h1>
       <form action="https://formspree.io/me@aarongriffis.com" method="POST">
          <p>Whether you'd like to discuss my work, ask me a question, or would just like to chat, I'd be happy to hear from you!</p>
-         <input type="hidden" aria-hidden="true" name="_next" value="http://www.aarongriffis.com/thanks">
+         <input type="hidden" aria-hidden="true" name="_next" value="https://www.aarongriffis.com/thanks">
          <input type="text" name="_gotcha" style="display:none" />
 
          <div class="input-group">

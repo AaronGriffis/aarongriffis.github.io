@@ -102,10 +102,10 @@
    <header>
       <nav>
          <ul>
-            <li><a href="http://www.aarongriffis.com" data-tag="#top">Home</a></li>
-            <li><a href="http://www.aarongriffis.com/#portfolio" data-tag="#portfolio">Work</a></li>
+            <li><a href="https://www.aarongriffis.com" data-tag="#top">Home</a></li>
+            <li><a href="https://www.aarongriffis.com/#portfolio" data-tag="#portfolio">Work</a></li>
          </ul>
-         <a href="http://www.aarongriffis.com" data-tag="#top" id="logo" aria-hidden="true">
+         <a href="https://www.aarongriffis.com" data-tag="#top" id="logo" aria-hidden="true">
             <svg class="tree" viewBox="15 15 20 25" alt="" aria-hidden="true" focusable=”false”>
                <g>
                   <path class="trunk" d="m25,22 l-0.5,15 a1,1 0 0,0 1,0 l-0.5,-15"/>
@@ -125,8 +125,8 @@
             </svg>
          </a>
          <ul>
-            <li><a href="http://www.aarongriffis.com/#about" data-tag="#about">About</a></li>
-            <li><a href="http://www.aarongriffis.com/#contact" data-tag="#contact">Contact</a></li>
+            <li><a href="https://www.aarongriffis.com/#about" data-tag="#about">About</a></li>
+            <li><a href="https://www.aarongriffis.com/#contact" data-tag="#contact">Contact</a></li>
          </ul>
       </nav>
    </header>

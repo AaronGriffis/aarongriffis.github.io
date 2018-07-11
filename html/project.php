@@ -4,7 +4,7 @@
    <?php require_once "../../html/scenery.php"; ?>
 
    <div class="intro-text btn-group inv">
-      <a href="http://www.aarongriffis.com/work/<?php echo $prev ?>" class="arrow arrow-left" aria-label="Previous project">
+      <a href="https://www.aarongriffis.com/work/<?php echo $prev ?>" class="arrow arrow-left" aria-label="Previous project">
          <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 8 8" role="img" aria-labelledby="left-arrow-title left-arrow-desc" focusable=”false”>
             <title id="left-arrow-title">Previous project</title>
             <desc id="left-arrow-desc">Arrow pointing left</desc>
@@ -15,7 +15,7 @@
 
       <h1><?php echo $title ?></h1>
 
-      <a href="http://www.aarongriffis.com/work/<?php echo $next ?>" class="arrow arrow-right" aria-label="Next project">
+      <a href="https://www.aarongriffis.com/work/<?php echo $next ?>" class="arrow arrow-right" aria-label="Next project">
          <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 8 8" role="img" aria-labelledby="right-arrow-title right-arrow-desc" focusable=”false”>
             <title id="right-arrow-title">Next project</title>
             <desc id="right-arrow-desc">Arrow pointing right</desc>
@@ -39,7 +39,7 @@
             if ($hasWebsite || $hasGithub) {
                echo '<div class="btn-group">';
                if ($hasWebsite) {
-                  echo '<a href="http://www.aarongriffis.com/' . $link . '/" class="card-btn">View Website</a>';
+                  echo '<a href="https://www.aarongriffis.com/' . $link . '/" class="card-btn">View Website</a>';
                }
 
                if ($hasGithub) {
@@ -87,7 +87,7 @@
 </section>
 
 <div class="btn-group">
-   <a href="http://www.aarongriffis.com/work/<?php echo $prev ?>" class="arrow arrow-left" aria-label="Previous project">
+   <a href="https://www.aarongriffis.com/work/<?php echo $prev ?>" class="arrow arrow-left" aria-label="Previous project">
       <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 8 8" role="img" aria-labelledby="bottom-left-arrow-title bottom-left-arrow-desc" focusable=”false”>
          <title id="bottom-left-arrow-title">Previous project</title>
          <desc id="bottom-left-arrow-desc">Arrow pointing left</desc>
@@ -105,7 +105,7 @@
       </svg>
    </a>
 
-   <a href="http://www.aarongriffis.com/work/<?php echo $next ?>" class="arrow arrow-right" aria-label="Next project">
+   <a href="https://www.aarongriffis.com/work/<?php echo $next ?>" class="arrow arrow-right" aria-label="Next project">
       <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 8 8" role="img" aria-labelledby="bottom-right-arrow-title bottom-right-arrow-desc" focusable=”false”>
          <title id="bottom-right-arrow-title">Next project</title>
          <desc id="bottom-right-arrow-desc">Arrow pointing right</desc>
